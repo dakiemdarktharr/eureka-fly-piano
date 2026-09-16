@@ -83,3 +83,21 @@ graph-controller work exists; no broad novelty claim is made.
 
 The software is runnable and the negative findings are useful. The full original
 scientific mission is **not complete** and the manuscript is **not submission-ready**.
+
+## Verified reproduction and local media input
+
+See `docs/reproducibility_audit.md` for the fresh-checkout result and
+`docs/artifact_manifest.json` for delivered-file hashes and missing outputs.
+All four core runs reproduced the original numerical arrays exactly on this host.
+
+Authorized MIDI or WAV can be converted locally (lossy monophonic reduction):
+
+```powershell
+.\.venv\Scripts\python.exe experiments\input_events.py C:\path\authorized.mid events.json
+.\.venv\Scripts\python.exe experiments\run.py --id B1_novel_full_s00 --events events.json
+```
+
+Inspect the extracted notes first. Events must fit the selected run duration;
+this eight-second benchmark does not render a full song automatically. The utility
+does not copy source audio or promise faithful polyphonic transcription. Exact
+synthetic event files and their run mappings are under `data/synthetic`.

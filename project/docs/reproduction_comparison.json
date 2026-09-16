@@ -1,0 +1,96 @@
+{
+  "status": "pass",
+  "comparison": "exact array equality on the same Windows host",
+  "checkout": "C:\\Users\\ANHKHOI\\Documents\\ChatGPT\\eureka\\project\\tmp\\repro_checkout",
+  "runs": [
+    {
+      "run_id": "A1_tonic_full_s00",
+      "arrays_equal": {
+        "time": true,
+        "rates": true,
+        "task": true,
+        "q": true,
+        "dq": true,
+        "torque": true,
+        "force": true,
+        "actual": true,
+        "target": true,
+        "limb": true,
+        "key_x": true,
+        "key_height": true,
+        "hips": true
+      },
+      "scientific_metrics_equal": true,
+      "excluded_metric": "wall_seconds",
+      "telemetry_sha256": "fdd08d4febf838cf4bc8f367c074d6697b8e62e8f395bb9bf96fa3b45d750ee6"
+    },
+    {
+      "run_id": "A1_tonic_no_cpg_s00",
+      "arrays_equal": {
+        "time": true,
+        "rates": true,
+        "task": true,
+        "q": true,
+        "dq": true,
+        "torque": true,
+        "force": true,
+        "actual": true,
+        "target": true,
+        "limb": true,
+        "key_x": true,
+        "key_height": true,
+        "hips": true
+      },
+      "scientific_metrics_equal": true,
+      "excluded_metric": "wall_seconds",
+      "telemetry_sha256": "e399e853d01b3aee1b619da0abdd7febc15c8ee66b2fb3b19d4e5384a47744a8"
+    },
+    {
+      "run_id": "A1_tonic_no_dn_s00",
+      "arrays_equal": {
+        "time": true,
+        "rates": true,
+        "task": true,
+        "q": true,
+        "dq": true,
+        "torque": true,
+        "force": true,
+        "actual": true,
+        "target": true,
+        "limb": true,
+        "key_x": true,
+        "key_height": true,
+        "hips": true
+      },
+      "scientific_metrics_equal": true,
+      "excluded_metric": "wall_seconds",
+      "telemetry_sha256": "02599d4ca41b7f708c861f3d9d57b9ca782f0e94d4ba1e58e60e51bdb41a7701"
+    },
+    {
+      "run_id": "B1_novel_full_s00",
+      "arrays_equal": {
+        "time": true,
+        "rates": true,
+        "task": true,
+        "q": true,
+        "dq": true,
+        "torque": true,
+        "force": true,
+        "actual": true,
+        "target": true,
+        "limb": true,
+        "key_x": true,
+        "key_height": true,
+        "hips": true
+      },
+      "scientific_metrics_equal": true,
+      "excluded_metric": "wall_seconds",
+      "telemetry_sha256": "7ed26d4918ad475a1fbd982a7a63a387540daeea3f137574ba48b28d22e3007b"
+    }
+  ],
+  "source_checksums": {
+    "weights.npy": true,
+    "neurons.csv": true,
+    "anatomy.json": true
+  }
+}
