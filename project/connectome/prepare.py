@@ -14,6 +14,8 @@ FILES = {
  'MANC.tissue.surf.rda': f'https://raw.githubusercontent.com/natverse/malevnc/{ANATOMY}/data/MANC.tissue.surf.rda',
  'MANC.surf.rda': f'https://raw.githubusercontent.com/natverse/malevnc/{ANATOMY}/data/MANC.surf.rda',
 }
+EXPECTED_SHA256 = {'W_20260522_allSynapses.npz': '3cd637b2397236aec4c8d46883b753335f73e3acae508f9c082f39bd123e0b84', 'wTable_20260522_allSynapses.feather': 'a013ec9910d5377bf8b90b9abdd6411bf29f934141228be3d677962a047b7522', 'MANC.tissue.surf.rda': 'b294410076f75e4ac389030a15732f562eae46f366330d2062b39cdab3211655', 'MANC.surf.rda': '37b594f248d18bf478d66d9e0b572beedd9e98c39a502735d0636cb6f974ba17'}
+
 def sha(path):
     with open(path,'rb') as stream: return hashlib.file_digest(stream,'sha256').hexdigest()
 def dump(path, obj):
@@ -24,11 +26,13 @@ def prepare():
     raw=ROOT/'data/external'; raw.mkdir(parents=True,exist_ok=True)
     for name,url in FILES.items():
         if not (raw/name).exists(): urllib.request.urlretrieve(url, raw/name)
+        if sha(raw/name) != EXPECTED_SHA256[name]:
+            raise ValueError(f'Source checksum mismatch: {name}; refusing to build a different graph')
     df=pd.read_feather(raw/'wTable_20260522_allSynapses.feather')
     keep=df.type.isin(['DNg100','IN17A001','INXXX466','IN16B036']) | ((df['class']=='motor neuron') & df.subclass.isin(['fl','ml','hl']))
     ix=np.flatnonzero(keep); table=df.iloc[ix].copy().reset_index(drop=True)
     # The compressed upstream file stores a dense pre-by-post matrix. Stream it
-    # rowwise to avoid allocating the full 4.47 GB matrix on a laptop.
+    # by its declared memory order to avoid allocating the full 4.47 GB matrix.
     selected={int(old):new for new,old in enumerate(ix)}
     w=np.zeros((len(ix),len(ix)))
     with zipfile.ZipFile(raw/'W_20260522_allSynapses.npz') as z, z.open('arr_0.npy') as f:
