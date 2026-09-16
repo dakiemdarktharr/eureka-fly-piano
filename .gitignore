@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.firecrawl/
+project/data/external/
+project/data/runs/
+project/app/replays/
+project/videos/*.mp4
+project/tmp/
+project/paper/manuscript.pdf
+project/paper/figures/*.png
+project/paper/figures/*.svg
+project/data/reproduction/
