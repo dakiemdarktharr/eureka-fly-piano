@@ -43,7 +43,9 @@ class CoreTests(unittest.TestCase):
             run(c,d);z=np.load(Path(d)/'test/telemetry.npz');a={k:z[k].copy() for k in z.files};z.close()
             run(c,d);z=np.load(Path(d)/'test/telemetry.npz')
             for k in a:np.testing.assert_array_equal(a[k],z[k]);self.assertTrue(np.isfinite(z[k]).all())
+            z.close()
     def test_measured_ids_unique(self):
         n=MotorNetwork();self.assertTrue(n.table.id.is_unique);self.assertEqual(len(n.dn),2);self.assertEqual(len(n.cpg),18)
 
 if __name__=='__main__':unittest.main()
+

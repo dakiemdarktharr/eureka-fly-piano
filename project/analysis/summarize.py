@@ -1,5 +1,5 @@
 from pathlib import Path
-import sys,json
+import sys,json,hashlib
 import numpy as np
 import pandas as pd
 from scipy.stats import ttest_rel
@@ -20,13 +20,14 @@ def summarize():
     rows=[]
     for p in sorted((ROOT/'data/runs').glob('*/metrics.json')):
         meta=json.loads((p.parent/'metadata.json').read_text());m=json.loads(p.read_text())
+        meta['sequence_id']=hashlib.sha256(json.dumps(meta['events'],sort_keys=True).encode()).hexdigest()[:16] if meta['events'] else 'tonic'
         rows.append({**{k:meta[k] for k in ['run_id','experiment_id','condition','variant','seed','sequence_id']},**{k:m.get(k) for k in METRICS}})
     df=pd.DataFrame(rows);out=ROOT/'paper/tables';out.mkdir(parents=True,exist_ok=True);df.to_csv(out/'per_run.csv',index=False)
     results=[];tests=[]
     for (exp,cond,var),g in df.groupby(['experiment_id','condition','variant'],sort=True):
         for metric in METRICS:
             x=g[metric].dropna().to_numpy(float);ci=bootstrap(x)
-            results.append(dict(experiment_id=exp,condition=cond,variant=var,metric=metric,n=len(x),n_seeds=g.seed.nunique(),n_sequences=g.sequence_id.nunique(),n_connectome_instances=1,
+            results.append(dict(experiment_id=exp,condition=cond,variant=var,metric=metric,n=len(x),n_seeds=g.seed.nunique(),n_sequences=(0 if exp=='A1' else g.sequence_id.nunique()),n_connectome_instances=1,
              mean=float(x.mean()) if len(x) else None,median=float(np.median(x)) if len(x) else None,sd=float(x.std(ddof=1)) if len(x)>1 else None,ci_low=ci[0],ci_high=ci[1]))
     for (exp,cond),g in df.groupby(['experiment_id','condition']):
         full=g[g.variant=='full'].set_index('seed')
@@ -74,6 +75,8 @@ def summarize():
         z=np.load(trace);table=pd.read_csv(ROOT/'connectome/neurons.csv');sel=table.bodyId.isin([10093,10707,11751,13905]).to_numpy();fig,ax=plt.subplots(figsize=(10,3.3),constrained_layout=True)
         for i in np.flatnonzero(sel):ax.plot(z['time'],z['rates'][:,i],label=str(table.iloc[i].bodyId)+' '+table.iloc[i].type,lw=.9)
         ax.set(xlim=(1,2),xlabel='Time (s)',ylabel='Modeled rate (Hz)',title='A1 tonic / full / seed 0');ax.legend(fontsize=7,ncol=2);fig.savefig(figs/'neural_trace.png',dpi=180);fig.savefig(figs/'neural_trace.svg');plt.close(fig)
+    figure_runs=[json.loads(p.read_text()) for p in (ROOT/'data/runs').glob('*/metadata.json') if p.parent.name.startswith(('A1_','B1_'))]
+    dump(figs/'run_provenance.json',[{k:m[k] for k in ['run_id','variant','seed','git_commit','dataset_version','config_sha256','graph_sha256']} for m in figure_runs])
     dump(figs/'provenance.json',{'source':'paper/tables/per_run.csv and telemetry','experiments':['A1','B1'],'variants':sorted(df.variant.unique().tolist()),'seeds':sorted(map(int,df.seed.unique())), 'dataset_version':manifest['dataset_version'],'graph_sha256':manifest['graph_sha256'],'rendering':'fixed y limits; no per-frame normalization'})
     print(f'Summarized {len(df)} runs; {len(tests)} paired contrasts',flush=True)
     return df

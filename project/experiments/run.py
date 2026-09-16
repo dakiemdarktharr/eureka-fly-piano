@@ -9,6 +9,16 @@ from connectome.prepare import dump,sha
 from experiments.registry import registry
 
 def events_for(cfg):
+    if cfg.get('event_file'):
+        payload=json.loads(Path(cfg['event_file']).read_text(encoding='utf-8-sig'))
+        events=payload['events'] if isinstance(payload,dict) else payload
+        previous=-1.
+        for i,event in enumerate(events):
+            if not 0<=event['key']<cfg['nkeys'] or int(event['key'])!=event['key']:raise ValueError('Key out of range')
+            if not np.isfinite(event['time']) or event['time']<0 or not previous<event['time']<cfg['duration']:raise ValueError('Events must have strictly increasing finite times inside the trial')
+            previous=event['time'];event['event_id']=i;event.setdefault('hold',.13)
+            if not 0<event['hold']<=1:raise ValueError('Hold must be within (0,1] seconds')
+        return events
     if cfg['experiment_id']=='A1':return []
     rng=np.random.default_rng(9100+cfg['seed']%3)
     cond=cfg['condition'];duration=cfg['duration']
@@ -130,12 +140,13 @@ def run(cfg,output_root=None):
 
 if __name__=='__main__':
     import argparse
-    p=argparse.ArgumentParser();p.add_argument('--id');p.add_argument('--all',action='store_true');p.add_argument('--seeds',type=int,default=8);p.add_argument('--output');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--id');p.add_argument('--all',action='store_true');p.add_argument('--seeds',type=int,default=8);p.add_argument('--output');p.add_argument('--events');a=p.parse_args()
     configs=registry(range(a.seeds))
     if a.id:configs=[c for c in configs if c['run_id']==a.id]
     elif not a.all:configs=configs[:1]
     if not configs:raise SystemExit('No matching experiment ID')
     for c in configs:
+        if a.events: c=dict(c,event_file=str(Path(a.events).resolve()),run_id=c['run_id']+'_external')
         m=run(c,a.output);print(c['run_id'],json.dumps({k:m[k] for k in ['motor_rhythm_power','motor_frequency_hz','key_accuracy','timing_mae_s','wall_seconds']}),flush=True)
 
 

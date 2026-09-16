@@ -1,0 +1,6 @@
+.venv
+tmp
+data/runs
+data/external
+data/core
+videos/*.mp4

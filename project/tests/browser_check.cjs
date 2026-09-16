@@ -1,0 +1,21 @@
+const fs=require('fs');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH});
+ const page=await browser.newPage({viewport:{width:1560,height:1200}}),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:8765',{waitUntil:'networkidle'});
+ await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('B1_novel_full_s00'));
+ await page.locator('#seek').fill('50');await page.locator('#seek').dispatchEvent('input');
+ await page.screenshot({path:'project/tmp/browser_replay.png',fullPage:true});
+ await page.locator('#neuron').selectOption('1');
+ if(!(await page.locator('#details').textContent()).includes('Modeled rate'))throw Error('Neuron inspector missing rate');
+ await page.locator('#variant').selectOption('no_cpg');await page.locator('#load').click();
+ await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('B1_novel_no_cpg_s00'));
+ await page.locator('#play').click();await page.waitForTimeout(200);await page.locator('#play').click();
+ if(Number(await page.locator('#seek').inputValue())===0)throw Error('Replay did not advance');
+ await page.setViewportSize({width:650,height:1000});await page.screenshot({path:'project/tmp/browser_mobile.png',fullPage:true});
+ if(errors.length)throw Error(errors.join('\n'));
+ fs.writeFileSync('project/docs/browser_check.json',JSON.stringify({status:'pass',checks:['load','seek','inspect neuron','switch ablation','play/pause','responsive layout'],page_errors:errors},null,2));
+ await browser.close();console.log('Browser replay checks passed');
+})().catch(e=>{console.error(e);process.exit(1)});

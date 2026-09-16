@@ -1,0 +1,1514 @@
+[
+  {
+    "run_id": "A1_tonic_full_s00",
+    "variant": "full",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "b0897910fc15a3c8d6becc4a21d4efe68b3ea4c90aac373917833bea58905306",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_full_s01",
+    "variant": "full",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9d8687653051b64ec23a4fcc9e8368e80e9ef7351fea0a975215d8879870b4f7",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_full_s02",
+    "variant": "full",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "e6edb925fe32c17c2e1db9e22ddee4f1df7b0c6f52a7729af0cbe49231213d2e",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_full_s03",
+    "variant": "full",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "b0e3eec9fe5bcbe98fd953f1b7d311f08542372759891b56581cd5f3320eb4d9",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_full_s04",
+    "variant": "full",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "4ae29a68b773eafc5c3c36f4e88cd4fac159368fef0679a0f1c5cb19a318ab4b",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_full_s05",
+    "variant": "full",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "1e1c3617e4f3a0ba5871027c730f14003b19d3ee76761e201b4ab87f6fdd3f81",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_full_s06",
+    "variant": "full",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "2d80e25c8cee30b10d3933c7608ba5802f28877e5d6cae537c0579dd0f49ac28",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_full_s07",
+    "variant": "full",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "e6eb1c78585301af630acd7c92b14d397d5b69c0a8407356a6c3d7a756e534b0",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_cpg_s00",
+    "variant": "no_cpg",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "e0a0817211c7fbea54cc101a550e94957e846759c151682b49be2a776152dce6",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_cpg_s01",
+    "variant": "no_cpg",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "cd1403b3fe7e3a03e897366cc15d085ef4cd32e44ee5b9185900fa21786e3438",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_cpg_s02",
+    "variant": "no_cpg",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "4e2c6e754050fe828e525001a147b2fff2a812affc116cc487d019c65cb5e94a",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_cpg_s03",
+    "variant": "no_cpg",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "bbc9ba49a33f0b9663f7a3681a5544ed85fcef589e80dbbe8b17beebf084f301",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_cpg_s04",
+    "variant": "no_cpg",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "cb08963c5a4a52d335e073b1f0e16e6a6b1897cd0a2708f115e8f2445c1d4f17",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_cpg_s05",
+    "variant": "no_cpg",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "a304005adf5d8450c633342c04a8d86551528e8b1a4c8ff88f747e5e6e335b84",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_cpg_s06",
+    "variant": "no_cpg",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "a01b9359e4ee29a4c0869bc8812cc7b763c39910ae4daa04314f4f52390c2dd0",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_cpg_s07",
+    "variant": "no_cpg",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "1dfe65c4fe612e83e384d5b09134de2241ea6c0e1ee8226eb6611659b611f7ef",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_delay_s00",
+    "variant": "no_delay",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "d69082b01dc20a6786e90dae96d45009cd1aeda6cdc83794d8704e5e9b256e9c",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_delay_s01",
+    "variant": "no_delay",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "89e4ca881210eccd63440f2d3faaf852c90b16ec340d39a455117549d8803966",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_delay_s02",
+    "variant": "no_delay",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "cccdacfd9ff5298500189599bb7b00bb38136f2bed2429935f2fc1b63edd9d05",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_delay_s03",
+    "variant": "no_delay",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "88f12429a0456e4069a52f41a296ed73d8b01a4845e62e47c4a1eb80b31e5aa7",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_delay_s04",
+    "variant": "no_delay",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9ff5f3c61116ff3b6a1b5891c9ab096e527d4586304f93061a36c8f357414003",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_delay_s05",
+    "variant": "no_delay",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "a49d3aa53a786d66a7a389ec11b51ad3e68dccdbc453e9fe6e25fbb42293e2df",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_delay_s06",
+    "variant": "no_delay",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "0e540476279e1e204b90943e1ef1c96a7d505f0f61c7f9e82b1f1805f2018666",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_delay_s07",
+    "variant": "no_delay",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "fad7667b630b70d9ee2e34454afc6471ba531e5f15462bc47105a5657aca48f5",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_dn_s00",
+    "variant": "no_dn",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "f55b9d020350862bc33cd5a8edd8363587ac219c4f30d9d90065db45883ea482",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_dn_s01",
+    "variant": "no_dn",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "23a74ea2f1be1a992362ad1996b06d9a08a815a70c98945d55f4a552e3e82c9b",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_dn_s02",
+    "variant": "no_dn",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9b1f9c0b0e21cfb10c1f48acc8cb19b716276510cbefe774a69ae02e274458dc",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_dn_s03",
+    "variant": "no_dn",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "3dbaa15796d863280a231221c6ab133e28b4cca5d051fda884053e036c180aca",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_dn_s04",
+    "variant": "no_dn",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "22aa1144a1ca6a7602e7c2fd431ab28d688bdea1977dc3e5c13a85f8cd0df8af",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_dn_s05",
+    "variant": "no_dn",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "66dc8c41d97d88b9b184a08e9214b5393e331612e607923d8f0e6abeb322047e",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_dn_s06",
+    "variant": "no_dn",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "f1ef66cebdc1077623a706654fd74f4b06d145d4e78587c7ed10aff49720f198",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_dn_s07",
+    "variant": "no_dn",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "2ed8baf94a0fea8a014819dd348cf03d514cb443ee4c26096331ec6d3945e667",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_inhibition_s00",
+    "variant": "no_inhibition",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "f6a6c61ef3400349dd371642c9118a1942a499ddaf5187e9671117ba39f46f4f",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_inhibition_s01",
+    "variant": "no_inhibition",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "329e790a92730b7af68f5d6054134f00b721587230116f73a4601dd3e397963f",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_inhibition_s02",
+    "variant": "no_inhibition",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "3a4ebc42a4b0dfbbc6790d5a8b7dbeca2516ed468903971c8a604d497a8e6bbc",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_inhibition_s03",
+    "variant": "no_inhibition",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "5af7701cd80a0def6792259f59aa94705c52af9c1caa734f781a67f499217631",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_inhibition_s04",
+    "variant": "no_inhibition",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "5ea173ef273b71d1a404afe87ace23943a3d89070d861b5b26012b06bc30508a",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_inhibition_s05",
+    "variant": "no_inhibition",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "f34bc8a638cd46ef45e44d2d3730fd788df84f47fdcb65a075e5853eafb896fe",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_inhibition_s06",
+    "variant": "no_inhibition",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "4b9efd32432cc0ee480ceaef9e1c933555493a407da9c27d1e6c700fc10ab294",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_no_inhibition_s07",
+    "variant": "no_inhibition",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "1d56edd9675ac72032f2ca04218b66095dfd4e69595fc5a89ff7d680a12dacbb",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_randomized_s00",
+    "variant": "randomized",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "470230428549f89bdba0ab4b6b27d59623948b4e5250e751e58436b0b61fe194",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_randomized_s01",
+    "variant": "randomized",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "50ee72a1a8c31e9080e92419436f42a6fcad1a8705358d2681f41cfa81927a26",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_randomized_s02",
+    "variant": "randomized",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "0615c2e54cde21390f5ba4272cf23defcb41b74b88d62652cfe0ef72a3a494f6",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_randomized_s03",
+    "variant": "randomized",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "6caa159e4a35f128afed6ddf86b37a5757a9f82d0240d1f8821d87b26085225c",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_randomized_s04",
+    "variant": "randomized",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "07074938aba73077bc539bc7b5c3298f30f365c0db1da583b449eb6a4f42255d",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_randomized_s05",
+    "variant": "randomized",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "7966ae773307bcbd9ef7d20e8061a83a37f7c0cdb3ae9d74d04bb232db9615c1",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_randomized_s06",
+    "variant": "randomized",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "b7b3b9b895f282589b0cbc34c7ed4dad43885bc0dc176619a0550b79b585fc47",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "A1_tonic_randomized_s07",
+    "variant": "randomized",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "244206cd0d343e87623126142cfb3ee634cc89e2db41f34904487e0359aa1529",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_direct_s00",
+    "variant": "direct",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "c52b8a6b9c2b908ab9196290e72e710eef796f0f1874ec798e34ab31535d63da",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_direct_s01",
+    "variant": "direct",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9b307f9d61db3c507f77921e662761d352b51dbcaca188e9770dd54e8362a30b",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_direct_s02",
+    "variant": "direct",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "0879b1e5665e3b2a77d2e025b2a3be74f5f33f048cf7fe3fbb43567414501fed",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_direct_s03",
+    "variant": "direct",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "ffdb85e2de019ea7c84fbcbdcca1c3cd0881593f8274713544e70f0841042135",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_direct_s04",
+    "variant": "direct",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "97a1da0b16868ecf2785f4075e511812f494635454fc280a1858e2b463dab1f7",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_direct_s05",
+    "variant": "direct",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "422f11c219ef06fe0f94f82173271a2e51d1cb0ab1bbf52a726a9598ec47ef1a",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_direct_s06",
+    "variant": "direct",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "547675ae0287f6194165fe2c69e40d05067cb3f6500fc30e00b2e2658974375c",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_direct_s07",
+    "variant": "direct",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "20273708af077450da84746c1680c28063c801e6927e28f1cc93e90750f81995",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_full_s00",
+    "variant": "full",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "0c9225306637f7bcca8fe84cfd4184987386d04e737ca895be86183632cd14db",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_full_s01",
+    "variant": "full",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9914d4b790747f3a306611fc370f579b19128eac792a8a44371fff077d0ce234",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_full_s02",
+    "variant": "full",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "e73bae8ec8ec086b48aaabc61e9f6edce3b28c9b60f84794ed8d7dfde8600595",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_full_s03",
+    "variant": "full",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "c9e5bfbb1fd97e172eda9473b063dbb139d36cb4ab91badd006e21705c201e36",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_full_s04",
+    "variant": "full",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "e1e1db91acb00e199df5d278a83666e4ac5d7e3ac97907032e9ab1241e1fc9ba",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_full_s05",
+    "variant": "full",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "c93241b91cc012f8adc5c51a3440eed0fd9716f3c4accc28e274ae80d14caaf3",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_full_s06",
+    "variant": "full",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "57033504c4ef2799fcb625ff15cbe05e1132273d6deed0a4d9e5964464e63ed8",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_full_s07",
+    "variant": "full",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "7c028f2a9d722677909ed71e2522c1bebff7e78abe18d36384eaef44caac5e52",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_hand_cpg_s00",
+    "variant": "hand_cpg",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "ad3a6192e612970c34b34dc9b4214966e484a9425eacf44a20a6783079d36778",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_hand_cpg_s01",
+    "variant": "hand_cpg",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "5d18a12ffc32bdc677a0d0b2a0b313daaabedf126cc56832b9ccb9db01aa5a0c",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_hand_cpg_s02",
+    "variant": "hand_cpg",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "0c8c6498d1aa4844d317baadad3b2318e5e02788ef1b35ed6d7f9bcfa589c3bc",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_hand_cpg_s03",
+    "variant": "hand_cpg",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "477711091eaf4655eb36d34ae8356ca4868ba6c10f4a56293f4fed2c4e8026e5",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_hand_cpg_s04",
+    "variant": "hand_cpg",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "954c1c701a07521924fecc557113d2679e9f5cdf93e3d29c6f1d7bb152b403bf",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_hand_cpg_s05",
+    "variant": "hand_cpg",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "17c8a0eae3586b9a798cc7cc21241f960772fd977ec6bcecf3720d9ffdd5ef43",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_hand_cpg_s06",
+    "variant": "hand_cpg",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "0fff2af28f4c36d6b98542ff5dd3dbc97f1487b7930a00c55da9f4666ccf23b4",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_hand_cpg_s07",
+    "variant": "hand_cpg",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "5cbfcb416136fef656e16e21373e88b279d95077fda2c08f3cd42d53a649917d",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_body_mapping_s00",
+    "variant": "no_body_mapping",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "412b369c4761ce5512837f634d3572b47c152a8fbc619efb9572e333cb6ce14e",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_body_mapping_s01",
+    "variant": "no_body_mapping",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "d562fc1c1f2e15d02eb02ca07cab00b7d7ecf9882f0e0c3df2b48b4443130c1d",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_body_mapping_s02",
+    "variant": "no_body_mapping",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "0a21e5c1a967f2bbffe7f50441cf3336691aec4405eaad48161bc3a9ffc729cd",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_body_mapping_s03",
+    "variant": "no_body_mapping",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "eead5adef48f1c68d1de2358be1fad22b3ee5740d1e3bfc789ae1e0931e54c35",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_body_mapping_s04",
+    "variant": "no_body_mapping",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "ec1ce065e6acbfb56d10077def2964f009b3e1dba125aff0b98bc2e8177b11ce",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_body_mapping_s05",
+    "variant": "no_body_mapping",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "566337037db9e348af623fe8f86c70d53e38eb6a4fa027abc5cb79282eeb84a4",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_body_mapping_s06",
+    "variant": "no_body_mapping",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9d86e3f8218d3d81ce1475a84bd9a2d0a53697b65f9496e267509d9d917649fc",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_body_mapping_s07",
+    "variant": "no_body_mapping",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "8d8e0b0a03dce9c83de0bc0970ae6c457c0cd3f5de3042aff55c87f9cb0816e6",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_cpg_s00",
+    "variant": "no_cpg",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "cac4634d3fd6434c822085d48d8cea0247f1c34538bf7c0c02bfec2041e9b46e",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_cpg_s01",
+    "variant": "no_cpg",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "541b852e805ebc339d19c5d73454d21d2ba989bbe43629cafde834404a36bbad",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_cpg_s02",
+    "variant": "no_cpg",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "a1f64224fcf07613f7dcc68aa4649f72739766eba54bf139746278cd99f9b786",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_cpg_s03",
+    "variant": "no_cpg",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "606a261e2a23109441970d73ddaa60b9ddd8e7ead4d0ea522fcb7adb7cb84cf5",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_cpg_s04",
+    "variant": "no_cpg",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "015bf545ae80c5bf3453f35c2124c5633c5dc3f7196663d6a432b793a80b2706",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_cpg_s05",
+    "variant": "no_cpg",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "1014fb3ac5de78170813e1245560a7b94579952cbd745d7e177466ab49d53d9c",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_cpg_s06",
+    "variant": "no_cpg",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "0cf6973aaa7d3555eb54092a946753d0fecf1d3ef1b81a7cb942eaaf4cde2089",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_cpg_s07",
+    "variant": "no_cpg",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "8a4fccab72cbebc9b062114d077fec034f9828d8d49033a50b25195f6b4343c6",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_delay_s00",
+    "variant": "no_delay",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "564e47d364010f9bf89d481c94a0f4f18236a1ca26cb7b24a2ce6f237f683a73",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_delay_s01",
+    "variant": "no_delay",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "d646b603a60d743fdee5df33547f9cad459c732c75d2ddfe82bb8f03ade57475",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_delay_s02",
+    "variant": "no_delay",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "105204af990efd0d8de39bf1778c04f310ef4bde815d621f0f2d3576065d2034",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_delay_s03",
+    "variant": "no_delay",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "05bfdb276631509965930dc67533b194503632f7804f1ee2f52974fed595e167",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_delay_s04",
+    "variant": "no_delay",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "b60cbd1865a322d2ec93341bd1e5ab8b3c5ba625d18d3a7979b24051b2a8c141",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_delay_s05",
+    "variant": "no_delay",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "aa68bfba1a1df6c8d37136c420787e5f1b290f40711c0c08f12e917a30384dd8",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_delay_s06",
+    "variant": "no_delay",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "2f4fe40329b635014290803403f6fab68bb5f1637d63b22e42fff5012f52921c",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_delay_s07",
+    "variant": "no_delay",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "c4c693a50dfc24479b99343e99f54b486fbec43586487841cbd2f5538bb0694b",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_dn_s00",
+    "variant": "no_dn",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "73f1a8a3da5632c4e8ec0a1324c682fe231ce3d4dba6739d3f9f854782a158bf",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_dn_s01",
+    "variant": "no_dn",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "62c9f0a5717035dd2fb069bce54573b4a7a38fbda502739c67b7022ad595c6c1",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_dn_s02",
+    "variant": "no_dn",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9fa25d42375e293f533794b4fb48f82787216725d24d597da4770e84dd4063c9",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_dn_s03",
+    "variant": "no_dn",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "d36d03150cd38a166b27ded01c46e0727e4c832cfdffab178000d95d3646aab7",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_dn_s04",
+    "variant": "no_dn",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "8d9d77f4970ab71c2e9c029864b5b6727718dcd484112f2fe40622a294314bcc",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_dn_s05",
+    "variant": "no_dn",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "b90a79f75be17f4022485dc2c611d81b1436f265a2c651c282a76267e529ba09",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_dn_s06",
+    "variant": "no_dn",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "6504473cd0ed5ebe48b9d380c1fee54574fa7a71058f05ecdb44bcce0740f594",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_dn_s07",
+    "variant": "no_dn",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "2ab4e937f8d16ac69fb6fded38fd29704d373a8392a6b92335fc6b1f46acdb8f",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_feedback_s00",
+    "variant": "no_feedback",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "026d69fa26d0113424deeaa28913f5166bc405bc9ed71dfa351b0d3f0bb2eae9",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_feedback_s01",
+    "variant": "no_feedback",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "679f6baaa89035d2cf5f9886a3e604f8593e45702d3144dd4ef5d74d68e5c91c",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_feedback_s02",
+    "variant": "no_feedback",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "2a9739808b30be1026245439bdb68abc38e39793cfa617995061a068a62d9e36",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_feedback_s03",
+    "variant": "no_feedback",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "1f4e9dc513b00bac0fe80d07ebf2a8c98ca60f1177d4d62079d3d72e0b1e02c2",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_feedback_s04",
+    "variant": "no_feedback",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "5f9035adfad073e58d8747c64516be6a252f5f72df33b95fa405e7453c7722ad",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_feedback_s05",
+    "variant": "no_feedback",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "5b0823869fa596b52c7e43d7478bf115232f6d4a2cb88393271259a844d710fb",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_feedback_s06",
+    "variant": "no_feedback",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "b0ae6df442dee059153c3aca49cf6a85d844d2edcb3d9f6e8515543c59343059",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_feedback_s07",
+    "variant": "no_feedback",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "1fb5137b1635fe267cd5fbddcd0ea72fa282d3a68e09afd6e416f7d60cb68873",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_inhibition_s00",
+    "variant": "no_inhibition",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "d1616b398d436b4e0dd29d1eb3eb2b8f4ea492f7f10e744402f101bbd0dd66e4",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_inhibition_s01",
+    "variant": "no_inhibition",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "11798831051f8edf21ce2bd350eb972db07f5baf8ad090e2097f2b4692dbacf4",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_inhibition_s02",
+    "variant": "no_inhibition",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "a7bd76d3020702d4ea500faa2653efa0c377539ad38b3fa171f068f21a4e9687",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_inhibition_s03",
+    "variant": "no_inhibition",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "84dad2d7880f27e613866c894c8434a75d1d92b905f2ddca769f44a09d20c989",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_inhibition_s04",
+    "variant": "no_inhibition",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9eb8e1bc38facf92f28b4e9e4957d9ac6a0c426f9805276ca744151ca9325336",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_inhibition_s05",
+    "variant": "no_inhibition",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "04272d4fb2a6f1597b2799a1afa2f2dd889ab1f9d335164c3a9d5cae87104e09",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_inhibition_s06",
+    "variant": "no_inhibition",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9b14ac1e8f4d79eca40be5a1b6ceead8cfd2d527e6007ff4350fe0aa32cffe90",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_inhibition_s07",
+    "variant": "no_inhibition",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "61f438f672409776fd0653bf3a0947c89d8d20934bca4b04b872ea93518f9656",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_interleg_s00",
+    "variant": "no_interleg",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "039b851ca5be6a25dff8e7e53f46c4a58168a139b2262d0c6c14eefb4dc0b5d1",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_interleg_s01",
+    "variant": "no_interleg",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "7b6f0c665f06abb81ef1ff15d0f97f9a0a1dfb8605204f9562499aa0e435af41",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_interleg_s02",
+    "variant": "no_interleg",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "031050b995e73ec4b591088069020db038c56288e80211c0d3f64aa21f1bdd9e",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_interleg_s03",
+    "variant": "no_interleg",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "2253e37e9afc265ce6eabfd18472d6476e5b5c653797c1c0ee92fff1c6f0014d",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_interleg_s04",
+    "variant": "no_interleg",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "ceec31e7b68cca6f679f58b3baffdeb47480012eef6884e1321f74515268af5f",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_interleg_s05",
+    "variant": "no_interleg",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "f8f74a5990f48f634523652695f99917bf90c017677112e68ca41e84714b323c",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_interleg_s06",
+    "variant": "no_interleg",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "d931d7a95b49a5a0d48863d1eeda16c471db3dd1cd4d6788021ec1b3bfc6c76a",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_interleg_s07",
+    "variant": "no_interleg",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "b170c88dd3f02c145d4be4c825b28c30afccfb7c44bdcb98566a80dc85a2cb61",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_intraleg_s00",
+    "variant": "no_intraleg",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "0993325952ba994ffc319b00d691a8cf77f661c3125bcb24dafbc7a78e10c9de",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_intraleg_s01",
+    "variant": "no_intraleg",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9601d0b6f0b0cb7a90be4789220cc32da6a1b91f1a12501469d1a1d17d5a57f1",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_intraleg_s02",
+    "variant": "no_intraleg",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "9fe218a1a6e34cf853e8813a8ca9cabe7a776209f5a845ab96ad846ab4fcb707",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_intraleg_s03",
+    "variant": "no_intraleg",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "48aa62ea9f4e0d99c4cedb336d458e21486b2f820f350a24d6ba9a406c7f47bf",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_intraleg_s04",
+    "variant": "no_intraleg",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "642962bcb974b78dea836f8fe9948676f6038a59d67fa64d5f67bdb508ccbeee",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_intraleg_s05",
+    "variant": "no_intraleg",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "c4698bf3cf49cb776ba3dddc33e443d521708a4eaeefae1f3400c05b58a0d79c",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_intraleg_s06",
+    "variant": "no_intraleg",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "efbf21329476442b9445da34a389a6388fedd95248dcd75f3822a67de4eccb17",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_intraleg_s07",
+    "variant": "no_intraleg",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "e8f6f71b0f7033309917cc97c0336f8fcff44c47724ca791df307b5f15f5c8e3",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_memory_s00",
+    "variant": "no_memory",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "84041036425ce01a01991124ce8661ae00e687b0bf8f50a976d477b633c232fd",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_memory_s01",
+    "variant": "no_memory",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "26d326cde0cb84bb2202ce3e200a2ab433bc5ffda5393e2eddb8dcd404db18b6",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_memory_s02",
+    "variant": "no_memory",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "f80a305be90d2a9076b2194fdb72dda486f14e2747ab0938d8529c0bb9be62b7",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_memory_s03",
+    "variant": "no_memory",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "e053ec5ce1b2ac83fe41a5aa5f778d57c420a3dac7186565dee2d84b4ed5bdb4",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_memory_s04",
+    "variant": "no_memory",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "816319f3789ab314a4fcf1784a0ac3d1316fb8859e9ca825fbcafc8aa1b61f98",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_memory_s05",
+    "variant": "no_memory",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "92501405aa5f911c0850867d8d9a4b7f502efbd150c06a3ffe6bca101022eb4b",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_memory_s06",
+    "variant": "no_memory",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "2c7a3bb9105398c492074a52bd3fa89b12ea30fba9ee74d2352e5fb9269cd026",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_no_memory_s07",
+    "variant": "no_memory",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "d02ce50b57b8ca87078817eb64fd54a7c14c7d64946bbad62945f4fa6a593580",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_randomized_s00",
+    "variant": "randomized",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "80cbbf29389f6cb336cabb9e047cee2b0a7efbf7da197f3e3fb7ab7281f5a7ae",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_randomized_s01",
+    "variant": "randomized",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "b44270a51506150432809b36ba3e0dd73e8991817b3065a3a87fe2e023d33145",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_randomized_s02",
+    "variant": "randomized",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "2c437a971166841a77e18132491ae216fc646e1c5e2446d3ea820f90bc6e0458",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_randomized_s03",
+    "variant": "randomized",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "757565e43b381261549d675c5d70c91e61fafefea70ea26a10b3c06263b6a4bd",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_randomized_s04",
+    "variant": "randomized",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "df3d654af43ab7ba839a661bb4fc56779701b7b530c2000f56b6be18a0bbc43b",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_randomized_s05",
+    "variant": "randomized",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "48ae3092ec10dcf933698fcd2f6bfa669ecf995172c3cd1d2a7e54c927b74781",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_randomized_s06",
+    "variant": "randomized",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "4d17e9374d8694d0502670df9e932bad9a6ef7ae9797b896a07c764a1c396798",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_randomized_s07",
+    "variant": "randomized",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "ed0736eb0cd658180f08895e08cc8f269c8fe5e82ba97856efa2079f4f80daef",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_rnn_s00",
+    "variant": "rnn",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "cbf3b138426fdeb88a3fd228770c630ca1aabdcce0f30cf08e00a1041c54e234",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_rnn_s01",
+    "variant": "rnn",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "31baabd58dbcbefc1cd83906f310b23e7940be5e0c5423031794009f548bf137",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_rnn_s02",
+    "variant": "rnn",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "8d88198bcb3494fb6a6106c56b1f85f97c0cfe0eccb38b36cc2cf9864c408d2b",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_rnn_s03",
+    "variant": "rnn",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "08356dfd6a7e8f22b4ddce93d28967b9c5f7ae372aefb3c4ea87828e69067386",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_rnn_s04",
+    "variant": "rnn",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "55b5e8170398c80cae868da86c8a3f697a02450eb25fe02247e398456bdb2a2a",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_rnn_s05",
+    "variant": "rnn",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "50ec95ca0d880621392d7d1673f2a090e62e059df88bf886c2f39e21d199bc69",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_rnn_s06",
+    "variant": "rnn",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "6ffffaa305c761fc991d6785c0dcbfe263edd76cd57531a1080563c5160f7f2d",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_rnn_s07",
+    "variant": "rnn",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "872743ad7bd46d39bdc07275bd2ee19f3b13de2a1ecfa13c1814e75987bbdd52",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_sequence_specific_s00",
+    "variant": "sequence_specific",
+    "seed": 0,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "72893230751e915c8de7ab1a7d417d805550e777cd0639b34da8fd572469e6f3",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_sequence_specific_s01",
+    "variant": "sequence_specific",
+    "seed": 1,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "a5824d64bba9cfe3d0122c8acb2791d2b17ca7bbf6aa6feceeda5eedcae0e646",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_sequence_specific_s02",
+    "variant": "sequence_specific",
+    "seed": 2,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "5d6602b2b3dabbc2e8611e792882cbd6d22fce6b5650a79e6bca02555fd32278",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_sequence_specific_s03",
+    "variant": "sequence_specific",
+    "seed": 3,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "eb062b35fd9798c93519bd5ec72a1066140d33ae6a7fe88fa96f60b1b6fb47d7",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_sequence_specific_s04",
+    "variant": "sequence_specific",
+    "seed": 4,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "8f74730009253f032bb457f2ffe52a7501f4b682b1ac16a12a19d786206fe46a",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_sequence_specific_s05",
+    "variant": "sequence_specific",
+    "seed": 5,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "fbe41c4a975b9a735baf62d8a813a6cb1d482dee47e91f65245fb629af427bb6",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_sequence_specific_s06",
+    "variant": "sequence_specific",
+    "seed": 6,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "d20c36758d164b1362778ee776e379439f9631a594304bc8c4dbf34ae0935577",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  },
+  {
+    "run_id": "B1_novel_sequence_specific_s07",
+    "variant": "sequence_specific",
+    "seed": 7,
+    "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "config_sha256": "2ac78426c45683d5b544fa0d54e925595595bb3685c9e9f106b8bcd5944c46b2",
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9"
+  }
+]

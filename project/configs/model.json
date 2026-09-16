@@ -1,0 +1,21 @@
+{
+  "dt_seconds": 0.002,
+  "duration_seconds": 8,
+  "descending_drive": 500,
+  "gain_distribution": "max(0.01, Normal(1,0.1)) / relative_volume",
+  "threshold_distribution": "max(0.01, Normal(7.5,0.6)) * relative_volume",
+  "cap_distribution_hz": "max(1, Normal(200,10))",
+  "tau_distribution_seconds": "max(0.005, Normal(0.02,0.002))",
+  "weight_scale": 0.03,
+  "signed_weights": "source export; acetylcholine positive, GABA/glutamate negative",
+  "synaptic_delay": "2 buffered update steps plus causal update ordering; no_delay uses current state",
+  "task_relay": "8 synthetic leaky rate units, 25 ms, one-hot input",
+  "readout": "sum of leg motor-neuron rates / 40 Hz; equal-weight untrained linear readout",
+  "feedback": "10 * clipped joint error/contact feedback into E1; engineered projection",
+  "body": "six independent 2R legs, link lengths 0.65, inertia 0.08, viscous damping 0.25, PD gains 32 and 1.4, torque limit 8",
+  "contact": "unilateral spring 180, damper 1.5; force threshold 0.04; model units",
+  "noise": "parameter draws per seed; sensory Normal(0,0.25) only in noisy condition",
+  "trainable_parameters": [],
+  "learning_claim": false,
+  "safety": "all nonfinite numerical states raise; no replacement with fabricated zeros"
+}

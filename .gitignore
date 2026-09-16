@@ -11,3 +11,12 @@ project/paper/manuscript.pdf
 project/paper/figures/*.png
 project/paper/figures/*.svg
 project/data/reproduction/
+
+project/.venv/
+project/connectome/weights.npy
+project/connectome/neurons.csv
+project/connectome/anatomy.json
+project/data/calibration/
+project/data/validation/
+project/data/core/
+project/videos/*_preview.png

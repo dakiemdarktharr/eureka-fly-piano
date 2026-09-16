@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "registered_runs": 768,
+  "checked_runs": 768,
+  "issues": [],
+  "checks": [
+    "complete registry coverage",
+    "all telemetry checksums",
+    "config hashes",
+    "finite neural/body arrays",
+    "fixed time grid",
+    "unilateral force",
+    "raw contact correspondence",
+    "independent contact metric recomputation"
+  ],
+  "limits": "Does not validate biological assumptions, learning, data rights or numerical convergence."
+}

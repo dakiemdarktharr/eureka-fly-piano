@@ -1,0 +1,37 @@
+{
+  "source": "paper/tables/per_run.csv and telemetry",
+  "experiments": [
+    "A1",
+    "B1"
+  ],
+  "variants": [
+    "direct",
+    "full",
+    "hand_cpg",
+    "no_body_mapping",
+    "no_cpg",
+    "no_delay",
+    "no_dn",
+    "no_feedback",
+    "no_inhibition",
+    "no_interleg",
+    "no_intraleg",
+    "no_memory",
+    "randomized",
+    "rnn",
+    "sequence_specific"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+  "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9",
+  "rendering": "fixed y limits; no per-frame normalization"
+}

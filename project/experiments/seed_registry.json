@@ -1,0 +1,13 @@
+{
+  "evaluation_parameter_seeds": [0, 1, 2, 3, 4, 5, 6, 7],
+  "calibration_seeds": [100, 101],
+  "four_key_determinism_seed": 42,
+  "unit_test_seed": 19,
+  "symbolic_sequence_rng": "9100 + parameter_seed modulo 3; repeated/alternating patterns override generated keys",
+  "feedback_noise_rng": "5000 + parameter_seed",
+  "bootstrap_rng": 9901,
+  "plot_jitter_rng": 11,
+  "biological_connectome_instances": 1,
+  "randomized_graphs": "seed-specific directed double-edge swaps; counterfactuals, not biological instances",
+  "note": "No train/test window splitting occurs because no model training occurs. No learned generalization is claimed."
+}

@@ -1,0 +1,683 @@
+{
+  "run_ids": [
+    "B1_novel_full_s00",
+    "B1_novel_no_cpg_s00",
+    "B1_novel_direct_s00"
+  ],
+  "fps": 25,
+  "duration": 24.0,
+  "audio": "synthetic sine tones from actual physical contacts; no copyrighted audio",
+  "source_metadata": [
+    {
+      "run_id": "B1_novel_full_s00",
+      "experiment_id": "B1",
+      "hypothesis": "P2.1/P2.5: an engineered reusable primitive library executes new combinations.",
+      "variant": "full",
+      "condition": "novel",
+      "seed": 0,
+      "drive": 500.0,
+      "dt": 0.002,
+      "duration": 8.0,
+      "nkeys": 8,
+      "input": "synthetic symbolic events; tonic only for A1",
+      "sequence_id": "heldout_novel_0",
+      "split": "test",
+      "expected_outcome": "directional prediction only; null and adverse results retained",
+      "primary_metrics": [
+        "motor_rhythm_power",
+        "key_accuracy",
+        "timing_mae_s"
+      ],
+      "outputs": [
+        "data/runs/B1_novel_full_s00/telemetry.npz",
+        "data/runs/B1_novel_full_s00/metrics.json"
+      ],
+      "interpretation_rule": "Support requires paired effect in predicted direction; engineered P2 effects cannot establish learned biological primitives.",
+      "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+      "config_sha256": "0c9225306637f7bcca8fe84cfd4184987386d04e737ca895be86183632cd14db",
+      "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+      "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9",
+      "telemetry_sha256": "7ed26d4918ad475a1fbd982a7a63a387540daeea3f137574ba48b28d22e3007b",
+      "body_version": "reduced-six-leg-2R-v1.0; original engineering surrogate; not NeuroMechFly",
+      "activity_scale_hz": [
+        0,
+        250
+      ],
+      "spikes": "not simulated; rate model",
+      "events": [
+        {
+          "event_id": 0,
+          "time": 1.0,
+          "key": 3,
+          "hold": 0.13
+        },
+        {
+          "event_id": 1,
+          "time": 1.55,
+          "key": 4,
+          "hold": 0.13
+        },
+        {
+          "event_id": 2,
+          "time": 2.1,
+          "key": 3,
+          "hold": 0.13
+        },
+        {
+          "event_id": 3,
+          "time": 2.6500000000000004,
+          "key": 4,
+          "hold": 0.13
+        },
+        {
+          "event_id": 4,
+          "time": 3.2,
+          "key": 1,
+          "hold": 0.13
+        },
+        {
+          "event_id": 5,
+          "time": 3.75,
+          "key": 5,
+          "hold": 0.13
+        },
+        {
+          "event_id": 6,
+          "time": 4.300000000000001,
+          "key": 2,
+          "hold": 0.13
+        },
+        {
+          "event_id": 7,
+          "time": 4.8500000000000005,
+          "key": 6,
+          "hold": 0.13
+        },
+        {
+          "event_id": 8,
+          "time": 5.4,
+          "key": 0,
+          "hold": 0.13
+        },
+        {
+          "event_id": 9,
+          "time": 5.95,
+          "key": 5,
+          "hold": 0.13
+        },
+        {
+          "event_id": 10,
+          "time": 6.5,
+          "key": 5,
+          "hold": 0.13
+        },
+        {
+          "event_id": 11,
+          "time": 7.050000000000001,
+          "key": 7,
+          "hold": 0.13
+        }
+      ],
+      "contacts": [
+        {
+          "time": 1.112,
+          "key": 3,
+          "limb": 5,
+          "force": 1.887474170721937,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 3,
+          "timing_error_s": 0.1120000000000001,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 1.6620000000000001,
+          "key": 4,
+          "limb": 5,
+          "force": 1.7413654663568758,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 4,
+          "timing_error_s": 0.1120000000000001,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 2.212,
+          "key": 3,
+          "limb": 5,
+          "force": 1.8190423255782464,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 3,
+          "timing_error_s": 0.1120000000000001,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 2.7640000000000002,
+          "key": 4,
+          "limb": 5,
+          "force": 1.7499403379325749,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 4,
+          "timing_error_s": 0.11399999999999988,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 3.86,
+          "key": 5,
+          "limb": 5,
+          "force": 1.6003540973227155,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 5,
+          "timing_error_s": 0.10999999999999988,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 4.96,
+          "key": 6,
+          "limb": 1,
+          "force": 1.7685102774728059,
+          "responsible_mn_id": "18440",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 6,
+          "timing_error_s": 0.10999999999999943,
+          "structural_upstream_path": [
+            "10339",
+            "18440"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 6.0600000000000005,
+          "key": 5,
+          "limb": 5,
+          "force": 1.6002408137833029,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 5,
+          "timing_error_s": 0.11000000000000032,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 6.612,
+          "key": 5,
+          "limb": 5,
+          "force": 1.7761974326367338,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 5,
+          "timing_error_s": 0.1120000000000001,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 7.17,
+          "key": 7,
+          "limb": 5,
+          "force": 1.754186674956428,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 7,
+          "timing_error_s": 0.11999999999999922,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        }
+      ]
+    },
+    {
+      "run_id": "B1_novel_no_cpg_s00",
+      "experiment_id": "B1",
+      "hypothesis": "P2.1/P2.5: an engineered reusable primitive library executes new combinations.",
+      "variant": "no_cpg",
+      "condition": "novel",
+      "seed": 0,
+      "drive": 500.0,
+      "dt": 0.002,
+      "duration": 8.0,
+      "nkeys": 8,
+      "input": "synthetic symbolic events; tonic only for A1",
+      "sequence_id": "heldout_novel_0",
+      "split": "test",
+      "expected_outcome": "directional prediction only; null and adverse results retained",
+      "primary_metrics": [
+        "motor_rhythm_power",
+        "key_accuracy",
+        "timing_mae_s"
+      ],
+      "outputs": [
+        "data/runs/B1_novel_no_cpg_s00/telemetry.npz",
+        "data/runs/B1_novel_no_cpg_s00/metrics.json"
+      ],
+      "interpretation_rule": "Support requires paired effect in predicted direction; engineered P2 effects cannot establish learned biological primitives.",
+      "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+      "config_sha256": "cac4634d3fd6434c822085d48d8cea0247f1c34538bf7c0c02bfec2041e9b46e",
+      "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+      "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9",
+      "telemetry_sha256": "f63080a0a6804df5a2a7ce71d5571b77c83c34b921ec0b3b01797377442a1830",
+      "body_version": "reduced-six-leg-2R-v1.0; original engineering surrogate; not NeuroMechFly",
+      "activity_scale_hz": [
+        0,
+        250
+      ],
+      "spikes": "not simulated; rate model",
+      "events": [
+        {
+          "event_id": 0,
+          "time": 1.0,
+          "key": 3,
+          "hold": 0.13
+        },
+        {
+          "event_id": 1,
+          "time": 1.55,
+          "key": 4,
+          "hold": 0.13
+        },
+        {
+          "event_id": 2,
+          "time": 2.1,
+          "key": 3,
+          "hold": 0.13
+        },
+        {
+          "event_id": 3,
+          "time": 2.6500000000000004,
+          "key": 4,
+          "hold": 0.13
+        },
+        {
+          "event_id": 4,
+          "time": 3.2,
+          "key": 1,
+          "hold": 0.13
+        },
+        {
+          "event_id": 5,
+          "time": 3.75,
+          "key": 5,
+          "hold": 0.13
+        },
+        {
+          "event_id": 6,
+          "time": 4.300000000000001,
+          "key": 2,
+          "hold": 0.13
+        },
+        {
+          "event_id": 7,
+          "time": 4.8500000000000005,
+          "key": 6,
+          "hold": 0.13
+        },
+        {
+          "event_id": 8,
+          "time": 5.4,
+          "key": 0,
+          "hold": 0.13
+        },
+        {
+          "event_id": 9,
+          "time": 5.95,
+          "key": 5,
+          "hold": 0.13
+        },
+        {
+          "event_id": 10,
+          "time": 6.5,
+          "key": 5,
+          "hold": 0.13
+        },
+        {
+          "event_id": 11,
+          "time": 7.050000000000001,
+          "key": 7,
+          "hold": 0.13
+        }
+      ],
+      "contacts": [
+        {
+          "time": 4.962,
+          "key": 6,
+          "limb": 1,
+          "force": 1.716316423704519,
+          "responsible_mn_id": "20386",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 6,
+          "timing_error_s": 0.11199999999999921,
+          "structural_upstream_path": [
+            "10339",
+            "20386"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        }
+      ]
+    },
+    {
+      "run_id": "B1_novel_direct_s00",
+      "experiment_id": "B1",
+      "hypothesis": "P2.1/P2.5: an engineered reusable primitive library executes new combinations.",
+      "variant": "direct",
+      "condition": "novel",
+      "seed": 0,
+      "drive": 500.0,
+      "dt": 0.002,
+      "duration": 8.0,
+      "nkeys": 8,
+      "input": "synthetic symbolic events; tonic only for A1",
+      "sequence_id": "heldout_novel_0",
+      "split": "test",
+      "expected_outcome": "directional prediction only; null and adverse results retained",
+      "primary_metrics": [
+        "motor_rhythm_power",
+        "key_accuracy",
+        "timing_mae_s"
+      ],
+      "outputs": [
+        "data/runs/B1_novel_direct_s00/telemetry.npz",
+        "data/runs/B1_novel_direct_s00/metrics.json"
+      ],
+      "interpretation_rule": "Support requires paired effect in predicted direction; engineered P2 effects cannot establish learned biological primitives.",
+      "git_commit": "e8f9715e3f210b7b0ee6ade7482250c789e3e372",
+      "config_sha256": "c52b8a6b9c2b908ab9196290e72e710eef796f0f1874ec798e34ab31535d63da",
+      "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+      "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9",
+      "telemetry_sha256": "d8bcf9b31f71781fa3e4c19876670bed771e6d32c96587d03434a977110a8f65",
+      "body_version": "reduced-six-leg-2R-v1.0; original engineering surrogate; not NeuroMechFly",
+      "activity_scale_hz": [
+        0,
+        250
+      ],
+      "spikes": "not simulated; rate model",
+      "events": [
+        {
+          "event_id": 0,
+          "time": 1.0,
+          "key": 3,
+          "hold": 0.13
+        },
+        {
+          "event_id": 1,
+          "time": 1.55,
+          "key": 4,
+          "hold": 0.13
+        },
+        {
+          "event_id": 2,
+          "time": 2.1,
+          "key": 3,
+          "hold": 0.13
+        },
+        {
+          "event_id": 3,
+          "time": 2.6500000000000004,
+          "key": 4,
+          "hold": 0.13
+        },
+        {
+          "event_id": 4,
+          "time": 3.2,
+          "key": 1,
+          "hold": 0.13
+        },
+        {
+          "event_id": 5,
+          "time": 3.75,
+          "key": 5,
+          "hold": 0.13
+        },
+        {
+          "event_id": 6,
+          "time": 4.300000000000001,
+          "key": 2,
+          "hold": 0.13
+        },
+        {
+          "event_id": 7,
+          "time": 4.8500000000000005,
+          "key": 6,
+          "hold": 0.13
+        },
+        {
+          "event_id": 8,
+          "time": 5.4,
+          "key": 0,
+          "hold": 0.13
+        },
+        {
+          "event_id": 9,
+          "time": 5.95,
+          "key": 5,
+          "hold": 0.13
+        },
+        {
+          "event_id": 10,
+          "time": 6.5,
+          "key": 5,
+          "hold": 0.13
+        },
+        {
+          "event_id": 11,
+          "time": 7.050000000000001,
+          "key": 7,
+          "hold": 0.13
+        }
+      ],
+      "contacts": [
+        {
+          "time": 1.086,
+          "key": 3,
+          "limb": 3,
+          "force": 2.873418513272927,
+          "responsible_mn_id": "19206",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 3,
+          "timing_error_s": 0.08600000000000008,
+          "structural_upstream_path": [
+            "10339",
+            "19206"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 1.6400000000000001,
+          "key": 4,
+          "limb": 4,
+          "force": 3.151897771424692,
+          "responsible_mn_id": "10347",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 4,
+          "timing_error_s": 0.09000000000000008,
+          "structural_upstream_path": [
+            "10093",
+            "10347"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 2.186,
+          "key": 3,
+          "limb": 3,
+          "force": 2.8233689712042294,
+          "responsible_mn_id": "19206",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 3,
+          "timing_error_s": 0.08599999999999985,
+          "structural_upstream_path": [
+            "10339",
+            "19206"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 2.742,
+          "key": 4,
+          "limb": 4,
+          "force": 3.1483991288393263,
+          "responsible_mn_id": "10347",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 4,
+          "timing_error_s": 0.09199999999999964,
+          "structural_upstream_path": [
+            "10093",
+            "10347"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 3.3000000000000003,
+          "key": 1,
+          "limb": 1,
+          "force": 3.869460222642735,
+          "responsible_mn_id": "18440",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 1,
+          "timing_error_s": 0.10000000000000009,
+          "structural_upstream_path": [
+            "10339",
+            "18440"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 3.8360000000000003,
+          "key": 5,
+          "limb": 5,
+          "force": 3.129109604873339,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 5,
+          "timing_error_s": 0.0860000000000003,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 4.388,
+          "key": 2,
+          "limb": 2,
+          "force": 3.0902806506150746,
+          "responsible_mn_id": "10710",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 2,
+          "timing_error_s": 0.08799999999999919,
+          "structural_upstream_path": [
+            "10093",
+            "10737",
+            "10710"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 4.7780000000000005,
+          "key": 4,
+          "limb": 0,
+          "force": 1.8286377534940912,
+          "responsible_mn_id": "12686",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 6,
+          "timing_error_s": -0.07200000000000006,
+          "structural_upstream_path": [
+            "10093",
+            "12686"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 4.96,
+          "key": 6,
+          "limb": 0,
+          "force": 2.7593193002387766,
+          "responsible_mn_id": "12686",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 6,
+          "timing_error_s": 0.10999999999999943,
+          "structural_upstream_path": [
+            "10093",
+            "12686"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 6.0360000000000005,
+          "key": 5,
+          "limb": 5,
+          "force": 3.1291096238914666,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 5,
+          "timing_error_s": 0.0860000000000003,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 6.588,
+          "key": 5,
+          "limb": 5,
+          "force": 2.8836517826421377,
+          "responsible_mn_id": "17970",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 5,
+          "timing_error_s": 0.08800000000000008,
+          "structural_upstream_path": [
+            "10339",
+            "17970"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        },
+        {
+          "time": 7.146,
+          "key": 7,
+          "limb": 1,
+          "force": 3.1103762246884616,
+          "responsible_mn_id": "18440",
+          "attribution": "highest active member of engineered population readout; not proven sole causal neuron",
+          "expected_key": 7,
+          "timing_error_s": 0.0959999999999992,
+          "structural_upstream_path": [
+            "10339",
+            "18440"
+          ],
+          "path_interpretation": "structural reachability only; not causal attribution"
+        }
+      ]
+    }
+  ],
+  "video_sha256": "15ddf09272d2a7a8ef72b531964d9bfc57016314bd093a2118b86bff50229e36"
+}

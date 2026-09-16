@@ -29,7 +29,7 @@ class MotorNetwork:
         if variant=='no_interleg':w[(legs[:,None]!=legs[None,:])&(legs[:,None]>=0)&(legs[None,:]>=0)]=0
         if variant=='no_intraleg':w[(legs[:,None]==legs[None,:])&(legs[:,None]>=0)&(legs[None,:]>=0)]=0
         self.w=csr_matrix(w.T*.03)
-        self.delay=0 if variant=='no_delay' else 2
+        self.delay=0 if variant=='no_delay' else max(1,round(.004/dt))
         self.history=[np.zeros(n) for _ in range(self.delay+1)];self.step_count=0
         if variant=='rnn':
             # Fixed random rate reservoir, state-size-matched, untrained control.
@@ -70,4 +70,5 @@ def rewire(w,rng,attempts_factor=30):
     assert np.array_equal((out!=0).sum(0),(w!=0).sum(0))
     assert np.array_equal((out!=0).sum(1),(w!=0).sum(1))
     return out,count
+
 

@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite the source papers in docs/sources/verified_sources.json; project author metadata must be supplied before publication."
+type: software
+title: "Eureka: an exploratory VNC motor-control benchmark"
+version: 0.1.0
+date-released: 2026-09-17
+authors:
+  - name: "Eureka project (authorship pending)"
+license: MIT

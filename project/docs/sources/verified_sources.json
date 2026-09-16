@@ -1,0 +1,90 @@
+{
+  "access_date": "2026-09-17",
+  "searches": [
+    "Drosophila connectome simulations putative walking central pattern generator",
+    "Drosophila connectome embodied motor primitives compositional generalization hierarchical descending control 2025 2026"
+  ],
+  "method": "Firecrawl paper index and publisher/PubMed full-page retrieval; web fallback for initially unavailable CLI",
+  "references": [
+    {
+      "key": "Dorkenwald2024",
+      "title": "Neuronal wiring diagram of an adult brain",
+      "year": 2024,
+      "status": "peer-reviewed Nature article",
+      "url": "https://www.nature.com/articles/s41586-024-07558-y",
+      "relevance": "Adult brain resource; not the graph used here."
+    },
+    {
+      "key": "Shiu2024",
+      "title": "A Drosophila computational brain model reveals sensorimotor processing",
+      "year": 2024,
+      "status": "peer-reviewed Nature article",
+      "url": "https://www.nature.com/articles/s41586-024-07763-9",
+      "relevance": "LIF connectome modeling precedent; does not validate piano behavior."
+    },
+    {
+      "key": "Azevedo2024",
+      "title": "Connectomic reconstruction of a female Drosophila ventral nerve cord",
+      "year": 2024,
+      "status": "peer-reviewed Nature article",
+      "url": "https://www.nature.com/articles/s41586-024-07389-x",
+      "relevance": "Female VNC dataset and motor atlas; distinct from the MANC data used."
+    },
+    {
+      "key": "Pugliese2026",
+      "title": "Connectome simulations identify a central pattern generator circuit for fly walking",
+      "year": 2026,
+      "status": "bioRxiv preprint, April 30 2026 revision; not journal-peer-reviewed in the consulted record",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42094485/",
+      "doi": "10.1101/2025.09.12.675944",
+      "relevance": "Source of core circuit identities, rate-model assumptions, and downloaded MANC export."
+    },
+    {
+      "key": "Cheong2026",
+      "title": "Organization of circuits linking descending input to motor output in the Drosophila Male Adult Nerve Cord connectome",
+      "year": 2026,
+      "status": "eLife Version of Record, July 20 2026",
+      "url": "https://elifesciences.org/articles/96084",
+      "relevance": "Descending-to-motor organization and MANC annotation; source page reports neuPrint v1.2.3 for that paper, not necessarily our export."
+    },
+    {
+      "key": "WangChen2024",
+      "title": "NeuroMechFly v2: simulating embodied sensorimotor control in adult Drosophila",
+      "year": 2024,
+      "status": "peer-reviewed Nature Methods article",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39533006/",
+      "doi": "10.1038/s41592-024-02497-y",
+      "relevance": "Biomechanical modeling benchmark; not implemented here."
+    },
+    {
+      "key": "FlyGM2026",
+      "title": "Whole-Brain Connectomic Graph Model Enables Whole-Body Locomotion Control in Fruit Fly",
+      "year": 2026,
+      "status": "arXiv preprint; v3 full-text passages consulted, publication status not independently established",
+      "url": "https://arxiv.org/abs/2602.17997",
+      "relevance": "Trained graph-policy prior art; imitation learning and PPO, locomotion tasks. Prevents a broad novelty claim."
+    },
+    {
+      "key": "Larval2026",
+      "title": "A canonical excitatory-inhibitory motif embedded in the connectome underlies rhythmic locomotion in Drosophila larvae",
+      "year": 2026,
+      "status": "preprint abstract indexed August 31 2026; full text not verified",
+      "url": "https://doi.org/10.64898/2026.08.31.748252",
+      "relevance": "Adjacent larval literature; not used for quantitative or cellular claims."
+    },
+    {
+      "key": "PLOSCode",
+      "title": "PLOS Computational Biology code availability policy",
+      "url": "https://journals.plos.org/ploscompbiol/s/code-availability",
+      "status": "journal policy",
+      "relevance": "Public code availability is not fulfilled by a local repository."
+    },
+    {
+      "key": "PLOSData",
+      "title": "PLOS Computational Biology data availability policy",
+      "url": "https://journals.plos.org/ploscompbiol/s/data-availability",
+      "status": "journal policy",
+      "relevance": "Local telemetry is not a public data deposit."
+    }
+  ]
+}

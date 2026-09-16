@@ -15,7 +15,7 @@ FILES = {
  'MANC.surf.rda': f'https://raw.githubusercontent.com/natverse/malevnc/{ANATOMY}/data/MANC.surf.rda',
 }
 def sha(path):
-    return hashlib.file_digest(open(path,'rb'),'sha256').hexdigest()
+    with open(path,'rb') as stream: return hashlib.file_digest(stream,'sha256').hexdigest()
 def dump(path, obj):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     Path(path).write_text(json.dumps(obj, indent=2, allow_nan=False), encoding='utf8')
@@ -92,5 +92,6 @@ def prepare():
     dump(ROOT/'connectome_manifest.json',out)
     print(json.dumps({k:out[k] for k in ['neuron_count','edge_count','counts_by_kind']}))
 if __name__=='__main__': prepare()
+
 
 

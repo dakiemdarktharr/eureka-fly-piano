@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "checks": [
+    "load",
+    "seek",
+    "inspect neuron",
+    "switch ablation",
+    "play/pause",
+    "responsive layout"
+  ],
+  "page_errors": []
+}
