@@ -6,7 +6,8 @@ args=[sys.executable,'-m','PyInstaller','--noconfirm','--onedir','--windowed','-
 for package in ['flygym','music21','matplotlib','IPython','pyarrow','trimesh','pytest','torch','warp','mujoco_warp']:args+=['--exclude-module',package]
 def add(src,dest):args.extend(['--add-data',f'{src}:{dest}'])
 add(ROOT/'ui','bundle/project/v4/ui')
-for name in ['engine.py','train.py','v4_paths.py']:add(ROOT/name,'bundle/project/v4')
+add(ROOT/'checkpoints','bundle/project/v4/checkpoints')
+for name in ['engine.py','train.py','train_songs.py','v4_paths.py']:add(ROOT/name,'bundle/project/v4')
 add(PROJECT/'v2/world.py','bundle/project/v2')
 add(PROJECT/'simulation/model.py','bundle/project/simulation')
 for p in ['output','research']:

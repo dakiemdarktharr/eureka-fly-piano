@@ -11,6 +11,7 @@ jobs:
       - run: pip install -r project/v4/requirements.txt
       - run: python project/v4/test_protocol.py -v
       - run: python project/v4/test_app.py -v
+      - run: python project/v4/test_song_practice.py -v
       - run: python -m compileall -q project/v4
       - run: docker compose -f compose.v4.yaml config --quiet
   container:

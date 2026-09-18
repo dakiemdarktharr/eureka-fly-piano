@@ -33,7 +33,7 @@ def state():
     return dict(csrf=TOKEN,readiness=readiness(),campaign=s,replay=manifest,benchmark=read_json(bench) if bench.exists() else None)
 def launch(minutes,workers):
     global CHILD
-    command=[sys.executable,'--worker','train','--minutes',str(minutes),'--workers',str(workers)]
+    command=[sys.executable,'--worker','songs','--minutes',str(minutes),'--workers',str(workers)]
     if not getattr(sys,'frozen',False):command.insert(1,str(ROOT/'app.py'))
     STATE.mkdir(parents=True,exist_ok=True)
     with (STATE/'worker.log').open('ab') as log:
@@ -97,13 +97,16 @@ class Handler(SimpleHTTPRequestHandler):
         except (ValueError,TypeError,OSError) as e:return self.json({'error':str(e)},400)
 
 def main():
-    multiprocessing.freeze_support();p=argparse.ArgumentParser();p.add_argument('--host',choices=['127.0.0.1','0.0.0.0'],default='127.0.0.1');p.add_argument('--port',type=int,default=8878);p.add_argument('--no-browser',action='store_true');p.add_argument('--worker',choices=['train','verify']);p.add_argument('--minutes',type=float,default=60);p.add_argument('--workers',type=int,default=4);a=p.parse_args()
+    multiprocessing.freeze_support();p=argparse.ArgumentParser();p.add_argument('--host',choices=['127.0.0.1','0.0.0.0'],default='127.0.0.1');p.add_argument('--port',type=int,default=8878);p.add_argument('--no-browser',action='store_true');p.add_argument('--worker',choices=['train','songs','verify']);p.add_argument('--minutes',type=float,default=60);p.add_argument('--workers',type=int,default=4);a=p.parse_args()
     if a.worker=='verify':
         from engine import Engine,INITIAL
         from v4_paths import atomic_json
         e=Engine();notes,d=e.synthetic(80002,count=1);r=e.rollout(INITIAL,notes,d)
         atomic_json(STATE/'bundle_verify.json',{'ok':r['solver_warnings']==0,'physics_steps':r['physics_steps'],'finite':True,'training':False,'parameters':len(INITIAL)})
         return
+    if a.worker=='songs':
+        from train_songs import run
+        run(a.minutes,a.workers);return
     if a.worker:
         from train import run,export
         folder=run(a.minutes,a.workers);export(folder.name);return

@@ -8,15 +8,19 @@ Trên máy đã đóng gói, chạy `dist/FlyPianoLabV4/FlyPianoLabV4.exe` hoặ
 
 Từ source: tạo môi trường Python 3.12, cài `requirements.txt`, cung cấp các private input kế thừa v2 rồi chạy `python project/v4/app.py`. API `/api/health` liệt kê input thiếu. MuJoCo được khóa ở 3.9.0; torch và MuJoCo Warp không phải dependency của learner. Chúng chỉ được cài trong môi trường khảo sát tăng tốc; GPU probe bị chặn do noslip.
 
+## Lượt luyện hai bài bổ sung
+
+App hiện mặc định luyện trực tiếp hai bài, tối đa 60 phút **mỗi bài**, bỏ điều kiện precision. Hai checkpoint chuyên biệt khởi đầu từ primary v4b. Chi tiết cách chia đoạn, chọn checkpoint và hạn chế: [SONG_PRACTICE_vi.md](SONG_PRACTICE_vi.md). Số liệu/paper v4 cũ được giữ nguyên.
+
 ## Cách đọc giao diện
 
-Thời gian thực là wall-clock của chiến dịch. Giây mô phỏng cộng dồn gồm chín ô thí nghiệm và cả đánh giá. Cột trải nghiệm học của từng ô chỉ tính bước đã dùng trong tối ưu. CEM chạy nhiều ứng viên và reset mỗi episode, nên không có "một con ruồi sống liên tục" tương ứng tổng này.
+Thời gian thực là wall-clock của chiến dịch. Giây mô phỏng cộng dồn gồm tất cả ứng viên và cả đánh giá; chiến dịch cũ có chín ô, lượt mới có hai bài. Cột trải nghiệm học của từng ô chỉ tính bước đã dùng trong tối ưu. CEM chạy nhiều ứng viên và reset mỗi episode, nên không có "một con ruồi sống liên tục" tương ứng tổng này.
 
-Biểu đồ là F1 validation, bảng cuối dùng test khi có. Nút tạo chiến dịch mới dùng tối đa 60 phút chung cho tất cả ô. Nút dừng kết thúc tối ưu sau lô hiện tại và chạy đánh giá checkpoint đã chọn; không tiếp tục học trên cùng test của run đã kết thúc. Kết quả v4a thăm dò và v4b chính của lần phát triển này được tính chung dưới trần một giờ, chi tiết trong paper.
+Với lượt luyện bài, biểu đồ là F1 trên các đoạn theo dõi đã có thể được luyện; bảng cuối dùng kết quả toàn bài khi có. Nút luyện hai bài dùng tối đa 60 phút mỗi bài. Thí nghiệm tổng hợp cũ vẫn tái lập bằng train.py với ngân sách chung 60 phút. Nút dừng kết thúc tối ưu sau lô hiện tại và chạy đánh giá checkpoint đã chọn; không tiếp tục học trên cùng test của run đã kết thúc. Kết quả v4a thăm dò và v4b chính của lần phát triển này được tính chung dưới trần một giờ, chi tiết trong paper.
 
 Nốt rơi có cửa sổ 150 ms; màu vàng là mục tiêu, màu xanh là tiếp xúc thật. Thanh nốt không tác động vật lý. Brain viewer chỉ chiếu rate DN lên hai DNg100 đồng dạng, không hiển thị toàn bộ các synapse VNC được học. Có thể nghe mục tiêu hoặc nốt tiếp xúc, hai nguồn được ghi rõ.
 
-Hai bản Merry-Go-Round of Life và In The Pool chỉ mở thành demo toàn bài sau khi primary adaptive seed 0 đạt skill P/R >=95% và sequence P>85%, R/F1>=85% trên test giữ riêng. Nếu không đạt, app giữ replay kỹ năng chẩn đoán; không tự phát hai bài bằng MIDI mục tiêu để giả làm hành vi đã học. Source hai bài vẫn giữ đầy đủ; OMR chưa note-by-note verified.
+Hai bản Merry-Go-Round of Life và In The Pool được mở khi có replay mô phỏng toàn bài, không phụ thuộc precision. Âm thanh tiếp xúc lấy từ sự kiện vật lý thật. Các ngưỡng 95%/85% chỉ còn là protocol lịch sử của thí nghiệm v4 cũ. Source hai bài vẫn giữ đầy đủ; OMR chưa được kiểm tra độc lập từng nốt.
 
 ## Mô hình học
 
@@ -28,6 +32,8 @@ Mô hình vật lý giữ dt 0,2 ms, control/rate 2 ms, noslip 5 và solver iter
 
 ```text
 python project/v4/test_protocol.py
+python project/v4/test_song_practice.py
+python project/v4/train_songs.py --minutes 60 --workers 4
 python project/v4/benchmark.py
 python project/v4/train.py --minutes 60 --workers 4
 python project/v4/train.py --export RUN_ID
