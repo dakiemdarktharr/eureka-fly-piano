@@ -1,7 +1,12 @@
 import unittest
-from train_songs import clip
+from train_songs import clip, validate_budget
 
 class SongPracticeTests(unittest.TestCase):
+    def test_two_hour_budget_and_invalid_limits(self):
+        validate_budget(120,4)
+        for minutes in [0,-1,121,float("nan"),float("inf")]:
+            with self.assertRaises(ValueError): validate_budget(minutes,4)
+
     def test_partition_keeps_every_onset_once_including_unassigned(self):
         notes=[dict(id=i,start=t,end=t+1,pitch=60,leg=-1 if i==2 else 0)
                for i,t in enumerate([0.,3.999,4.,8.])]

@@ -39,9 +39,12 @@ def job(args):
                 reward=float(np.mean([r['reward'] for r in results])),
                 solver_warnings=sum(r['solver_warnings'] for r in results))
 
-def run(minutes=60, workers=4):
-    if not np.isfinite(minutes) or not 0 < minutes <= 60: raise ValueError('0 < minutes per song <= 60')
+def validate_budget(minutes, workers):
+    if not np.isfinite(minutes) or not 0 < minutes <= 120: raise ValueError('0 < minutes per song <= 120')
     if workers not in range(1,7): raise ValueError('1..6 workers')
+
+def run(minutes=120, workers=4):
+    validate_budget(minutes, workers)
     source = read_json(ROOT/'checkpoints/v4b_primary.json')
     initial = np.asarray(source['parameters'], float)
     if initial.shape != LOW.shape or not np.isfinite(initial).all() or np.any(initial<LOW) or np.any(initial>HIGH): raise ValueError('Invalid warm start')
@@ -80,7 +83,7 @@ def run(minutes=60, workers=4):
                       aggregate_simulated_s=steps*.0002,aggregate_rtf=steps*.0002/max(.001,elapsed))
         atomic_json(folder/'status.json',status); atomic_json(STATE/'latest.json',dict(run_id=rid))
     def stopped(): return (folder/'stop.request').exists()
-    save('training','Luyện trực tiếp hai bài; một giờ mỗi bài; không có ngưỡng precision.')
+    save('training',f'Luyện trực tiếp hai bài; {minutes:g} phút mỗi bài; không có ngưỡng precision.')
     try:
         with concurrent.futures.ProcessPoolExecutor(workers,mp_context=multiprocessing.get_context('spawn'),initializer=init) as pool:
             for index,c in enumerate(cells):
@@ -154,5 +157,5 @@ def run(minutes=60, workers=4):
         save('failed',repr(ex));raise
 
 if __name__=='__main__':
-    multiprocessing.freeze_support();p=argparse.ArgumentParser();p.add_argument('--minutes',type=float,default=60);p.add_argument('--workers',type=int,default=4);a=p.parse_args()
+    multiprocessing.freeze_support();p=argparse.ArgumentParser();p.add_argument('--minutes',type=float,default=120);p.add_argument('--workers',type=int,default=4);a=p.parse_args()
     print(run(a.minutes,a.workers),flush=True)

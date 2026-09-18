@@ -1,6 +1,6 @@
 # Luyện trực tiếp hai bài piano sau v4
 
-Yêu cầu mới bỏ điều kiện precision trước khi luyện hoặc xem hai bài; không đặt precision thấp làm mục tiêu. Ngân sách mới là tối đa **60 phút mỗi bài**, hai lượt nối tiếp. 90% mỗi lượt dành cho tối ưu và theo dõi, 10% còn lại dành cho đánh giá toàn bài và ghi replay. Thời gian khởi tạo worker nằm trong ngân sách.
+Yêu cầu mới bỏ điều kiện precision trước khi luyện hoặc xem hai bài; không đặt precision thấp làm mục tiêu. Ngân sách mới là tối đa **120 phút mỗi bài**, hai lượt nối tiếp. 90% mỗi lượt dành cho tối ưu và theo dõi, 10% còn lại dành cho đánh giá toàn bài và ghi replay. Thời gian khởi tạo worker nằm trong ngân sách.
 
 Hai bộ tham số chuyên biệt cùng khởi đầu từ adaptive seed 0 của chiến dịch `20260918T060329`. Không chọn seed theo kết quả test. CEM tiếp tục tối ưu 49 tham số bằng phần thưởng v4, quần thể 8, elite 3, bốn worker CPU. Không đổi bước thời gian vật lý, ngưỡng tiếp xúc hoặc cách ghép nốt.
 
@@ -10,4 +10,4 @@ Theo dõi tám đoạn trải đều bài mỗi năm thế hệ, chọn checkpoi
 
 Đây là thực nghiệm bổ sung về điều khiển trên hai bài đã luyện, không chứng minh trí nhớ bài hát, đọc sheet, khái quát hóa hay khả năng của ruồi sinh học. Paper v4 và các số liệu thí nghiệm cũ được giữ nguyên. Kết quả mới nằm trong `runtime/runs/<run_id>` và bản tổng hợp `results/<run_id>.json`.
 
-Chạy trong app bằng nút **Luyện hai bài piano**, hoặc `python train_songs.py --minutes 60 --workers 4`. Số phút là ngân sách **mỗi bài**. Máy cần duy trì hoạt động trong suốt lượt chạy; việc đóng cửa sổ trình duyệt không dừng worker.
+Chạy trong app bằng nút **Luyện hai bài piano**, hoặc `python train_songs.py --minutes 120 --workers 4`. Số phút là ngân sách **mỗi bài**. Máy cần duy trì hoạt động trong suốt lượt chạy; việc đóng cửa sổ trình duyệt không dừng worker.

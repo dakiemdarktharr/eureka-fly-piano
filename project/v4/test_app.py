@@ -5,6 +5,7 @@ from urllib.request import Request,urlopen
 from urllib.error import HTTPError
 from http.server import ThreadingHTTPServer
 import app
+from unittest.mock import patch
 class AppTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -30,6 +31,16 @@ class AppTests(unittest.TestCase):
         code,_=self.call('/api/train',{'Origin':'https://external.example','X-FlyPiano-Token':app.TOKEN},{});self.assertEqual(code,403)
     def test_invalid_budget_never_launches_worker(self):
         code,_=self.call('/api/train',{'X-FlyPiano-Token':app.TOKEN},{'minutes':0});self.assertEqual(code,400);self.assertIsNone(app.CHILD)
+    def test_two_hour_budget_can_launch(self):
+        with patch.object(app,"readiness",return_value={"ready":True}), patch.object(app,"launch") as launch:
+            code,_=self.call("/api/train",{"X-FlyPiano-Token":app.TOKEN},{"minutes":120,"workers":4})
+            self.assertEqual(code,200);launch.assert_called_once_with(120.,4)
+
+    def test_over_two_hour_budget_rejected(self):
+        with patch.object(app,"readiness",return_value={"ready":True}), patch.object(app,"launch") as launch:
+            code,_=self.call("/api/train",{"X-FlyPiano-Token":app.TOKEN},{"minutes":121,"workers":4})
+            self.assertEqual(code,400);launch.assert_not_called()
+
     def test_file_allowlist(self):
         code,_=self.call('/v4/train.py');self.assertEqual(code,404)
 if __name__=='__main__':unittest.main()

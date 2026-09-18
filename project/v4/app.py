@@ -87,8 +87,8 @@ class Handler(SimpleHTTPRequestHandler):
                 if self.path=='/api/train':
                     if not readiness()['ready']:return self.json({'error':'Missing private inputs: '+', '.join(readiness()['missing'])},400)
                     if alive(s) or (CHILD and CHILD.poll() is None):return self.json({'error':'A campaign is already running'},409)
-                    minutes=float(body.get('minutes',60));workers=int(body.get('workers',4))
-                    if not 0<minutes<=60 or workers not in range(1,7):raise ValueError('Budget 0..60 minutes, 1..6 workers')
+                    minutes=float(body.get('minutes',120));workers=int(body.get('workers',4))
+                    if not 0<minutes<=120 or workers not in range(1,7):raise ValueError('Budget >0 and <=120 minutes per song, 1..6 workers')
                     launch(minutes,workers);return self.json({'started':True})
                 if self.path=='/api/stop':
                     if not alive(s):return self.json({'error':'No running campaign'},409)
