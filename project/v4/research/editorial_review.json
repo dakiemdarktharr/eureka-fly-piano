@@ -1,0 +1,30 @@
+{
+  "operation": "Vietnamese editorial revision and replacement of architecture diagram",
+  "original_results_changed": false,
+  "training_code_changed": false,
+  "resume_implemented": false,
+  "visual_review": "All 10 manuscript and 4 companion pages inspected after final render; arrows and labels checked",
+  "reviewer_issues_preserved": 37,
+  "diagram": {
+    "pixels": [
+      4800,
+      2700
+    ],
+    "dpi": [
+      299.9994,
+      299.9994
+    ]
+  },
+  "artifacts": {
+    "manuscript_v4_vi.pdf": {
+      "pages": 10,
+      "sha256": "3789b56b0297da28358cbf8495d1ce4c77e15ca92c82c00be0402418bad6a8b4",
+      "embedded_images": 5
+    },
+    "reviewer_v4_vi.pdf": {
+      "pages": 4,
+      "sha256": "b05d359fcbf611041255ff29b2c1a05a19a9bece7b3929cbbbd90840314debcf",
+      "embedded_images": 0
+    }
+  }
+}

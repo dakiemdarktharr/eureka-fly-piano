@@ -6,7 +6,6 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyBboxPatch,FancyArrowPatch
 ROOT=Path(__file__).resolve().parent;PAPER=ROOT/'paper';FIG=PAPER/'figures';OUT=ROOT/'output/pdf'
 FIG.mkdir(parents=True,exist_ok=True);OUT.mkdir(parents=True,exist_ok=True)
 read=lambda p:json.loads(p.read_text(encoding='utf8'))
@@ -17,13 +16,8 @@ cells=status['cells'];done=status['state']=='completed'
 if done and not (FIG/'demo.jpg').exists():raise RuntimeError('Capture the final diagnostic viewer before final PDF export')
 colors={'adaptive':'#218b7d','frozen':'#b77c28','rewired':'#8d72b8'}
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':9,'axes.spines.top':False,'axes.spines.right':False})
-fig,ax=plt.subplots(figsize=(9,3.6),layout='constrained');ax.axis('off')
-boxes=[(.02,.65,.22,.22,'Chuỗi nốt mục tiêu\nCửa sổ cục bộ 150 ms'),(.33,.65,.25,.22,'Lập lịch / IK kỹ thuật\n+ hiệu chỉnh ngang được học'),(.02,.12,.22,.25,'Mạng rate 412 neuron\n24 hệ số synapse\n6 hệ số kích thích MN'),(.66,.65,.3,.22,'42 mục tiêu servo\nCơ thể MuJoCo + 88 phím'),(.66,.12,.3,.25,'Sự kiện tiếp xúc vật lý\nGhép nốt một-một'),(.33,.12,.25,.25,'Thưởng episode -> CEM\n10 ứng viên, 3 elite')]
-for x,y,w,h,t in boxes:ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=.01',facecolor='#e7f1ef',edgecolor='#50938a'));ax.text(x+w/2,y+h/2,t,ha='center',va='center',fontsize=9)
-for start,end in [((.25,.76),(.32,.76)),((.59,.76),(.65,.76)),((.81,.64),(.81,.38)),((.65,.245),(.59,.245)),((.32,.245),(.25,.245)),((.24,.37),(.67,.65)),((.455,.38),(.455,.64))]:ax.add_patch(FancyArrowPatch(start,end,arrowstyle='->',mutation_scale=13,color='#56716d',lw=1.4))
-ax.add_patch(FancyArrowPatch((.8,.12),(.13,.12),connectionstyle='arc3,rad=-.25',arrowstyle='->',mutation_scale=11,color='#56716d',lw=1,linestyle='--'))
-ax.text(.47,.025,'Phản hồi lực mỗi 2 ms',ha='center',fontsize=8,color='#56716d')
-fig.savefig(FIG/'architecture.png',dpi=190);plt.close(fig)
+from draw_architecture import draw
+draw(FIG/'architecture.png')
 fig,ax=plt.subplots(figsize=(8,3.2),layout='constrained');names=[f"CPU {r['workers']} worker" for r in bench['parallel']]+['Mục tiêu 1 năm / giờ'];vals=[r['aggregate_rtf'] for r in bench['parallel']]+[8766]
 ax.barh(names,vals,color=['#368f83']*4+['#bc8950']);ax.set_xscale('log');ax.set(xlabel='Giây mô phỏng cộng dồn / giây thực',xlim=(1,30000));ax.grid(axis='x',alpha=.15)
 for i,v in enumerate(vals):ax.text(v*1.12,i,f'{v:,.2f}x',va='center',fontsize=8)
@@ -33,27 +27,29 @@ for field,filename,xlabel,scale in [('wall_s','learning.png','Thời gian chiế
  for seed,ax in enumerate(axes):
   for c in [c for c in cells if c['seed']==seed]:
    ax.plot([h[field]/scale for h in c['history']],[h['metric']['f1'] for h in c['history']],color=colors[c['variant']],label=c['variant'],lw=1.25)
-  ax.set(title=f'Seed {seed}',xlabel=xlabel,ylabel='F1 validation',ylim=(0,1));ax.grid(alpha=.15)
+  ax.set(title=f'Seed {seed}',xlabel=xlabel,ylabel='F1 trên tập lựa chọn',ylim=(0,1));ax.grid(alpha=.15)
  axes[0].legend(frameon=False,fontsize=8);fig.savefig(FIG/filename,dpi=190);plt.close(fig)
 train_steps=sum(c['training_steps'] for c in cells);eval_steps=sum(c['evaluation_steps'] for c in cells)
 assert train_steps+eval_steps==status['physics_steps']
 total_wall=status['elapsed_s']+pilot['status']['elapsed_s'];total_sim=status['aggregate_simulated_s']+pilot['status']['aggregate_simulated_s']
 primary=next(c for c in cells if c['seed']==0 and c['variant']=='adaptive')
-table=['| Mạng / seed | Train phút mô phỏng | Precision | Recall | F1 | TP / mục tiêu | Warning |','|---|---|---|---|---|---|---|']
+table=['| Mạng / seed | Phút mô phỏng tối ưu | Precision | Recall | F1 | TP / mục tiêu | Cảnh báo |','|---|---|---|---|---|---|---|']
 for c in cells:
  m=c.get('test') or {};table.append(f"| {c['variant']} / {c['seed']} | {c['training_steps']*.0002/60:.2f} | {m.get('precision',0):.3f} | {m.get('recall',0):.3f} | {m.get('f1',0):.3f} | {m.get('matched','-')} / {m.get('target_notes','-')} | {c.get('solver_warnings','NA')} |")
 bt=['| Giai đoạn | Giây thực | Giây mô phỏng mới |','|---|---|---|',f"| V4a thăm dò, 37 tham số | {pilot['status']['elapsed_s']:.2f} | {pilot['status']['aggregate_simulated_s']:.2f} |",f"| V4b, 49 tham số | {status['elapsed_s']:.2f} | {status['aggregate_simulated_s']:.2f} |",f"| Tổng hai lượt | {total_wall:.2f} | {total_sim:.2f} |"]
 manifest=read(folder/'replay_manifest.json') if (folder/'replay_manifest.json').exists() else None
 passed=sum(bool(c.get('skill_pass') and c.get('sequence_pass')) for c in cells)
-summary='; '.join(f"{v}: F1 test trung bình {np.mean([c['test']['f1'] for c in cells if c['variant']==v and c.get('test')]):.3f}" for v in colors) if done else 'Kết quả đang chạy; chưa có test cuối.'
-abstract=f"Lượt v4b dùng {status['elapsed_s']:.2f} giây thực, tạo {status['physics_steps']:,} bước vật lý mới, trong đó {train_steps:,} bước dùng để tối ưu. {summary}." if done else 'BẢN XEM BỐ CỤC: chiến dịch chưa hoàn tất; số tạm thời không dùng để kết luận.'
-budget=f"Lượt v4a {pilot['config']['run_id']} dừng sau {pilot['status']['elapsed_s']:.2f} s. Lượt v4b {a.run} có trần 3.150 s, bắt đầu với protocol đã sửa và chia 88% ngân sách cho tối ưu. Tổng thực tế hai lượt là {total_wall:.2f} s, {'nằm trong' if total_wall<=3600 else 'vượt'} trần 3.600 s. V4b có {train_steps:,} bước tối ưu và {eval_steps:,} bước đánh giá; RTF toàn chiến dịch v4b là {status['aggregate_rtf']:.3f}. Tổng giây mô phỏng không phải thời gian học của một bộ não duy nhất. Benchmark, phát triển phần mềm và xuất video/replay không nằm trong ngân sách learner này."
-learning=f"{summary}. Số thế hệ hoàn tất theo ô nằm trong [{min(c['generation'] for c in cells)}, {max(c['generation'] for c in cells)}]. Đường validation có dao động; checkpoint cuối được chọn bằng validation, không phải điểm cuối đường học. Không sử dụng khác biệt trung bình của ba seed làm chứng cứ ưu thế có ý nghĩa thống kê."
-demo=(f"Có {passed}/9 ô vượt đồng thời cổng kỹ năng và chuỗi. Chính sách primary cố định trước là adaptive seed 0. "+('Hai bản nhạc đầy đủ đã được xuất theo cổng chất lượng.' if manifest and manifest['qualified_song_demonstration'] else 'Primary chưa vượt cả hai cổng nên hai bài nhạc đầy đủ bị khóa ở v4. App cung cấp replay kỹ năng để chẩn đoán, không trình bày nó như một buổi biểu diễn thành công. Dữ liệu hai bản nhạc vẫn được giữ nguyên để đánh giá sau.'))
+summary=('F1 trung bình trên tập kiểm tra là '+', '.join(f"{np.mean([c['test']['f1'] for c in cells if c['variant']==v and c.get('test')]):.3f} ở nhánh {v}" for v in colors)) if done else 'Chưa có kết quả kiểm tra cuối'
+abstract=f"Thí nghiệm v4b dùng {status['elapsed_s']:.2f} giây thực, thực hiện {status['physics_steps']:,} bước vật lý, trong đó {train_steps:,} bước dùng để tối ưu. {summary}." if done else 'BẢN XEM BỐ CỤC: chiến dịch chưa hoàn tất; số tạm thời không dùng để kết luận.'
+budget=f"Lượt v4a {pilot['config']['run_id']} dừng sau {pilot['status']['elapsed_s']:.2f} s. Lượt v4b {a.run} có trần 3.150 s; quy trình được sửa sau lượt thăm dò và dành 88% ngân sách cho tối ưu. Tổng thực tế hai lượt là {total_wall:.2f} s, {'nằm trong' if total_wall<=3600 else 'vượt'} trần 3.600 s. V4b có {train_steps:,} bước tối ưu và {eval_steps:,} bước đánh giá; RTF toàn chiến dịch v4b là {status['aggregate_rtf']:.3f}. Tổng giây mô phỏng không phải thời gian của một quỹ đạo học liên tục. Benchmark, phát triển phần mềm và xuất video/replay không nằm trong ngân sách learner này."
+learning=f"{summary}. Số thế hệ hoàn tất theo ô nằm trong [{min(c['generation'] for c in cells)}, {max(c['generation'] for c in cells)}]. Điểm trên tập lựa chọn dao động qua các thế hệ. Checkpoint cuối được chọn theo F1 cao nhất trên tập này, nên có thể khác bộ tham số của thế hệ cuối. Với ba seed, các chênh lệch trung bình được xem là mô tả; chưa đủ để xác lập ưu thế giữa các cấu hình."
+demo=(f"Trong thí nghiệm tổng hợp v4b, {passed}/9 ô đạt đồng thời các ngưỡng kỹ năng và chuỗi. Cấu hình dùng để minh họa được xác định trước là adaptive seed 0. "+('Replay hai bản nhạc đã được xuất theo quy trình đó.' if manifest and manifest['qualified_song_demonstration'] else 'Cấu hình này chưa đạt các ngưỡng nên kết quả v4b chỉ có replay chuỗi kỹ năng.'))
 if manifest:
  dm=manifest['items'][0]['metric'];demo+=f" Replay chẩn đoán cố định có {dm['target_notes']} nốt, P={dm['precision']:.3f}, R={dm['recall']:.3f}, F1={dm['f1']:.3f}; nó chỉ là một trong các đoạn test, không thay thế kết quả 24 nốt ở bảng trên."
-conclusion=f"V4 triển khai tăng tốc CPU có kiểm tra tương đương và một pipeline học/đánh giá có ngân sách. {summary}. Mục tiêu một năm mô phỏng trong một giờ chưa đạt; probe GPU không tương thích noslip. Kết quả là đánh giá của một bộ điều khiển lai có hỗ trợ hình học trong phạm vi synthetic hẹp. Cần sửa/kiểm chứng cơ học tiếp xúc và bổ sung baseline, test chuyển giao trước khi đưa ra kết luận rộng hơn."
-editorial=f"Phiên bản này là nghiên cứu thăm dò: {summary}. Tổng learner wall time của hai lượt: {total_wall/60:.2f} phút. Số ô đạt cả skill và sequence gate: {passed}/9. Chưa đủ bằng chứng để gọi manuscript là sẵn sàng nộp Q2; các điểm còn mở bên dưới phải được giữ trong paper."
+demo+=" Sau khi khóa kết quả v4b, một lượt bổ sung luyện trực tiếp hai bài được khởi chạy với ngân sách tối đa 60 phút mỗi bài. Hai checkpoint riêng cùng khởi đầu từ adaptive seed 0; CEM dùng 8 ứng viên và 3 elite, theo các đoạn có onset trong cửa sổ 4 s. Checkpoint được chọn trên các đoạn theo dõi có thể đã được luyện; replay toàn bài được xuất không phụ thuộc ngưỡng precision. Lượt bổ sung chưa được đưa vào các bảng kết quả của bản thảo này và không phải kiểm tra khái quát hóa sang bài mới."
+conclusion=f"Quy trình thực thi trên CPU tăng thông lượng mà giữ nguyên cấu hình vật lý trong phép kiểm tra tương đương đã thực hiện. Trong thí nghiệm tổng hợp, {summary}. Chênh lệch giữa các cấu hình còn nhỏ so với phạm vi biến thiên được quan sát qua các seed; dữ liệu chưa xác lập lợi ích riêng của việc tối ưu hệ số synapse. Các kết quả định hướng bước tiếp theo vào hiệu chuẩn tiếp xúc và đối chứng đóng góp của từng nhóm tham số. Kết luận hiện tại áp dụng cho bộ điều khiển lai và tác vụ mô phỏng đã xét."
+
+editorial=f"Kết quả hiện tại có tính thăm dò. {summary}. Tổng thời gian thực của hai lượt là {total_wall/60:.2f} phút; {passed}/9 ô đạt cả hai ngưỡng kỹ năng. Các vấn đề cần bổ sung bằng chứng được liệt kê bên dưới."
 checkpoint_rows=['| Mốc thực (phút) | Seed | P trung bình | R trung bình | F1 trung bình | F1 min-max | Trễ tối đa (s) |','|---|---|---|---|---|---|---|']
 for minute in [5,15,30,45]:
  if status['elapsed_s']<minute*60:continue
@@ -67,7 +63,7 @@ for minute in [5,15,30,45]:
 values={'DATE':str(date.today()),'ABSTRACT_RESULTS':abstract,'BUDGET_RESULTS':budget,'BUDGET_TABLE':'\n'.join(bt),'LEARNING_RESULTS':learning,'TEST_TABLE':'\n'.join(table),'DEMO_RESULTS':demo,'CONCLUSION':conclusion,'EDITORIAL':editorial,'CHECKPOINT_TABLE':'\n'.join(checkpoint_rows)}
 sys.path.insert(0,str(ROOT));import pdf_renderer
 pdf_renderer.PAPER=PAPER
-for stem,title in [('manuscript','Fly Piano v4 - ban thao nghien cuu'),('reviewer','Fly Piano v4 - phan bien va huong xu ly')]:
+for stem,title in [('manuscript','Điều khiển tiếp xúc phím - v4'),('reviewer','Hồ sơ đánh giá bản thảo - v4')]:
  text=(PAPER/f'{stem}_vi.md').read_text(encoding='utf8')
  for key,value in values.items():text=text.replace('{{'+key+'}}',value)
  if '{{' in text:raise RuntimeError('Unresolved placeholder')

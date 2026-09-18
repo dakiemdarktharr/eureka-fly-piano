@@ -1,50 +1,50 @@
-# Học điều khiển tiếp xúc phím trong một mô hình ruồi có ràng buộc connectome dưới ngân sách tính toán hữu hạn
+# Học điều khiển tiếp xúc phím bằng mô hình vận động ruồi có cấu trúc connectome
 
-Bản thảo nghiên cứu v4, tiếng Việt. Thí nghiệm thăm dò có phần mềm kèm theo; chưa phải bản khẳng định khả năng học của ruồi sinh học hoặc bản sẵn sàng nộp journal. Ngày khóa kết quả: {{DATE}}.
+Bản thảo v4. Kết quả thí nghiệm tổng hợp được khóa ngày {{DATE}}.
 
 ## Tóm tắt
 
-Mô phỏng một hệ thần kinh lâu hơn không tự động tạo ra một bộ điều khiển tốt hơn. Trong tác vụ tiếp xúc phím đàn, sai lệch giữa vị trí đích hình học, mặt va chạm của chân và sự kiện phát nốt có thể giới hạn hiệu năng trước cả giới hạn học. Nghiên cứu này xây dựng một quy trình đánh giá bộ điều khiển lai gồm một mạng vận động 412 neuron có cấu trúc từ connectome, bộ giải hình học và cơ thể NeuroMechFly trên bàn phím thu nhỏ. Mục tiêu là đo hiệu năng học dưới trần một giờ tính toán, đồng thời kiểm tra cách tăng thông lượng mà giữ nguyên bước và cơ học mô phỏng.
+Điều khiển một cơ thể ruồi mô phỏng chạm đúng phím đòi hỏi phối hợp hoạt động mạng vận động với hình học bàn chân và cơ học tiếp xúc. Nghiên cứu này đánh giá một bộ điều khiển lai gồm mạng 412 neuron có cấu trúc từ connectome, bộ giải động học ngược và cơ thể NeuroMechFly trên bàn phím thu nhỏ. Hai câu hỏi được xét là mức hiệu năng đạt được trong ngân sách một giờ tính toán và mức tăng thông lượng khi giữ nguyên bước thời gian, bộ giải và cách lấy mẫu tiếp xúc.
 
-Chúng tôi dùng gom bước MuJoCo với điều khiển giữ cố định, bốn tiến trình CPU tồn tại lâu, chương trình học từ các nốt tổng hợp và phần thưởng ghép sự kiện một-một. Trong phiên bản cuối, CEM tối ưu 49 tham số, gồm 24 hệ số synapse hiệu dụng, 6 hệ số kích thích quần thể motor neuron và 19 tham số readout. Hai đối chứng là giữ synapse cố định và hoán đổi cạnh có bảo toàn bậc, mỗi cấu hình có ba seed. {{ABSTRACT_RESULTS}}
+Thuật toán cross-entropy method (CEM) tối ưu 49 tham số: 24 hệ số synapse theo nhóm, 6 hệ số điều chỉnh ngưỡng neuron vận động và 19 tham số điều khiển đầu ra. Hai cấu hình đối chứng giữ synapse cố định hoặc hoán đổi cạnh có bảo toàn bậc; mỗi cấu hình được chạy với ba seed. Điểm số dựa trên ghép một-một giữa nốt mục tiêu và sự kiện tiếp xúc vật lý. {{ABSTRACT_RESULTS}}
 
-Benchmark ngắn đạt RTF cộng dồn 13,807 với bốn worker, trong khi mục tiêu một năm/giờ đòi hỏi 8.766. Probe GPU bị chặn bởi tính năng noslip chưa được hỗ trợ; không thay đổi bộ giải để làm đẹp con số. Kết quả chỉ áp dụng cho họ bộ điều khiển và mô hình tiếp xúc đang xét. Không suy ra giới hạn tối đa của ruồi, khả năng đọc sheet, trí nhớ âm nhạc hay lợi ích nhân quả của connectome so với mọi kiến trúc khác.
+Trong phép đo thông lượng ngắn, bốn tiến trình CPU đạt 13,807 giây mô phỏng cộng dồn trên một giây thực. Giá trị này thấp hơn nhiều so với mức 8.766 cần để tạo lượng trải nghiệm tương đương một năm trong một giờ. Thử nghiệm GPU không chạy được với thiết lập noslip của mô hình. Các kết quả cho thấy giới hạn hiện tại của bộ điều khiển và môi trường tiếp xúc đang xét; chúng chưa xác lập lợi ích riêng của cấu trúc connectome hoặc giới hạn học của ruồi sinh học.
 
-Từ khóa: embodied control; Drosophila; connectome; tiếp xúc vật lý; derivative-free optimization; compute budget; reproducibility.
+Từ khóa: điều khiển vận động; Drosophila; connectome; tiếp xúc vật lý; tối ưu không đạo hàm; ngân sách tính toán.
 
-## 1. Câu hỏi và đóng góp
+## 1. Mục tiêu nghiên cứu
 
-Câu hỏi chính: trong một trần tính toán đã xác định, một bộ điều khiển lai có tham số thần kinh thích nghi có cải thiện khả năng tạo đúng sự kiện tiếp xúc phím trên các chuỗi tổng hợp chưa dùng để tối ưu hay không? Câu hỏi hệ thống đi kèm: có thể tăng bao nhiêu thông lượng vật lý khi giữ nguyên solver, timestep và pha lấy mẫu tiếp xúc?
+Nghiên cứu xét khả năng cải thiện độ chính xác tiếp xúc phím bằng cách tối ưu các tham số thần kinh và cơ học của một bộ điều khiển lai. Hiệu năng được đo trên chuỗi nốt tổng hợp, với dữ liệu huấn luyện, lựa chọn checkpoint và kiểm tra cuối được xác định bằng các seed riêng. Đồng thời, chúng tôi đo thông lượng vật lý trước và sau khi gom bước thực thi, với cùng bộ giải và pha lấy mẫu.
 
-Ba phép đo được phân biệt: khả năng cải thiện trong quá trình tối ưu; khả năng chuyển sang các mẫu cùng phân phối nhưng khác seed; và năng lực trình diễn hai bản nhạc dài. Hai bản nhạc là bước kiểm tra ứng dụng có điều kiện, không thay thế bộ benchmark chính. Một thất bại trong giới hạn thời gian không chứng minh nhiệm vụ bất khả thi khi thay mô hình, cơ chế học hay ngân sách.
+Cách thiết kế này cho phép phân biệt ba vấn đề: cải thiện trong quá trình tối ưu, chuyển sang chuỗi mới cùng phân phối và thực hiện một tác phẩm dài. Thí nghiệm chính tập trung vào hai vấn đề đầu. Hai bản nhạc piano được chuẩn bị cho bước đánh giá ứng dụng, có yêu cầu cao hơn về tốc độ, đa âm và tầm với.
 
-Đóng góp dự kiến là quy trình tách mục tiêu âm nhạc khỏi hành động vật lý, kế toán trải nghiệm mới, benchmark tăng tốc có kiểm tra tương đương, đối chứng cấu trúc mạng, và một app giúp kiểm tra replay cùng dữ liệu nguồn. Chưa tuyên bố một thuật toán tối ưu mới hay mô hình toàn não mới.
+Đóng góp của nghiên cứu là một quy trình đo tiếp xúc có đối chứng cấu trúc mạng, nhật ký riêng cho bước tối ưu và đánh giá, cùng phần mềm kiểm tra lại hành vi từ sự kiện vật lý. Phạm vi này bổ sung một tác vụ vận động chính xác cho mô hình ruồi có cấu trúc connectome, thay vì đề xuất một mô hình toàn não hoặc một thuật toán học mới.
 
 ## 2. Nghiên cứu liên quan
 
-NeuroMechFly v2 cung cấp một nền tảng mô phỏng cảm giác-vận động ở ruồi [1]. Mô hình whole-body fly khác đã được dùng để học các hành vi vận động phức tạp [2]. FlyGM đã khảo sát một bộ điều khiển đồ thị connectome cho cơ thể ruồi và so sánh với đồ thị hoán đổi và MLP [3]. Vì vậy, novelty của công trình này không nằm ở ý tưởng đầu tiên kết hợp connectome, học và cơ thể mô phỏng.
+NeuroMechFly v2 cung cấp một nền tảng mô phỏng cảm giác-vận động ở ruồi [1]. Một mô hình toàn thân ruồi khác đã được dùng để học các hành vi vận động phức tạp [2]. FlyGM đã khảo sát một bộ điều khiển đồ thị connectome cho cơ thể ruồi và so sánh với đồ thị hoán đổi và MLP [3]. Các nghiên cứu này đặt nền tảng cho việc kết hợp connectome với cơ thể mô phỏng; tác vụ tiếp xúc phím ở đây khảo sát một yêu cầu vận động cụ thể trên nền tảng đó.
 
-RoboPianist dùng mục tiêu có lookahead và phần thưởng nhấn phím, vị trí ngón cùng chi phí năng lượng; thí nghiệm báo cáo DroQ với 5 triệu mẫu cho mỗi bài và ba seed [4]. Tác vụ này khác về hình thái, số bậc tự do và mức hỗ trợ hình học, nên không dùng số đo của RoboPianist làm baseline số trực tiếp. Các nguyên tắc thiết kế thí nghiệm RL yêu cầu xem xét biến thiên theo seed, cách chọn cấu hình và chi phí đánh giá [5].
+RoboPianist dùng mục tiêu có lookahead và phần thưởng nhấn phím, vị trí ngón cùng chi phí năng lượng; thí nghiệm báo cáo DroQ với 5 triệu mẫu cho mỗi bài và ba seed [4]. Tác vụ này khác về hình thái, số bậc tự do và mức hỗ trợ hình học, nên không dùng số đo của RoboPianist làm đối chứng định lượng trực tiếp. Các nguyên tắc thiết kế thí nghiệm RL yêu cầu xem xét biến thiên theo seed, cách chọn cấu hình và chi phí đánh giá [5].
 
-MuJoCo Python hỗ trợ nhiều bước giữ control trong một lần gọi và rollout CPU đa luồng [6]. MuJoCo Warp tập trung vào thông lượng nhiều môi trường trên GPU, nhưng tính tương đương chức năng cần được kiểm tra trên phiên bản cụ thể [7]. Kết quả tốc độ từ một mô hình nhỏ không được áp sang toàn bộ mô hình tiếp xúc ruồi-bàn phím.
+MuJoCo Python hỗ trợ nhiều bước giữ nguyên lệnh điều khiển trong một lần gọi và thực thi mô phỏng CPU đa luồng [6]. MuJoCo Warp tập trung vào thông lượng nhiều môi trường trên GPU, nhưng tính tương đương chức năng cần được kiểm tra trên phiên bản cụ thể [7]. Kết quả tốc độ từ một mô hình nhỏ không được áp sang toàn bộ mô hình tiếp xúc ruồi-bàn phím.
 
 ## 3. Mô hình và phạm vi của việc học
 
 ### 3.1 Cơ thể, bàn phím và đơn vị
 
-Cơ thể dựa trên FlyGym/NeuroMechFly 2.1.0; ngực cố định; có 42 position servo ở sáu chân. Cảnh vật lý gồm 214 tọa độ qpos, 214 velocity coordinates và 157 geom. Bàn phím có 88 phím tương ứng MIDI 21-108, cách tâm 0,055 mm. Mỗi phím là một khối có khớp trượt với độ cứng 5 và damping 0,006 theo đơn vị native mm, g, s; lực g.mm/s² tương ứng micro-newton. Đây là các thông số kỹ thuật giả định, không phải một đàn piano chuẩn được thu nhỏ theo luật tương tự cơ học.
+Cơ thể dựa trên FlyGym/NeuroMechFly 2.1.0; ngực cố định; có 42 bộ chấp hành servo vị trí ở sáu chân. Cảnh vật lý gồm 214 tọa độ vị trí, 214 tọa độ vận tốc và 157 đối tượng hình học. Bàn phím có 88 phím tương ứng MIDI 21-108, cách tâm 0,055 mm. Mỗi phím là một khối có khớp trượt với độ cứng 5 và hệ số cản 0,006 theo hệ đơn vị mm, g, s; lực g.mm/s² tương ứng micro-newton. Đây là các thông số kỹ thuật giả định, không phải một đàn piano chuẩn được thu nhỏ theo luật tương tự cơ học.
 
-Va chạm tác vụ bật giữa geom ở đầu bàn chân và phím. Chưa bao gồm tự va chạm toàn thân, cơ bắp, mỏi cơ, pedal, cơ chế búa đàn hoặc toàn bộ xúc giác. Âm thanh trong app được tổng hợp từ sự kiện tiếp xúc hoặc từ mục tiêu, và hai nguồn được người dùng chọn rõ ràng. Không dùng âm thanh mục tiêu để chấm điểm.
+Mô hình tính va chạm giữa hình học đầu bàn chân và các phím. Chưa bao gồm tự va chạm toàn thân, cơ bắp, mỏi cơ, pedal, cơ chế búa đàn hoặc toàn bộ xúc giác. Âm thanh trong app được tổng hợp từ sự kiện tiếp xúc hoặc từ mục tiêu, và hai nguồn được người dùng chọn rõ ràng. Không dùng âm thanh mục tiêu để chấm điểm.
 
 ### 3.2 Mạng vận động và tính bất định sinh học
 
-Đồ thị được lấy từ export MANC trong repository của Pugliese và cộng sự [8], commit 10e7661bf414ba7b4c2edf795cd36d0f878c17c0, tập W_20260522_allSynapses. Release neuPrint nền không được ghi trong export nên không tự suy là v1.2.3. Bộ lọc giữ DNg100, IN17A001, INXXX466, IN16B036 và motor neuron thuộc các phân nhóm chân. Mạng có 2 descending neuron, 18 neuron trong nhóm CPG và 392 motor neuron; 2.592 cạnh tổng hợp từ 18.831 synapse của dữ liệu đầu vào. Ma trận thưa được nhân hệ số toàn cục 0,03; chuẩn hóa thể tích tác động vào tham số gain/ngưỡng neuron. Mô hình rate dùng ngưỡng, gain, giới hạn rate và hằng số thời gian phụ thuộc giả định thể tích cùng khởi tạo theo seed; tích phân Euler ở 2 ms và trễ giả định 4 ms. Descending drive bằng 500; phản hồi lực được chuẩn hóa, chặn và chiếu vào một neuron E1 trên mỗi chân.
+Đồ thị được lấy từ bản xuất MANC trong kho mã của Pugliese và cộng sự [8], commit 10e7661bf414ba7b4c2edf795cd36d0f878c17c0, tập W_20260522_allSynapses. Bản xuất không ghi phiên bản neuPrint nền; đây là một khoảng trống trong nguồn gốc dữ liệu. Bộ lọc giữ DNg100, IN17A001, INXXX466, IN16B036 và motor neuron thuộc các phân nhóm chân. Mạng có 2 neuron dẫn truyền xuống (DN), 18 neuron trong nhóm CPG và 392 neuron vận động (MN); 2.592 cạnh tổng hợp từ 18.831 synapse của dữ liệu đầu vào. Ma trận thưa được nhân hệ số toàn cục 0,03; chuẩn hóa thể tích tác động vào tham số gain/ngưỡng neuron. Mô hình rate dùng ngưỡng, gain, giới hạn rate và hằng số thời gian phụ thuộc giả định thể tích cùng khởi tạo theo seed; tích phân Euler ở 2 ms và trễ giả định 4 ms. Tín hiệu kích thích DN bằng 500; phản hồi lực được chuẩn hóa, chặn và chiếu vào một neuron E1 trên mỗi chân.
 
-Mô hình full-brain có kiểm chứng hành vi của Shiu và cộng sự [9] là một phạm vi khác; v4 không kế thừa sự kiểm chứng sinh học đó. Kết quả CPG trong nghiên cứu nguồn cũng không tự xác nhận dynamics của phân đồ thị và các tham số đã chỉnh ở đây. Dấu neurotransmitter là dự đoán; v4 giữ giả định dấu đã có, chưa đánh giá bất định dấu. Không đủ dữ liệu để xem số synapse như conductance thật hoặc xem rate tính toán như firing rate đã hiệu chuẩn. Kết nối từ mục tiêu âm nhạc đến bộ lập lịch, chiếu phản hồi cảm giác, ánh xạ quần thể motor neuron sang servo đều là lựa chọn mô hình hóa. Điều này giới hạn suy luận về thần kinh học.
+Shiu và cộng sự [9] kiểm chứng hành vi trên một mô hình toàn não. Mô hình vận động rút gọn ở đây có tập neuron, tham số và cách ghép với cơ thể khác, nên cần được kiểm chứng riêng. Dấu tác động của chất dẫn truyền thần kinh được giữ theo dự đoán trong dữ liệu đầu vào; độ nhạy đối với sai số dự đoán chưa được đánh giá. Không đủ dữ liệu để xem số synapse như conductance thật hoặc xem rate tính toán như firing rate đã hiệu chuẩn. Kết nối từ mục tiêu âm nhạc đến bộ lập lịch, chiếu phản hồi cảm giác, ánh xạ quần thể motor neuron sang servo đều là lựa chọn mô hình hóa. Điều này giới hạn suy luận về thần kinh học.
 
-### 3.3 Những gì thực sự được học
+### 3.3 Tham số được tối ưu
 
-Với W là ma trận có hàng biểu diễn neuron hậu synapse, phiên bản thích nghi dùng W'ij = exp(alpha_g(i)) Wij. Nhóm g(i) gồm từng neuron CPG trong 18 neuron và từng quần thể MN của sáu chân. Các hàng DN giữ hệ số 1. Alpha bị chặn trong [-0,69; 0,69]; cấu trúc zero/nonzero và dấu của cạnh không đổi. Sáu hệ số kích thích MN cộng vào phần âm của ngưỡng quần thể, trong [-50; 50] đơn vị mô hình. Đây là hệ số hiệu dụng được tối ưu ngoại tuyến, không phải luật plasticity đã được xác nhận ở ruồi.
+Với W là ma trận có hàng biểu diễn neuron hậu synapse, phiên bản thích nghi dùng W'ij = exp(alpha_g(i)) Wij. Nhóm g(i) gồm từng neuron CPG trong 18 neuron và từng quần thể MN của sáu chân. Các hàng DN giữ hệ số 1. Alpha bị chặn trong [-0,69; 0,69]; cấu trúc zero/nonzero và dấu của cạnh không đổi. Sáu hệ số kích thích MN được trừ khỏi ngưỡng của các neuron trong từng quần thể, trong [-50; 50] đơn vị mô hình. Đây là hệ số hiệu dụng được tối ưu ngoại tuyến, không phải luật plasticity đã được xác nhận ở ruồi.
 
 | Khối tham số | Số lượng | Vai trò và giới hạn |
 |---|---|---|
@@ -55,61 +55,61 @@ Với W là ma trận có hàng biểu diễn neuron hậu synapse, phiên bản
 | Hiệu chỉnh ngang | 6 | Dịch đích hiệu dụng tối đa ±0,275 mm; nội suy bảng IK |
 | Tiến thời điểm ấn | 1 | Từ 0 đến 80 ms để bù trễ cơ học |
 
-Tổng cộng 49 tham số ở nhánh thích nghi và hoán đổi. Nhánh giữ synapse cố định chỉ học 25 tham số còn lại; kích thích MN vẫn được học. Vì số tham số khác nhau, đây là phép ablation plasticity của synapse, chưa phải đối chứng bằng nhau về năng lực biểu diễn. Đối chứng hoán đổi mới có cùng số tham số với nhánh thích nghi.
+Tổng cộng 49 tham số ở nhánh thích nghi và hoán đổi. Nhánh giữ synapse cố định tối ưu 25 tham số còn lại, gồm cả hệ số điều chỉnh ngưỡng MN. So sánh này đo tác động của việc cho phép thay đổi hệ số synapse, nhưng đồng thời thay đổi số tham số tự do. Nhánh hoán đổi giữ cùng 49 tham số với nhánh thích nghi.
 
-Quan trọng về phạm vi: mạng không nhận trực tiếp tên nốt và không tự học cách đọc sheet. Bộ lập lịch nhận cao độ/thời gian và chọn chân bằng hình học; IK tạo tư thế mục tiêu, còn mạng điều biến độ ấn. Hiệu năng cuối phản ánh tổng hệ thống lai. Không được quy toàn bộ cải thiện của sáu hệ số hiệu chỉnh ngang cho khả năng nhận thức của mạng.
+Bộ lập lịch nhận cao độ và thời gian rồi chọn chân theo hình học. Bộ giải động học ngược (IK) tạo tư thế mục tiêu; mạng vận động điều biến mức ấn của từng chân. Mạng không nhận tên nốt hoặc ảnh bản nhạc. Vì các tham số điều khiển đầu ra cũng được tối ưu, mức cải thiện đo được phản ánh toàn bộ hệ thống lai.
 
 ![Kiến trúc](figures/architecture.png)
 
-Hình 1. Các khối kỹ thuật, khối thần kinh có tham số thích nghi, vòng tiếp xúc vật lý và tối ưu phần thưởng. Việc cập nhật tham số xảy ra giữa các rollout, không phải học synapse trực tuyến theo từng nốt.
+Hình 1. Hai thang thời gian của bộ điều khiển. (A) Mục tiêu nốt đi qua bộ lập lịch và IK; đầu ra mạng điều biến mức ấn, còn lực tiếp xúc trở lại mạng qua phản hồi cảm giác. (B) Sau mỗi lượt mô phỏng, sự kiện tiếp xúc được ghép với mục tiêu để tính thưởng cho CEM. Nét đứt biểu diễn cập nhật phân phối tham số giữa các thế hệ. Sơ đồ thể hiện cấu hình thí nghiệm tổng hợp v4b; lượt luyện bài bổ sung dùng quần thể 8 thay vì 10 ứng viên.
 
 ## 4. Tác vụ, thưởng và quy trình đánh giá
 
-### 4.1 Từ kỹ năng cơ bản đến hai bản nhạc
+### 4.1 Chuỗi tổng hợp và dữ liệu âm nhạc
 
-Benchmark đầu tiên gồm sáu nốt không chồng lấn, lần lượt giao cho sáu chân, bắt đầu ở 0,4 s, cách nhau 0,55 s, giữ 0,22 s; tổng episode 3,72 s sau làm tròn. Mỗi chân lấy ngẫu nhiên trong ba cao độ có sai số IK nhỏ nhất của chân đó. Tập huấn luyện dùng seed tác vụ 10000 + số thế hệ; validation dùng 71001 và 71002; test dùng 91001-91004. Các seed môi trường khác nhau chủ yếu thay cao độ, chưa thay tư thế ban đầu hay thông số vật lý. Đây là kiểm tra chuyển giao hẹp trong phân phối, không phải generalization rộng.
+Tác vụ tổng hợp đầu tiên gồm sáu nốt không chồng lấn, lần lượt giao cho sáu chân, bắt đầu ở 0,4 s, cách nhau 0,55 s, giữ 0,22 s; tổng episode 3,72 s sau làm tròn. Mỗi chân lấy ngẫu nhiên trong ba cao độ có sai số IK nhỏ nhất của chân đó. Tập huấn luyện dùng seed tác vụ 10000 + số thế hệ; tập lựa chọn checkpoint (validation) dùng 71001 và 71002; tập kiểm tra cuối (test) dùng 91001-91004. Các seed môi trường khác nhau chủ yếu thay cao độ, chưa thay tư thế ban đầu hay thông số vật lý. Phép kiểm tra này đo chuyển giao giữa các mẫu cùng phân phối, với biến thiên chủ yếu ở cao độ.
 
-Sau khi validation đạt precision và recall ít nhất 0,95, chương trình mở nhóm 12 cao độ reachable cho mỗi chân. Nếu test kỹ năng đạt chuẩn, một test chuỗi nhanh hơn dùng 12 nốt, khoảng cách 0,30 s và giữ 0,16 s được chạy. Chuỗi này đòi precision >0,85, recall và F1 >=0,85. Đây là ngưỡng trên ước lượng điểm của tập test nhỏ, không phải cận dưới tin cậy cho hiệu năng quần thể. Hiện curriculum chuyển sang phổ cao độ rộng hơn, nhưng không huấn luyện riêng mức chuỗi nhanh trước test; đây là bài kiểm tra transfer tốc độ khó hơn, không thể suy thất bại là mất khả năng học chuỗi.
+Sau khi validation đạt precision và recall ít nhất 0,95, chương trình mở nhóm 12 cao độ có sai số IK thấp cho mỗi chân. Nếu test kỹ năng đạt chuẩn, một test chuỗi nhanh hơn dùng 12 nốt, khoảng cách 0,30 s và giữ 0,16 s được chạy. Chuỗi này đòi precision >0,85, recall và F1 >=0,85. Các ngưỡng được áp dụng cho ước lượng điểm trên tập kiểm tra nhỏ; độ bất định của hiệu năng quần thể chưa được lượng hóa. Chương trình học mở rộng tập cao độ nhưng chưa luyện riêng chuỗi nhanh. Kết quả của bước này vì thế còn phụ thuộc khả năng chuyển sang tốc độ mới.
 
-Hai bản nhạc đầy đủ chỉ được xuất như demonstration đạt chuẩn sau khi cả hai cổng trên thành công. Merry-Go-Round of Life có 237 ô nhịp, 2.401 nốt, khoảng 316,04 s và đa âm tối đa 8; In The Pool có 69 ô viết, 73 ô khi tính lặp, 1.502 nốt, khoảng 238,46 s và đa âm tối đa 7. Các con số là từ bản OMR đang có, chưa được một nhạc công kiểm tra độc lập từng nốt. Hai bản nhạc không được dùng trong tối ưu v4. Kiểm tra cấu trúc phát hiện 1/29 nốt dư do trùng cùng pitch và onset, cùng 7/55 cặp chồng thời gian ở cùng pitch, lần lượt cho Merry/Pool. Cần xác minh unison, tie và tái nhấn rồi chuẩn hóa mục tiêu physical-key với mapping về từng voice trước khi dùng để chấm full-song. V4 giữ nguyên dữ liệu nguồn và chưa tự gộp các trường hợp chưa rõ nhạc lý.
+Trong quy trình thí nghiệm tổng hợp v4b, replay toàn bài chỉ được xuất sau khi đạt cả hai ngưỡng kỹ năng. Merry-Go-Round of Life có 237 ô nhịp, 2.401 nốt, khoảng 316,04 s và đa âm tối đa 8; In The Pool có 69 ô viết, 73 ô khi tính lặp, 1.502 nốt, khoảng 238,46 s và đa âm tối đa 7. Các con số là từ bản OMR đang có, chưa được một nhạc công kiểm tra độc lập từng nốt. Hai bản nhạc không được dùng để tối ưu hoặc chọn checkpoint của thí nghiệm tổng hợp v4b. Kiểm tra cấu trúc phát hiện 1/29 nốt dư do trùng cùng pitch và onset, cùng 7/55 cặp chồng thời gian ở cùng pitch, lần lượt cho Merry/Pool. Các trường hợp này cần được đối chiếu với bản nhạc để phân biệt đồng âm giữa các bè, dấu nối và tái nhấn. Việc chấm theo sự kiện vật lý từng phím cần một ánh xạ về các bè nguồn. Dữ liệu hiện tại giữ các sự kiện theo bè, chưa gộp những trường hợp đó.
 
-Sáu chân không bảo đảm thực hiện mọi hợp âm hoặc với tới mọi phím. Nếu sau này trình diễn bản chuyển soạn đơn giản hơn, phải gọi đúng là bản chuyển soạn, ghi mọi nốt bị bỏ và chấm cả trên mục tiêu gốc lẫn mục tiêu chuyển soạn. Không tự đổi sang bản đơn âm để đạt chuẩn rồi gọi đó là chơi toàn bộ tác phẩm.
+Tầm với và số chân giới hạn khả năng thực hiện các hợp âm trong bản gốc. Do đó, mọi nốt không phân công được chân vẫn được giữ trong mẫu số đánh giá. Một bản chuyển soạn, nếu được sử dụng về sau, cần được đánh giá riêng và có danh sách thay đổi so với bản gốc.
 
 ### 4.2 Quan sát hữu hạn và giao diện nốt rơi
 
-Ở mỗi chân, bộ lập lịch chỉ đưa mục tiêu kế tiếp vào điều khiển khi onset còn tối đa 150 ms. App thể hiện cùng cửa sổ bằng thanh nốt rơi trên đúng phím trong cảnh 3D; đầu thanh tới bàn phím ở onset, chiều dài thể hiện phần thời gian giữ còn trong cửa sổ. Thanh là một lớp hiển thị, không có collision và không tạo lực. Replay hiển thị riêng màu mục tiêu và tiếp xúc thực. Tư thế được lưu ở 24 fps, nhưng sự kiện chấm điểm được phát hiện ở 500 Hz và lưu riêng; không chấm từ các frame video.
+Ở mỗi chân, bộ lập lịch đưa mục tiêu kế tiếp vào điều khiển tối đa 150 ms trước thời điểm bắt đầu nốt (onset). App thể hiện cùng cửa sổ bằng thanh nốt rơi trên đúng phím trong cảnh 3D; đầu thanh tới bàn phím ở onset, chiều dài thể hiện phần thời gian giữ còn trong cửa sổ. Thanh nốt chỉ phục vụ hiển thị và không tham gia mô phỏng va chạm. Replay hiển thị riêng màu mục tiêu và tiếp xúc thực. Tư thế được lưu ở 24 fps, nhưng sự kiện chấm điểm được phát hiện ở 500 Hz và lưu riêng; không chấm từ các frame video.
 
-Tuy nhiên, ở full-song scheduler, phân công chân ban đầu được tính từ chuỗi có sẵn. Vì vậy cửa sổ 150 ms chỉ giới hạn mục tiêu vào bộ điều khiển cục bộ; chưa loại bỏ mọi lợi thế từ tiền xử lý toàn bản nhạc. Không gọi toàn bộ hệ thống là một tác nhân quan sát trực tuyến thuần túy hoặc một hệ thống nhìn và đọc bản nhạc.
+Trong bộ lập lịch toàn bài, phân công chân ban đầu được tính từ chuỗi có sẵn. Vì vậy cửa sổ 150 ms chỉ giới hạn mục tiêu vào bộ điều khiển cục bộ; chưa loại bỏ mọi lợi thế từ tiền xử lý toàn bản nhạc. Phạm vi quan sát hữu hạn này vì thế chưa tương đương với một tác nhân xử lý toàn bộ bản nhạc trực tuyến.
 
 ### 4.3 Sự kiện nốt và phần thưởng
 
-Lực pháp tuyến từ tiếp xúc toe-key được cộng theo phím. Onset cần lực ít nhất 0,003 micro-newton trong 16 ms; release cần dưới 0,0015 micro-newton trong 24 ms; khoảng chống lặp 40 ms. Cùng bộ phát hiện được giữ qua mọi cấu hình. Mẫu tiếp xúc lấy sau bước vật lý đầu tiên của mỗi khối 2 ms, gắn nhãn thời gian đầu khối; độ lệch quy ước 0,2 ms được giữ nhất quán, nhỏ hơn cửa sổ ghép chính 100 ms.
+Lực pháp tuyến từ tiếp xúc bàn chân-phím được cộng theo phím. Onset cần lực ít nhất 0,003 micro-newton trong 16 ms; release cần dưới 0,0015 micro-newton trong 24 ms; khoảng chống lặp 40 ms. Cùng bộ phát hiện được giữ qua mọi cấu hình. Mẫu tiếp xúc lấy sau bước vật lý đầu tiên của mỗi khối 2 ms, gắn nhãn thời gian đầu khối; độ lệch quy ước 0,2 ms được giữ nhất quán, nhỏ hơn cửa sổ ghép chính 100 ms.
 
-Chấm bằng matching một-một cùng cao độ, tối đa hóa số cặp trong ±100 ms rồi ưu tiên sai lệch nhỏ. Precision = TP/(TP+FP); recall = TP/(TP+FN); F1 là trung bình điều hòa. Không có nốt phát thì precision được quy ước 0. Mỗi mục tiêu chỉ được thưởng đúng một lần; bấm lặp hoặc bấm thêm phím không tạo thêm TP.
+Điểm số dựa trên ghép một-một giữa các sự kiện cùng cao độ, tối đa hóa số cặp trong ±100 ms rồi ưu tiên sai lệch nhỏ. Precision = TP/(TP+FP); recall = TP/(TP+FN); F1 là trung bình điều hòa. Không có nốt phát thì precision được quy ước 0. Mỗi mục tiêu chỉ được thưởng đúng một lần; bấm lặp hoặc bấm thêm phím không tạo thêm TP.
 
-Reward episode = (5TP - 2FN - FP)/N + 0,5 IoU - 0,5 MAE/0,1 + 0,1D/T - min(0,1; 10^-5 E). N là số nốt mục tiêu; IoU là trung bình độ chồng lấn thời gian giữ của các cặp đã ghép; MAE chỉ tính trên cặp ghép; D tích phân độ gần đích exp(-khoảng cách/0,08 mm) trong lúc có mục tiêu; E là tích phân trị tuyệt đối công suất actuator. Thành phần shaping bị chặn, không thể một mình đạt tiêu chí thành công. Nếu có cảnh báo solver, reward bằng -10^6 và phép đánh giá có cảnh báo không được vượt cổng thành công.
+Phần thưởng mỗi lượt được tính bằng: R = (5TP - 2FN - FP)/N + 0,5 IoU - 0,5 MAE/0,1 + 0,1D/T - min(0,1; 10^-5 E). N là số nốt mục tiêu; IoU là trung bình độ chồng lấn thời gian giữ của các cặp đã ghép; MAE chỉ tính trên cặp ghép; D tích phân độ gần đích exp(-khoảng cách/0,08 mm) trong lúc có mục tiêu; E là tích phân trị tuyệt đối công suất bộ chấp hành. Thành phần thưởng theo khoảng cách bị chặn ở 0,1; tiêu chí thành công vẫn phụ thuộc các sự kiện nốt. Nếu có cảnh báo solver, phần thưởng bằng -10^6 và phép đánh giá có cảnh báo không được vượt ngưỡng thành công.
 
-IoU và MAE có tính điều kiện theo cặp được ghép, nên phải đọc cùng recall. Việc chọn hệ số 5 không phải chứng cứ về cường độ phần thưởng sinh học; nhân đồng loạt mọi hệ số không tự làm thuật toán học nhanh hơn. Chưa có reward ablation đầy đủ.
+IoU và MAE có tính điều kiện theo cặp được ghép, nên phải đọc cùng recall. Việc chọn hệ số 5 không phải chứng cứ về cường độ phần thưởng sinh học; nhân đồng loạt mọi hệ số không tự làm thuật toán học nhanh hơn. Chưa có phân tích đầy đủ về đóng góp của từng thành phần thưởng.
 
 ### 4.4 Tối ưu, đối chứng và tính thăm dò
 
-CEM dùng quần thể 10, lấy 3 elite. Mean và standard deviation được trộn với tỷ trọng 0,6 cho elite mới; sigma có sàn bằng 3% bề rộng miền tham số. Mỗi thế hệ gồm mean hiện tại, checkpoint tốt nhất và các mẫu mới; các nhánh cùng seed dùng cùng chuỗi ngẫu nhiên khởi tạo và cùng seed tác vụ theo thế hệ. Chọn checkpoint theo F1 validation; reward trung bình nhân 10^-6 chỉ phá hòa. Không chọn checkpoint theo test.
+Mỗi thế hệ CEM có 10 ứng viên; ba ứng viên có phần thưởng cao nhất được dùng để cập nhật phân phối. Trung bình và độ lệch chuẩn được trộn với tỷ trọng 0,6 cho ba ứng viên được chọn; sigma có sàn bằng 3% bề rộng miền tham số. Mỗi thế hệ gồm trung bình hiện tại, checkpoint tốt nhất và các mẫu mới; các nhánh cùng seed dùng cùng chuỗi ngẫu nhiên khởi tạo và cùng seed tác vụ theo thế hệ. Chọn checkpoint theo F1 trên tập lựa chọn; phần thưởng trung bình nhân 10^-6 được dùng để phân biệt các trường hợp có cùng F1. Không chọn checkpoint theo test.
 
-Ba cấu hình: adaptive, frozen-synapses và rewired. Rewired dùng double-edge swap bảo toàn in/out degree; trọng số đi cùng nguồn, không bảo toàn incoming strength. Cả ba cùng cơ thể, scheduler, reward, detector và readout. Số seed mạng là 0, 1, 2. Các thế hệ chạy round-robin giữa chín ô, có thể khác tối đa một phần vòng cuối vì hết ngân sách. Vì vậy cần đọc cả số bước và thời gian từng ô, không chỉ gọi là ngân sách bằng nhau tuyệt đối.
+Ba cấu hình: adaptive, frozen-synapses và rewired. Nhánh rewired hoán đổi cặp cạnh để bảo toàn bậc vào và bậc ra; trọng số đi cùng neuron nguồn, nên tổng trọng số đi vào từng neuron có thể thay đổi. Cả ba dùng cùng cơ thể, bộ lập lịch, hàm thưởng, bộ phát hiện tiếp xúc và bộ điều khiển đầu ra. Số seed mạng là 0, 1, 2. Các thế hệ được chạy luân phiên giữa chín ô thí nghiệm, có thể nhận lượng tính toán khác nhau ở vòng cuối khi hết ngân sách. Số bước và thời gian của từng ô được báo riêng để thể hiện chênh lệch này.
 
-Một lượt thăm dò v4a dùng 37 tham số được dừng sau khi phát hiện sai lệch giữa gốc đốt chân và mặt tiếp xúc. V4b thêm kích thích MN và hiệu chỉnh ngang, dùng bộ validation/test mới. Kết quả v4a và thời gian đã dùng được giữ lại. Quy trình này là phát triển thích nghi có khai báo, không phải tiền đăng ký độc lập hoặc phép kiểm định xác nhận. Ba seed không đủ cho suy luận quần thể vững; báo từng seed và thống kê mô tả, không dùng các nốt trong cùng seed như hàng trăm mẫu độc lập để tạo p-value nhỏ.
+Một lượt thăm dò v4a dùng 37 tham số được dừng sau khi phát hiện sai lệch giữa gốc đốt chân và mặt tiếp xúc. V4b thêm kích thích MN và hiệu chỉnh ngang, dùng bộ validation/test mới. Kết quả v4a và thời gian đã dùng được giữ lại. Do phương pháp được sửa sau lượt thăm dò, kết quả được xem là bằng chứng khám phá. Phân tích báo từng seed và thống kê mô tả; các nốt trong cùng một lượt chạy không được xem là những lần lặp độc lập.
 
-## 5. Tăng tốc và kế toán thời gian
+## 5. Tăng tốc thực thi và ghi nhận thời gian
 
-Giữ MuJoCo 3.9.0, timestep 0,2 ms, neural/control timestep 2 ms, implicit-fast integrator, 50 solver iterations tối đa và noslip_iterations = 5. Trình chạy tạo một world cho mỗi worker, cache mẫu mạng, không xuất mesh JSON hoặc frame khi học. Control được giữ qua một bước, lấy mẫu, rồi gom chín bước còn lại. Kiểm tra paired scalar/batched cho cùng input có qpos cuối và các sự kiện giống hệt; đây là kiểm chứng tối ưu thực thi, chưa chứng minh hội tụ số của mô hình.
+Mô phỏng dùng MuJoCo 3.9.0, bước thời gian vật lý 0,2 ms và bước cập nhật mạng/điều khiển 2 ms. Bộ tích phân là implicitfast; số vòng lặp bộ giải tối đa là 50 và noslip_iterations = 5. Mỗi tiến trình giữ một môi trường vật lý và mẫu mạng trong bộ nhớ. Việc xuất dữ liệu hình học và khung hình được tắt trong tối ưu. Lệnh điều khiển được giữ qua một bước, lấy mẫu, rồi gom chín bước còn lại. Trong phép kiểm tra cặp, cách chạy từng bước và cách gom bước nhận cùng đầu vào, cho trạng thái vị trí cuối và sự kiện tiếp xúc giống hệt. Phép kiểm tra này xác nhận thay đổi thực thi trên trường hợp đã xét; hội tụ số của mô hình cần được đánh giá riêng.
 
-RTF_total = dt x tổng số bước vật lý mới / tổng giây thực chiến dịch. Bước train và evaluation được lưu riêng từng ô. Thời gian export replay được ghi riêng, không cộng vào trải nghiệm đã dùng để tối ưu. Warmup neuron 100 bước chỉ là 0,2 s tích phân mạng và không được tính như 0,2 s tương tác cơ thể. Các episode reset, các ứng viên CEM khác nhau và các seed khác nhau không tạo thành một quỹ đạo liên tục của một não duy nhất.
+RTF_total = dt x tổng số bước vật lý mới / tổng giây thực chiến dịch. Số bước tối ưu và đánh giá được lưu riêng từng ô. Thời gian xuất replay được ghi riêng, không cộng vào trải nghiệm đã dùng để tối ưu. Giai đoạn khởi tạo mạng 100 bước chỉ là 0,2 s tích phân mạng và không được tính như 0,2 s tương tác cơ thể. Các lượt mô phỏng bắt đầu lại từ trạng thái ban đầu, các ứng viên CEM khác nhau và các seed khác nhau không tạo thành một quỹ đạo liên tục của một não duy nhất.
 
-Mốc một năm/giờ đòi RTF 8.766, tức 43,83 triệu bước vật lý/giây ở dt hiện tại. Probe MuJoCo Warp 3.9.0.1 / Warp 1.17.0 trên RTX 5050 Laptop 8 GiB dừng do `noslip solver not implemented`. Không có số thông lượng GPU hợp lệ cho mô hình này. Tắt noslip, đổi collider, giảm iteration hoặc tăng dt cần một nghiên cứu hiệu chuẩn riêng.
+Mốc một năm/giờ đòi RTF 8.766, tức 43,83 triệu bước vật lý/giây ở dt hiện tại. Thử nghiệm MuJoCo Warp 3.9.0.1 / Warp 1.17.0 trên RTX 5050 Laptop 8 GiB dừng do `noslip solver not implemented`. Không có số thông lượng GPU hợp lệ cho mô hình này. Thay đổi noslip, hình học va chạm, số vòng lặp bộ giải hoặc bước thời gian đều cần được đánh giá lại về ảnh hưởng tới tiếp xúc.
 
 ![Thông lượng](figures/throughput.png)
 
-Hình 2. Thông lượng benchmark CPU gồm tiếp xúc chủ động, sau warmup worker. Cột mục tiêu một năm/giờ chỉ là yêu cầu toán học; trục log tránh che mất khoảng cách lớn. Benchmark này được chạy trước hiệu chỉnh v4b; thông lượng chiến dịch cuối được báo riêng.
+Hình 2. Thông lượng benchmark CPU gồm tiếp xúc chủ động, sau khởi tạo tiến trình. Cột mục tiêu một năm/giờ chỉ là yêu cầu toán học; trục hoành dùng thang logarithm. Benchmark này được chạy trước hiệu chỉnh v4b; thông lượng chiến dịch cuối được báo riêng.
 
 ## 6. Kết quả
 
@@ -129,47 +129,45 @@ Các mốc dùng điểm validation gần nhất không vượt mốc, trung bì
 
 ![Đường học](figures/learning.png)
 
-Hình 3. F1 validation theo thời gian thực chiến dịch, từng seed ở một panel. Đây là điểm validation mỗi thế hệ, không phải đường test. Việc lặp lại cùng tập validation nhỏ có thể gây overfit chọn mô hình.
+Hình 3. F1 trên tập lựa chọn checkpoint theo thời gian thực, tách theo seed. Mỗi điểm tương ứng một thế hệ. Do tập này nhỏ và được dùng lặp lại, đường học có thể phản ánh cả sự thích nghi với tập lựa chọn.
 
 {{TEST_TABLE}}
 
 ![Theo mẫu vật lý mới](figures/sample_efficiency.png)
 
-Hình 4. F1 validation theo số bước vật lý dùng để tối ưu từng ô; không gồm các bước đánh giá. Biểu đồ giúp phân biệt lợi ích tốc độ thực thi với lợi ích hiệu quả mẫu; chưa thực hiện một phép kiểm định ưu thế thống kê.
+Hình 4. F1 trên tập lựa chọn checkpoint theo số bước vật lý dùng để tối ưu từng ô. Các bước đánh giá được loại khỏi trục hoành. Biểu đồ cho phép đối chiếu hiệu năng ở lượng trải nghiệm tương đương.
 
-### 6.3 Demonstration và cổng chất lượng
+### 6.3 Minh họa hành vi và lượt luyện bài bổ sung
 
 {{DEMO_RESULTS}}
 
 ![Replay chẩn đoán](figures/demo.jpg)
 
-Hình 5. App v4 ở thời điểm cố định 1,05 s của replay kỹ năng, adaptive seed 0. Thanh nốt và tiếp xúc được tách màu; morphology não và tín hiệu CPG được ghi rõ phạm vi. Đây là hình chẩn đoán, không phải chứng cứ đã chơi thành công hai bản nhạc.
+Hình 5. Giao diện xem lại chuỗi kỹ năng ở thời điểm 1,05 s, adaptive seed 0. Mục tiêu và tiếp xúc có màu riêng. Ảnh được lấy từ lượt kiểm tra tổng hợp v4b, trước khi mở chế độ luyện trực tiếp hai bài.
 
-App có replay chân/phím và 2 neuron DNg100 trong bề mặt não 3D. Màu rate DN được chiếu từ mạng MANC lên neuron đồng dạng của FlyWire, khác cá thể và giới tính. Các neuron thật trong mô hình học chủ yếu thuộc VNC; độ sáng DN trên brain viewer không biểu diễn toàn bộ plasticity đã học. Không gọi vùng sáng là một phép đo calcium imaging hoặc bằng chứng nhân quả về vùng não chịu trách nhiệm.
+Giao diện hiển thị lại chuyển động chân/phím và hai neuron DNg100 trong bề mặt não 3D. Màu biểu diễn mức hoạt động DN được chiếu từ mạng MANC lên neuron đồng dạng của FlyWire, khác cá thể và giới tính. Các neuron thật trong mô hình học chủ yếu thuộc VNC; độ sáng DN trên hình não không biểu diễn toàn bộ thay đổi tham số đã học. Màu sắc biểu diễn tín hiệu tính toán, không phải phép đo hoạt động thần kinh trên động vật.
 
-## 7. Diễn giải và giới hạn
+## 7. Thảo luận
 
-Giới hạn cơ học: các phím rộng xấp xỉ bề ngang bàn chân, nên một chân có thể chạm nhiều phím. Sai số IK tính ở gốc đốt chân có thể nhỏ dù vị trí mặt va chạm sai. Hiệu chỉnh ngang là một phép bù được học, chưa thay thế inverse contact kinematics dựa trên mặt hỗ trợ thật. Hình thái này đặt một bài toán contact-rich khó ngay cả với một bộ điều khiển kỹ thuật tốt.
+Ba cấu hình đạt F1 kiểm tra trung bình gần nhau. Với ba seed và phạm vi tác vụ hẹp, dữ liệu chưa phân biệt được lợi ích của cấu trúc connectome với tác động của các tham số điều khiển đầu ra. Nhánh giữ synapse cố định có ít tham số tự do hơn hai nhánh còn lại, trong khi phép hoán đổi cạnh giữ bậc nhưng thay đổi tổng trọng số đi vào từng neuron. Hai đặc điểm này cần được xét khi diễn giải so sánh.
 
-Giới hạn nhận dạng thần kinh: 24 hệ số synapse là tham số theo nhóm, không phải 2.592 synapse độc lập. Kích thích MN và readout có thể bù cấu trúc mạng, làm giảm khả năng quy kết cải thiện cho topology. Cần ablation khóa readout, khóa kích thích, tắt mạng và MLP/RNN có ngân sách tương ứng. Thay đổi topology có thể thay đổi incoming strength; cần thêm null model bảo toàn đặc điểm phù hợp với giả thuyết.
+Sai lệch tiếp xúc là một nguồn lỗi đáng chú ý. Gốc đốt chân dùng trong IK không trùng mặt hình học va chạm; một nghiệm IK có sai số nhỏ vẫn có thể tạo tiếp xúc ở phím lân cận. Hệ số hiệu chỉnh ngang ở v4b bù một phần sai lệch đó, nhưng chưa thay thế mô hình động học dựa trên mặt tiếp xúc. Kiểm tra ưu tiên tiếp theo là đo tầm với, vùng tiếp xúc và đáp ứng phím bằng bộ điều khiển hình học tham chiếu, trước khi quy sai sót cho mạng thần kinh.
 
-Giới hạn tác vụ: sáu nốt chậm với tập cao độ nhỏ và tư thế reset cố định chưa đủ đại diện cho hai tác phẩm dài, hợp âm, quãng lớn và thay đổi tempo. Trình diễn âm nhạc yêu cầu dữ liệu nốt được xác minh, đánh giá pedal/duration khi có và công bố các trường hợp không thể thực hiện với sáu chân. Không chấm precision cao bằng cách bỏ nốt khó khỏi mẫu số.
+Các tham số thần kinh cũng chưa cho phép nhận dạng một cơ chế học riêng. Hai mươi bốn hệ số synapse tác động theo nhóm, còn điều chỉnh ngưỡng MN và các tham số đầu ra có thể bù cho thay đổi cấu trúc mạng. Những phép so sánh tiếp theo cần lần lượt cố định các nhóm tham số này và bổ sung mạng không dùng connectome với số tham số, dữ liệu và ngân sách tương ứng.
 
-Giới hạn thực nghiệm: ba seed, một máy và một thuật toán tìm kiếm; tập validation chỉ 12 nốt và test kỹ năng 24 nốt mỗi seed. Chưa thử độ nhạy theo reward, thời gian trễ, contact threshold, timestep hay nhiễu cơ học một cách có hệ thống. Chưa chứng minh hội tụ số hoặc tính tương đương CPU-GPU. Một giờ là trần thăm dò có ý nghĩa kỹ thuật, không phải ngân sách đủ để chốt giới hạn học của mô hình.
+Phạm vi kiểm tra hiện tại gồm sáu nốt chậm, tập cao độ nhỏ và tư thế khởi đầu cố định. Nó chưa đại diện cho hợp âm, bước nhảy cao độ, thay đổi nhịp độ hoặc một tác phẩm kéo dài vài phút. Lượt luyện trực tiếp hai bài bổ sung kiểm tra hoạt động của hệ trên dữ liệu đã luyện; một thí nghiệm chuyển giao cần các bài hoặc cấu trúc nốt chưa xuất hiện trong tối ưu.
 
-Khả năng hướng đến journal Q2 phụ thuộc đóng góp, mức phù hợp chuyên ngành và bằng chứng bổ sung. V4 hiện phù hợp như bản thảo phương pháp/thăm dò và phần mềm kiểm chứng. Để nộp như một bài nghiên cứu hoàn chỉnh cần một kết quả cơ chế hoặc benchmark rõ ràng, baseline mạnh, kiểm định cơ học, lặp độc lập và khả năng tái lập dữ liệu. Không thể bảo đảm acceptance bằng cách đổi cách diễn đạt hoặc loại các câu hỏi của reviewer.
+Các kết quả còn phụ thuộc một máy, một thuật toán tìm kiếm, tập lựa chọn 12 nốt và tập kiểm tra 24 nốt cho mỗi seed. Chưa có đánh giá có hệ thống về độ nhạy theo phần thưởng, ngưỡng lực, bước thời gian và nhiễu cơ học. Kiểm tra tương đương của cách gom bước xác nhận một thay đổi trong thực thi, nhưng chưa chứng minh hội tụ số hoặc độ chính xác sinh cơ học. Các bước còn thiếu này giới hạn kết luận ở cấu hình mô phỏng đã đo.
 
 ## 8. Kết luận
 
 {{CONCLUSION}}
 
-Không có cơ sở kết luận ruồi sinh học không thể học piano, và không dùng nhận xét hài hước về việc thay thế nghệ sĩ như một kết luận khoa học. Nếu muốn một câu nhẹ nhàng trong discussion, cách diễn đạt có phạm vi là: "Với mô hình và ngân sách đã thử ở đây, người chơi piano vẫn chưa cần lo về đối thủ sáu chân." Câu này không thay cho dữ liệu hoặc một kiểm định về khả năng của động vật thật.
+## Dữ liệu và phần mềm
 
-## Khả dụng dữ liệu, phần mềm và trách nhiệm
+Mã v4, định nghĩa reward, detector, cấu hình, checksum nguồn, benchmark và kết quả tổng hợp được lưu trong repository dự án. Mã v3 và kết quả v3 được giữ nguyên. Các bản nhạc PDF/MIDI, replay lớn và dữ liệu đồ thị có điều kiện giấy phép được lưu riêng. Nguồn và giấy phép của NeuroMechFly, Three.js và FlyWire đi kèm gói phần mềm. Quyền tái phân phối bản xuất connectome chưa được xác nhận đầy đủ; khả năng tái lập từ kho mã công khai vì vậy còn phụ thuộc việc cung cấp các đầu vào này.
 
-Mã v4, định nghĩa reward, detector, cấu hình, checksum nguồn, benchmark và kết quả tổng hợp được lưu trong repository dự án. Mã v3 và kết quả v3 được giữ nguyên. Sheet/MIDI, replay lớn và graph input có điều kiện giấy phép không được tự động phát hành công khai. Asset NeuroMechFly, Three.js và FlyWire được giữ nguồn/giấy phép trong bundle riêng. Chưa xác nhận đầy đủ quyền tái phân phối export connectome; do đó chưa tuyên bố toàn bộ pipeline có thể tái lập chỉ bằng một clone công khai.
-
-Mỗi lượt lưu run_id, các phiên bản thư viện, checksum các file mô hình/thuật toán chính, seed, ngân sách và kết quả từng ô. Trạng thái phần cứng: Ryzen AI 5 340, 6 core/12 thread; RTX 5050 Laptop 8 GiB. Hiệu năng phụ thuộc nhiệt và phần mềm nền. Không có thí nghiệm động vật sống trong quy trình này.
+Mỗi lượt lưu run_id, các phiên bản thư viện, checksum các file mô hình/thuật toán chính, seed, ngân sách và kết quả từng ô. Cấu hình phần cứng: Ryzen AI 5 340, 6 core/12 thread; RTX 5050 Laptop 8 GiB. Hiệu năng phụ thuộc nhiệt và phần mềm nền. Không có thí nghiệm động vật sống trong quy trình này.
 
 ## Tài liệu tham khảo
 

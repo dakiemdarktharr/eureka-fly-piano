@@ -10,7 +10,7 @@ PAPER=Path(__file__).resolve().parent/"paper"
 for name,file in [('Arial','arial.ttf'),('Arial-Bold','arialbd.ttf'),('Arial-Italic','ariali.ttf')]:pdfmetrics.registerFont(TTFont(name,'C:/Windows/Fonts/'+file))
 pdfmetrics.registerFontFamily('Arial',normal='Arial',bold='Arial-Bold',italic='Arial-Italic',boldItalic='Arial-Bold')
 styles={
- 'body':ParagraphStyle('body',fontName='Arial',fontSize=10,leading=15,spaceAfter=7,textColor=colors.HexColor('#203041')),
+ 'body':ParagraphStyle('body',fontName='Arial',fontSize=10,leading=15,spaceAfter=7,allowWidows=0,allowOrphans=0,textColor=colors.HexColor('#203041')),
  'title':ParagraphStyle('title',fontName='Arial-Bold',fontSize=21,leading=28,spaceAfter=17,textColor=colors.HexColor('#143d48')),
  'h2':ParagraphStyle('h2',fontName='Arial-Bold',fontSize=14,leading=19,spaceBefore=15,spaceAfter=8,keepWithNext=True,textColor=colors.HexColor('#176760')),
  'h3':ParagraphStyle('h3',fontName='Arial-Bold',fontSize=11,leading=16,spaceBefore=10,spaceAfter=6,keepWithNext=True),

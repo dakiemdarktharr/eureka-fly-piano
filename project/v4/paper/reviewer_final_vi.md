@@ -1,12 +1,12 @@
 # V4: các câu hỏi phản biện, cách xử lý và phương án dự phòng
 
-Tài liệu đi cùng bản thảo và app, không phải thư trả lời cho một journal cụ thể. "Đã xử lý" chỉ có nghĩa đã có thay đổi và bằng chứng tương ứng; không có nghĩa rủi ro khoa học đã biến mất. Ngày: 2026-09-18.
+Tài liệu này ghi các vấn đề cần kiểm tra trước khi nộp bản thảo. Trạng thái xử lý được phân biệt giữa thay đổi đã có bằng chứng và thí nghiệm còn cần thực hiện. Ngày: 2026-09-18.
 
-## Quyết định biên tập hiện tại
+## Đánh giá mức hoàn thiện
 
-Phiên bản này là nghiên cứu thăm dò: adaptive: F1 test trung bình 0.343; frozen: F1 test trung bình 0.330; rewired: F1 test trung bình 0.341. Tổng learner wall time của hai lượt: 53.64 phút. Số ô đạt cả skill và sequence gate: 0/9. Chưa đủ bằng chứng để gọi manuscript là sẵn sàng nộp Q2; các điểm còn mở bên dưới phải được giữ trong paper.
+Kết quả hiện tại có tính thăm dò. F1 trung bình trên tập kiểm tra là 0.343 ở nhánh adaptive, 0.330 ở nhánh frozen, 0.341 ở nhánh rewired. Tổng thời gian thực của hai lượt là 53.64 phút; 0/9 ô đạt cả hai ngưỡng kỹ năng. Các vấn đề cần bổ sung bằng chứng được liệt kê bên dưới.
 
-Một bài Q2 cần câu hỏi rõ và bằng chứng đủ sức trả lời. Mục tiêu khả thi của dự án là đánh giá học tiếp xúc chính xác trong bộ điều khiển lai có prior connectome, dưới ngân sách định lượng. Mục tiêu "mô phỏng ruồi đủ lâu để kết luận ruồi có thể/không thể chơi piano" không phù hợp với mô hình hiện tại. Không thể hứa tỷ lệ acceptance khi chưa chọn journal và chưa có bộ thí nghiệm xác nhận.
+Câu hỏi có thể trả lời bằng thiết kế hiện tại là mức cải thiện tiếp xúc của một bộ điều khiển lai trong ngân sách xác định. Để trở thành nghiên cứu xác nhận, bản thảo cần bổ sung kiểm chứng cơ học, đối chứng tương xứng và lặp độc lập. Việc chọn tạp chí nên dựa trên đóng góp đã được chứng minh và phạm vi chuyên môn; mức xếp hạng không dự báo xác suất chấp nhận một bản thảo cụ thể.
 
 ## Các điểm đã sửa trong v4
 
@@ -20,16 +20,16 @@ Một bài Q2 cần câu hỏi rõ và bằng chứng đủ sức trả lời. M
 
 5. Chạy ba seed, có nhánh synapse cố định và rewired, có tập synthetic test riêng và không dùng hai bài nhạc để tối ưu.
 
-6. App có biểu đồ tiến trình, thời gian thực/mô phỏng, từng nhánh, replay tiếp xúc, nốt rơi hữu hạn và cổng chất lượng trước full-song demo.
+6. App có biểu đồ tiến trình, bộ đếm thời gian và replay tiếp xúc. Các cổng chất lượng thuộc quy trình v4b ban đầu; chế độ luyện bài bổ sung đã bỏ ngưỡng mở replay.
 
 7. Lưu lượt thăm dò không đạt cùng nguyên nhân đổi phương pháp. Không xóa kết quả âm để chỉ giữ phiên bản có vẻ tốt hơn.
 
-## Ma trận vấn đề - cách xử lý chính - fallback
+## Vấn đề cần kiểm tra và phương án xử lý
 
-| Vấn đề reviewer sẽ hỏi | Cách xử lý chính và trạng thái | Fallback có thể chấp nhận |
+| Vấn đề cần làm rõ | Cách xử lý chính và trạng thái | Phương án dự phòng |
 |---|---|---|
 | 1. "Đang nghiên cứu cái gì?" | Đã thu hẹp thành học tiếp xúc của một hệ lai trong ngân sách tính toán; định nghĩa outcome trước lượt v4b | Nộp như bài benchmark/phần mềm có giới hạn rõ nếu chưa có kết quả cơ chế |
-| 2. Một năm mô phỏng có thật? | Đã có công thức dt x steps và log; mục tiêu 8.766x không đạt trên cấu hình đo | Báo trải nghiệm thực đo và giới hạn máy; không đổi tên epoch thành năm |
+| 2. Một năm mô phỏng có thật? | Đã có công thức dt x steps và log; mục tiêu 8.766x không đạt trên cấu hình đo | Báo trải nghiệm thực đo và giới hạn máy; phân biệt số vòng tối ưu với thời gian mô phỏng |
 | 3. Có cộng nhầm chín con ruồi thành một không? | Đã tách số bước từng ô, tổng toàn chiến dịch và evaluation; giải thích reset/CEM | Chỉ báo số mẫu mỗi policy-search cell, bỏ hoàn toàn khái niệm tuổi |
 | 4. Tăng tốc có đổi bài toán? | Batching giữ mẫu điều khiển, timestep và contact; test parity chính xác trên probe | Dùng scalar CPU reference nếu một tối ưu không qua parity |
 | 5. Vì sao không dùng GPU? | Đã probe thật; noslip không được hỗ trợ trong bản cài; giữ lỗi và phiên bản | CPU workers; GPU chỉ dùng sau nghiên cứu tương đương và hiệu chuẩn |
@@ -40,12 +40,12 @@ Một bài Q2 cần câu hỏi rõ và bằng chứng đủ sức trả lời. M
 | 10. Servo có phải cơ bắp ruồi? | Không; bài ghi rõ position servo kỹ thuật, đơn vị lực native | Bỏ diễn giải năng lượng sinh học; dùng công actuator như chỉ số kỹ thuật |
 | 11. Cái gì trong mạng được học? | Đã liệt kê 24 synapse-group gains + 6 MN offsets; còn 19 readout parameters | Chỉ tuyên bố tối ưu effective controller parameters, không gọi synaptic plasticity sinh học |
 | 12. Bộ não có nhận và hiểu nốt? | Không trực tiếp; mục tiêu đi qua scheduler/IK. Bài đã nêu giới hạn | Đổi câu hỏi sang motor gating; nghiên cứu encoder goal-to-neural sau bằng đối chứng riêng |
-| 13. Connectome có thật sự giúp? | Có ba seed và rewired cùng chiều tham số; chưa đủ kiểm định ưu thế | Báo không có bằng chứng ưu thế nếu dữ liệu không hỗ trợ, không ép kết luận dương |
+| 13. Connectome có thật sự giúp? | Có ba seed và rewired cùng chiều tham số; chưa đủ kiểm định ưu thế | Báo không có bằng chứng ưu thế nếu dữ liệu không hỗ trợ, giữ kết luận phù hợp với độ bất định |
 | 14. Đối chứng frozen có cùng năng lực? | Không: frozen học 25, adaptive học 49; báo là ablation chứ không baseline capacity-matched | Thêm đối chứng 24 tham số phi-synapse hoặc MLP/RNN phù hợp cùng ngân sách |
 | 15. Rewired có giữ phân bố trọng số? | Bảo toàn degree và outgoing weights, không incoming strength; công bố rõ | Thêm null model giữ strength/loại neuron/nhóm chân tùy giả thuyết |
 | 16. Readout có bù và che topology? | Có thể; cần khóa riêng bias ngang, gate và kích thích trong các ablation | Giới hạn mọi kết luận ở hệ lai, không quy thành cơ chế riêng của graph |
 | 17. "Reward mạnh" có hợp lý? | Reward đúng có hệ số 5 nhưng so với các phạt/shaping; không phải cường độ dopamine | Dùng sensitivity sweep rồi khóa hệ số; không tăng reward vô hạn khi học không đạt |
-| 18. Có farm reward bằng bấm lặp? | Đã có matching một-một, refractory và phạt extra; unit test kiểm chứng | Nếu tạo adversarial policy vẫn khai thác được, chuyển sang event ledger chặt hơn và rerun |
+| 18. Bấm lặp có làm tăng thưởng sai lệch? | Đã có matching một-một, refractory và phạt extra; unit test kiểm chứng | Nếu tạo adversarial policy vẫn khai thác được, chuyển sang event ledger chặt hơn và rerun |
 | 19. Precision cao nhưng bỏ gần hết nốt? | Đã yêu cầu recall cùng precision và F1; mẫu số gồm tất cả mục tiêu | Báo đường precision-recall/coverage và tuyệt đối không lọc nốt khó sau thử |
 | 20. Contact threshold có được chọn để nâng điểm? | Detector giữ cố định từ v3; chưa có calibration lực với bàn phím thật | Báo sensitivity ở nhiều ngưỡng, không gọi event là âm thanh piano thật |
 | 21. 85% có ý nghĩa khoa học gì? | Là tiêu chí kỹ thuật do dự án chọn, không phải ngưỡng sinh học hay chuẩn journal | Báo đường học liên tục cùng khoảng bất định, không dùng một ngưỡng để che xu hướng |
@@ -54,13 +54,13 @@ Một bài Q2 cần câu hỏi rõ và bằng chứng đủ sức trả lời. M
 | 24. Test có đủ mới? | Khác seed nhưng cùng tập pitch, timing và reset; chưa phải OOD | Gọi đúng in-distribution holdout; thêm test tempo/pitch/transposition/physics mới |
 | 25. Sửa phương pháp sau xem dữ liệu? | Có, v4a dẫn tới v4b; giữ cả hai, tạo holdout mới và công bố exploratory | Chạy một replication hoàn toàn độc lập sau khi khóa v4; không gọi v4 là preregistered |
 | 26. Chín ô có ngân sách bằng nhau? | Cùng vòng round-robin và population; vòng cuối có thể không đủ cho tất cả | So sánh ở cùng số bước/thế hệ chung từ history; báo thêm wall-clock chứ không thay nhau |
-| 27. Ba seed có đủ thống kê? | Chưa cho kết luận mạnh; trình bày từng seed, không coi từng nốt là replicate độc lập | Dùng effect size mô tả và tăng seed dựa trên variance/power pilot, không bịa CI hẹp |
+| 27. Ba seed có đủ thống kê? | Chưa cho kết luận mạnh; trình bày từng seed, không coi từng nốt là replicate độc lập | Dùng effect size mô tả và tăng seed dựa trên variance/power pilot, chưa báo khoảng tin cậy khi số lần lặp không đủ |
 | 28. Chưa có baseline học mạnh? | Chưa chạy PPO/DroQ/MLP direct action cùng budget | Định vị bài hiện tại là infrastructure/pilot; chưa nộp bài tuyên bố SOTA |
 | 29. Hai bài nhạc là dữ liệu chuẩn chưa? | OMR đầy đủ có warning, chưa note-by-note verification | Dùng synthetic làm benchmark chính; sheet/music chỉ demo có ghi giới hạn hoặc xin MusicXML/MIDI đã kiểm tra |
-| 30. Sáu chân chơi hợp âm 7-8 nốt? | Không bảo đảm; phải báo unassigned/infeasible target trong full-song score | Chuyển soạn có ghi mapping và giữ metric so với bản gốc, không âm thầm bỏ nốt |
+| 30. Sáu chân chơi hợp âm 7-8 nốt? | Không bảo đảm; phải báo unassigned/infeasible target trong full-song score | Chuyển soạn có ghi mapping và giữ metric so với bản gốc, công bố các nốt được thay đổi |
 | 31. Nốt rơi có làm lộ tương lai? | Viewer/controller chỉ dùng 150 ms cục bộ; tiền xử lý phân chân toàn bài vẫn là prior | Đổi sang online scheduler cùng cửa sổ và so sánh riêng trước khi gọi end-to-end online |
-| 32. Vùng não sáng có đo được không? | Không; DNg100 là chiếu mô hình lên morphology khác cá thể. UI đã ghi rõ | Hiển thị sơ đồ VNC theo chức năng, không gán anatomy giả cho neuron thiếu tọa độ |
-| 33. Hình ảnh đẹp có thay kết quả? | Không: app tách mục tiêu/contact và khóa full-song demo chưa đạt chuẩn | Cung cấp replay thất bại cùng event log, bỏ montage chọn đoạn đẹp |
+| 32. Vùng não sáng có đo được không? | Không; DNg100 là chiếu mô hình lên morphology khác cá thể. UI đã ghi rõ | Hiển thị sơ đồ VNC theo chức năng, ghi rõ những neuron chưa có tọa độ giải phẫu |
+| 33. Replay có đại diện cho hiệu năng đo được? | App tách mục tiêu và tiếp xúc; replay bài đã luyện được mở không phụ thuộc precision, có chỉ số toàn bài | Cung cấp replay thất bại cùng event log, bỏ montage chọn đoạn đẹp |
 | 34. Luật học có giống ruồi thật? | CEM là search ngoài mạng; chưa có dopamine, eligibility trace hay plasticity local | Không dùng thuật ngữ biological learning; nghiên cứu local rule như một dự án riêng có dữ liệu kiểm chứng |
 | 35. Có tái lập được không? | Có mã, seed, checksum, log; data/asset rights chưa hoàn toàn công khai | Phát synthetic fixtures và mô hình toy mở; thu xếp giấy phép trước khi tuyên bố fully reproducible |
 | 36. Kết quả âm nói lên điều gì? | Chỉ giới hạn của cấu hình, thuật toán và budget đã thử | Nêu failure-mode có cơ chế và phép can thiệp kiểm chứng; không tuyên bố ruồi không thể chơi piano |
@@ -68,18 +68,18 @@ Một bài Q2 cần câu hỏi rõ và bằng chứng đủ sức trả lời. M
 
 ## Bộ thí nghiệm ưu tiên trước khi nộp
 
-Gói A, cơ học: đối chiếu mặt tiếp xúc, spacing phím, spring/damping, lực/penetration và timestep. Định trước dung sai bằng yêu cầu tác vụ, không đặt sau khi nhìn số đo. Một oracle điều khiển hình học phải đạt chuẩn trên tập reachable trước khi lỗi được gán cho mạng học. Nếu oracle chưa đạt, sửa môi trường/decoder trước khi tăng hàng giờ train.
+Kiểm chứng cơ học: đối chiếu mặt tiếp xúc, spacing phím, spring/damping, lực/penetration và timestep. Định trước dung sai bằng yêu cầu tác vụ, không đặt sau khi nhìn số đo. Một oracle điều khiển hình học phải đạt chuẩn trên tập reachable trước khi lỗi được gán cho mạng học. Nếu oracle chưa đạt, sửa môi trường/decoder trước khi tăng hàng giờ train.
 
-Gói B, nhận dạng đóng góp: adaptive, fixed-synapse, rewired, mạng tắt/unity gate, MLP/RNN direct hoặc cùng decoder. Khóa hoặc ablate từng nhóm readout và MN offset. So sánh cả cùng bước vật lý và cùng wall-clock; ghi số tham số, số candidate, solver warning, domain và diện tích dưới đường học. Chọn số seed bằng variance pilot và nguồn lực, không cam kết một số seed tùy ý là đủ.
+Phân tách đóng góp của mô hình: adaptive, fixed-synapse, rewired, mạng tắt/unity gate, MLP/RNN direct hoặc cùng decoder. Khóa hoặc ablate từng nhóm readout và MN offset. So sánh cả cùng bước vật lý và cùng wall-clock; ghi số tham số, số candidate, solver warning, domain và diện tích dưới đường học. Chọn số seed bằng variance pilot và nguồn lực, không cam kết một số seed tùy ý là đủ.
 
-Gói C, chuyển giao: tập train pitch/timing/layout cố định; validation riêng; test mới theo tempo, quãng, reset pose và nhiễu lực. Hai tác phẩm được chép lại/đối chiếu độc lập. Bổ sung release/duration, tốc độ, polyphony, coverage và các nốt không phân chân được. Chạy full-song khi skill đủ, báo cả nguyên bản và chuyển soạn nếu có.
+Đánh giá chuyển giao: tập train pitch/timing/layout cố định; validation riêng; test mới theo tempo, quãng, reset pose và nhiễu lực. Hai tác phẩm được chép lại/đối chiếu độc lập. Bổ sung release/duration, tốc độ, polyphony, coverage và các nốt không phân chân được. Đánh giá toàn bài với checkpoint cố định, báo cả nguyên bản và chuyển soạn nếu có.
 
-Gói D, tái lập: khóa phiên bản, checksum tất cả mesh và ma trận; ghi chính xác release connectome; giải quyết quyền phân phối; chạy lại từ môi trường sạch và một máy độc lập. App và paper phải lấy số từ cùng artifact kết quả, không nhập tay.
+Tái lập: khóa phiên bản, checksum tất cả mesh và ma trận; ghi chính xác release connectome; giải quyết quyền phân phối; chạy lại từ môi trường sạch và một máy độc lập. App và paper phải lấy số từ cùng artifact kết quả, không nhập tay.
 
-Nếu không đủ nguồn lực cho A-D, hướng fallback có mục tiêu rõ nhất là bài phương pháp về kiểm định benchmark tiếp xúc có prior connectome và kế toán compute, với kết quả âm được phân tích. Cần kiểm tra journal có nhận bài công cụ/benchmark hoặc kết quả âm đúng chuyên ngành; không dùng chỉ số Q2 như một tiêu chí duy nhất.
+Nếu chưa thể hoàn thành các thí nghiệm trên, một phạm vi hẹp hơn là bài phương pháp về kiểm định benchmark tiếp xúc có prior connectome và kế toán compute, với kết quả âm được phân tích. Cần kiểm tra journal có nhận bài công cụ/benchmark hoặc kết quả âm đúng chuyên ngành; không dùng chỉ số Q2 như một tiêu chí duy nhất.
 
-## Deep search tăng tốc: điều có thể và chưa thể làm
+## Nguồn tài liệu về tăng tốc
 
 Đã rà 45 vị trí kết quả Exa theo ba hướng; trích được 44 kết quả/38 URL duy nhất. [MuJoCo Python](https://mujoco.readthedocs.io/en/3.9.0/python.html) và [source rollout](https://github.com/google-deepmind/mujoco/blob/main/python/mujoco/rollout.py) hỗ trợ batching/pool nhưng cần bảo toàn vòng feedback. [MuJoCo Warp](https://mujoco.readthedocs.io/en/stable/mjwarp/index.html) phù hợp throughput nhiều world; probe model này chưa chạy được vì noslip. [RoboPianist](https://proceedings.mlr.press/v229/zakka23a.html) ủng hộ thiết kế shaping/lookahead, không bảo đảm một giờ đủ học.
 
-Đường tăng tốc tiếp theo hợp lý là: giảm chi phí không làm đổi dynamics; đo lại trên workload có contact; xây một surrogate có kiểm chứng nếu cần GPU; và cải thiện hiệu quả mẫu. Mục tiêu một năm/giờ vẫn là một yêu cầu chưa đạt. Không có bằng chứng cho phép hứa đạt bằng một vài chỉnh sửa trên laptop hiện tại.
+Các hướng tăng tốc cần đánh giá tiếp gồm giảm chi phí không làm đổi dynamics; đo lại trên workload có contact; xây một surrogate có kiểm chứng nếu cần GPU; và cải thiện hiệu quả mẫu. Mục tiêu một năm/giờ vẫn là một yêu cầu chưa đạt. Khả năng đạt mức này trên phần cứng hiện tại chưa được chứng minh.
