@@ -57,7 +57,13 @@ class Handler(SimpleHTTPRequestHandler):
         if path=='/paper/manuscript.pdf':return ROOT/'output/pdf/manuscript_v4_vi.pdf'
         if path=='/paper/reviewer.pdf':return ROOT/'output/pdf/reviewer_v4_vi.pdf'
         return None
+    def local_host(self):
+        try:
+            host=urlsplit('http://'+self.headers.get('Host',''))
+            return host.hostname in ['127.0.0.1','localhost','::1'] and host.username is None and not host.path and (host.port is None or 0<host.port<65536)
+        except ValueError:return False
     def do_GET(self):
+        if not self.local_host():return self.json({'error':'Host rejected'},403)
         path=unquote(urlsplit(self.path).path)
         if path=='/api/state':return self.json(state())
         if path=='/api/health':return self.json({'ok':True,'version':4,**readiness()})
@@ -68,6 +74,7 @@ class Handler(SimpleHTTPRequestHandler):
         self._file=file;return super().do_GET()
     def translate_path(self,path):return str(getattr(self,'_file',ROOT/'missing'))
     def do_POST(self):
+        if not self.local_host():return self.json({'error':'Host rejected'},403)
         host=self.headers.get('Host','');origin=self.headers.get('Origin')
         if origin and origin!=f'http://{host}':return self.json({'error':'Origin rejected'},403)
         if not secrets.compare_digest(self.headers.get('X-FlyPiano-Token',''),TOKEN):return self.json({'error':'Token rejected'},403)

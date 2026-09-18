@@ -38,9 +38,9 @@ Va chạm tác vụ bật giữa geom ở đầu bàn chân và phím. Chưa bao
 
 ### 3.2 Mạng vận động và tính bất định sinh học
 
-Mạng có 2 descending neuron, 18 neuron trong nhóm CPG và 392 motor neuron; 2.592 cạnh tổng hợp từ 18.831 synapse của dữ liệu đầu vào. Ma trận thưa được chuẩn hóa và nhân hệ số toàn cục 0,03. Mô hình rate dùng ngưỡng, gain, giới hạn rate và hằng số thời gian phụ thuộc giả định thể tích cùng khởi tạo theo seed; tích phân Euler ở 2 ms và trễ giả định 4 ms. Descending drive bằng 500; phản hồi lực được chuẩn hóa, chặn và chiếu vào một neuron E1 trên mỗi chân.
+Đồ thị được lấy từ export MANC trong repository của Pugliese và cộng sự [8], commit 10e7661bf414ba7b4c2edf795cd36d0f878c17c0, tập W_20260522_allSynapses. Release neuPrint nền không được ghi trong export nên không tự suy là v1.2.3. Bộ lọc giữ DNg100, IN17A001, INXXX466, IN16B036 và motor neuron thuộc các phân nhóm chân. Mạng có 2 descending neuron, 18 neuron trong nhóm CPG và 392 motor neuron; 2.592 cạnh tổng hợp từ 18.831 synapse của dữ liệu đầu vào. Ma trận thưa được nhân hệ số toàn cục 0,03; chuẩn hóa thể tích tác động vào tham số gain/ngưỡng neuron. Mô hình rate dùng ngưỡng, gain, giới hạn rate và hằng số thời gian phụ thuộc giả định thể tích cùng khởi tạo theo seed; tích phân Euler ở 2 ms và trễ giả định 4 ms. Descending drive bằng 500; phản hồi lực được chuẩn hóa, chặn và chiếu vào một neuron E1 trên mỗi chân.
 
-Không đủ dữ liệu để xem số synapse như conductance thật hoặc xem rate tính toán như firing rate đã hiệu chuẩn. Kết nối từ mục tiêu âm nhạc đến bộ lập lịch, chiếu phản hồi cảm giác, ánh xạ quần thể motor neuron sang servo đều là lựa chọn mô hình hóa. Điều này giới hạn suy luận về thần kinh học.
+Mô hình full-brain có kiểm chứng hành vi của Shiu và cộng sự [9] là một phạm vi khác; v4 không kế thừa sự kiểm chứng sinh học đó. Kết quả CPG trong nghiên cứu nguồn cũng không tự xác nhận dynamics của phân đồ thị và các tham số đã chỉnh ở đây. Dấu neurotransmitter là dự đoán; v4 giữ giả định dấu đã có, chưa đánh giá bất định dấu. Không đủ dữ liệu để xem số synapse như conductance thật hoặc xem rate tính toán như firing rate đã hiệu chuẩn. Kết nối từ mục tiêu âm nhạc đến bộ lập lịch, chiếu phản hồi cảm giác, ánh xạ quần thể motor neuron sang servo đều là lựa chọn mô hình hóa. Điều này giới hạn suy luận về thần kinh học.
 
 ### 3.3 Những gì thực sự được học
 
@@ -69,15 +69,15 @@ Hình 1. Các khối kỹ thuật, khối thần kinh có tham số thích nghi,
 
 Benchmark đầu tiên gồm sáu nốt không chồng lấn, lần lượt giao cho sáu chân, bắt đầu ở 0,4 s, cách nhau 0,55 s, giữ 0,22 s; tổng episode 3,72 s sau làm tròn. Mỗi chân lấy ngẫu nhiên trong ba cao độ có sai số IK nhỏ nhất của chân đó. Tập huấn luyện dùng seed tác vụ 10000 + số thế hệ; validation dùng 71001 và 71002; test dùng 91001-91004. Các seed môi trường khác nhau chủ yếu thay cao độ, chưa thay tư thế ban đầu hay thông số vật lý. Đây là kiểm tra chuyển giao hẹp trong phân phối, không phải generalization rộng.
 
-Sau khi validation đạt precision và recall ít nhất 0,95, chương trình mở nhóm 12 cao độ reachable cho mỗi chân. Nếu test kỹ năng đạt chuẩn, một test chuỗi nhanh hơn dùng 12 nốt, khoảng cách 0,30 s và giữ 0,16 s được chạy. Chuỗi này đòi precision >0,85, recall và F1 >=0,85. Hiện curriculum chuyển sang phổ cao độ rộng hơn, nhưng không huấn luyện riêng mức chuỗi nhanh trước test; đây là bài kiểm tra transfer tốc độ khó hơn, không thể suy thất bại là mất khả năng học chuỗi.
+Sau khi validation đạt precision và recall ít nhất 0,95, chương trình mở nhóm 12 cao độ reachable cho mỗi chân. Nếu test kỹ năng đạt chuẩn, một test chuỗi nhanh hơn dùng 12 nốt, khoảng cách 0,30 s và giữ 0,16 s được chạy. Chuỗi này đòi precision >0,85, recall và F1 >=0,85. Đây là ngưỡng trên ước lượng điểm của tập test nhỏ, không phải cận dưới tin cậy cho hiệu năng quần thể. Hiện curriculum chuyển sang phổ cao độ rộng hơn, nhưng không huấn luyện riêng mức chuỗi nhanh trước test; đây là bài kiểm tra transfer tốc độ khó hơn, không thể suy thất bại là mất khả năng học chuỗi.
 
-Hai bản nhạc đầy đủ chỉ được xuất như demonstration đạt chuẩn sau khi cả hai cổng trên thành công. Merry-Go-Round of Life có 237 ô nhịp, 2.401 nốt, khoảng 316,04 s và đa âm tối đa 8; In The Pool có 69 ô viết, 73 ô khi tính lặp, 1.502 nốt, khoảng 238,46 s và đa âm tối đa 7. Các con số là từ bản OMR đang có, chưa được một nhạc công kiểm tra độc lập từng nốt. Hai bản nhạc không được dùng trong tối ưu v4.
+Hai bản nhạc đầy đủ chỉ được xuất như demonstration đạt chuẩn sau khi cả hai cổng trên thành công. Merry-Go-Round of Life có 237 ô nhịp, 2.401 nốt, khoảng 316,04 s và đa âm tối đa 8; In The Pool có 69 ô viết, 73 ô khi tính lặp, 1.502 nốt, khoảng 238,46 s và đa âm tối đa 7. Các con số là từ bản OMR đang có, chưa được một nhạc công kiểm tra độc lập từng nốt. Hai bản nhạc không được dùng trong tối ưu v4. Kiểm tra cấu trúc phát hiện 1/29 nốt dư do trùng cùng pitch và onset, cùng 7/55 cặp chồng thời gian ở cùng pitch, lần lượt cho Merry/Pool. Cần xác minh unison, tie và tái nhấn rồi chuẩn hóa mục tiêu physical-key với mapping về từng voice trước khi dùng để chấm full-song. V4 giữ nguyên dữ liệu nguồn và chưa tự gộp các trường hợp chưa rõ nhạc lý.
 
 Sáu chân không bảo đảm thực hiện mọi hợp âm hoặc với tới mọi phím. Nếu sau này trình diễn bản chuyển soạn đơn giản hơn, phải gọi đúng là bản chuyển soạn, ghi mọi nốt bị bỏ và chấm cả trên mục tiêu gốc lẫn mục tiêu chuyển soạn. Không tự đổi sang bản đơn âm để đạt chuẩn rồi gọi đó là chơi toàn bộ tác phẩm.
 
 ### 4.2 Quan sát hữu hạn và giao diện nốt rơi
 
-Ở mỗi chân, bộ lập lịch chỉ đưa mục tiêu kế tiếp vào điều khiển khi onset còn tối đa 150 ms. App thể hiện cùng cửa sổ bằng thanh nốt rơi trên đúng phím trong cảnh 3D; đầu thanh tới bàn phím ở onset, chiều dài thể hiện phần thời gian giữ còn trong cửa sổ. Thanh là một lớp hiển thị, không có collision và không tạo lực. Replay hiển thị riêng màu mục tiêu và tiếp xúc thực.
+Ở mỗi chân, bộ lập lịch chỉ đưa mục tiêu kế tiếp vào điều khiển khi onset còn tối đa 150 ms. App thể hiện cùng cửa sổ bằng thanh nốt rơi trên đúng phím trong cảnh 3D; đầu thanh tới bàn phím ở onset, chiều dài thể hiện phần thời gian giữ còn trong cửa sổ. Thanh là một lớp hiển thị, không có collision và không tạo lực. Replay hiển thị riêng màu mục tiêu và tiếp xúc thực. Tư thế được lưu ở 24 fps, nhưng sự kiện chấm điểm được phát hiện ở 500 Hz và lưu riêng; không chấm từ các frame video.
 
 Tuy nhiên, ở full-song scheduler, phân công chân ban đầu được tính từ chuỗi có sẵn. Vì vậy cửa sổ 150 ms chỉ giới hạn mục tiêu vào bộ điều khiển cục bộ; chưa loại bỏ mọi lợi thế từ tiền xử lý toàn bản nhạc. Không gọi toàn bộ hệ thống là một tác nhân quan sát trực tuyến thuần túy hoặc một hệ thống nhìn và đọc bản nhạc.
 
@@ -122,6 +122,10 @@ Hình 2. Thông lượng benchmark CPU gồm tiếp xúc chủ động, sau warm
 ### 6.2 Học và chuyển giao trong phân phối
 
 {{LEARNING_RESULTS}}
+
+{{CHECKPOINT_TABLE}}
+
+Các mốc dùng điểm validation gần nhất không vượt mốc, trung bình trên ba seed adaptive; cột trễ cho biết độ cũ lớn nhất của điểm đo. Đây không phải test lặp lại sau mỗi mốc.
 
 ![Đường học](figures/learning.png)
 
@@ -178,3 +182,7 @@ Mỗi lượt lưu run_id, các phiên bản thư viện, checksum các file mô
 [6] [MuJoCo Python documentation, phiên bản 3.9.0](https://mujoco.readthedocs.io/en/3.9.0/python.html).
 
 [7] [MuJoCo Warp documentation](https://mujoco.readthedocs.io/en/stable/mjwarp/index.html) và [repository chính thức](https://github.com/google-deepmind/mujoco_warp).
+
+[8] [Pugliese và cộng sự. Connectome simulations identify a central pattern generator circuit for fly walking. bioRxiv, 2025, preprint](https://doi.org/10.1101/2025.09.12.675944). [Code/data repository](https://github.com/smpuglie/Pugliese_cpg_2025).
+
+[9] [Shiu và cộng sự. A Drosophila computational brain model reveals sensorimotor processing. Nature 634, 210-219, 2024](https://www.nature.com/articles/s41586-024-07763-9).

@@ -1,0 +1,44 @@
+{
+  "merry": {
+    "notes": 2401,
+    "duplicate_same_pitch_onsets": 1,
+    "overlapping_same_pitch_pairs": 7,
+    "invalid_pitch_or_duration": 0,
+    "field_names": [
+      "id",
+      "start",
+      "end",
+      "pitch",
+      "measure",
+      "occurrence",
+      "page",
+      "staff",
+      "voice",
+      "quarter",
+      "quarter_duration",
+      "grace"
+    ],
+    "warnings": 3
+  },
+  "pool": {
+    "notes": 1502,
+    "duplicate_same_pitch_onsets": 29,
+    "overlapping_same_pitch_pairs": 55,
+    "invalid_pitch_or_duration": 0,
+    "field_names": [
+      "id",
+      "start",
+      "end",
+      "pitch",
+      "measure",
+      "occurrence",
+      "page",
+      "staff",
+      "voice",
+      "quarter",
+      "quarter_duration",
+      "grace"
+    ],
+    "warnings": 12
+  }
+}

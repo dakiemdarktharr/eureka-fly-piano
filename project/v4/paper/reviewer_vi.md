@@ -64,6 +64,7 @@ Một bài Q2 cần câu hỏi rõ và bằng chứng đủ sức trả lời. M
 | 34. Luật học có giống ruồi thật? | CEM là search ngoài mạng; chưa có dopamine, eligibility trace hay plasticity local | Không dùng thuật ngữ biological learning; nghiên cứu local rule như một dự án riêng có dữ liệu kiểm chứng |
 | 35. Có tái lập được không? | Có mã, seed, checksum, log; data/asset rights chưa hoàn toàn công khai | Phát synthetic fixtures và mô hình toy mở; thu xếp giấy phép trước khi tuyên bố fully reproducible |
 | 36. Kết quả âm nói lên điều gì? | Chỉ giới hạn của cấu hình, thuật toán và budget đã thử | Nêu failure-mode có cơ chế và phép can thiệp kiểm chứng; không tuyên bố ruồi không thể chơi piano |
+| 37. Các voice trùng có thành mục tiêu không thể thực hiện? | Sanity check có 1/29 duplicate onset-pitch và 7/55 overlap cùng pitch ở Merry/Pool; chưa chuẩn hóa tie/unison | Xác minh nhạc lý rồi tạo physical-key target riêng với mapping về source; synthetic vẫn là benchmark chính |
 
 ## Bộ thí nghiệm ưu tiên trước khi nộp
 

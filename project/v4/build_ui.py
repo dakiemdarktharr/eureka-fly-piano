@@ -20,10 +20,12 @@ h=h.replace('<main>','''<main>
 <p id="demoGate" class="gateNotice">Hai bản nhạc chỉ mở sau khi qua kiểm tra kỹ năng và chuỗi nốt.</p>
 </section>''')
 h=h.replace('<script type="module" src="/ui/app.js"></script>','<script type="module" src="/ui/app.js"></script><script src="/ui/dashboard.js"></script>')
+h=h.replace('</article></section>\n<section class="transport panel"','<div class="cpgPanel"><span>VNC: 18 CPG · sơ đồ tín hiệu, không phải vị trí giải phẫu</span><div class="cpgGrid">'+''.join(f'<i id="cpg{i}" title="CPG {i}">{i+1}</i>' for i in range(18))+'</div></div></article></section>\n<section class="transport panel"')
 (ui/'index.html').write_text(h,encoding='utf8')
 css=(old/'style.css').read_text(encoding='utf8')+'''
 .campaign{padding:26px;margin-bottom:30px;background:linear-gradient(125deg,#162d32,#121b27 65%)}.campaignHead{display:flex;justify-content:space-between;align-items:center}.campaignHead h1{font-size:28px}.pill{border:1px solid #3a635c;border-radius:20px;padding:8px 14px;color:var(--mint);font-size:12px}.statRow{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:25px 0}.statRow b{font-size:27px;font-weight:500;display:block;color:var(--mint)}.statRow span{font-size:11px;color:var(--muted);display:block;margin-top:8px}.progress{height:4px;background:#263f49;margin-bottom:22px}.progress i{display:block;height:100%;background:var(--mint);width:0}.experimentGrid{display:grid;grid-template-columns:1fr 1fr;gap:28px}#learningChart{width:100%;height:190px}.smallText{font-size:10px}table{width:100%;border-collapse:collapse;font-size:11px}th,td{text-align:right;padding:5px 8px;border-bottom:1px solid #2b3c47}th:first-child,td:first-child{text-align:left}.jobControls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:24px;font-size:12px}.gateNotice{margin-top:17px;padding-top:15px;border-top:1px solid #344653;color:var(--amber);font-size:12px}.campaign button:disabled{cursor:default}.webgl{height:410px}@media(max-width:950px){.statRow{grid-template-columns:1fr 1fr}.experimentGrid{grid-template-columns:1fr}.campaign{padding:18px}.campaignHead{align-items:flex-start;gap:10px}.campaignHead h1{font-size:24px}.statRow b{font-size:23px}}
 '''
+css+='\n.cpgPanel{padding:10px 20px 14px;font-size:9px;color:var(--muted);border-top:1px solid var(--line)}.cpgGrid{display:grid;grid-template-columns:repeat(18,1fr);gap:3px;margin-top:8px}.cpgGrid i{font-style:normal;text-align:center;padding:5px 0;background:#69e6c2;color:#092019;font-size:8px}\n'
 (ui/'style.css').write_text(css,encoding='utf8')
 js=(old/'app.js').read_text(encoding='utf8').replace("song:'merry',variant:'full'","song:'skill',variant:'adaptive'")
 js=js.replace('const matrix=new THREE.Matrix4();','''const matrix=new THREE.Matrix4();
@@ -33,6 +35,7 @@ function updateFalling(){const t=state.time;const notes=score.notes.filter(n=>n.
 ''')
 js=js.replace("'Kết thúc';drawRoll()","(state.song==='skill'?'Chuỗi tổng hợp':'Kết thúc');drawRoll()")
 js=js.replace('drawRoll();body.renderer.render','drawRoll();updateFalling();body.renderer.render')
+js=js.replace('const dn=base+replay.layout.DN[0];',"const cp=base+replay.layout.CPG[0];for(let i=0;i<18;i++){const el=$('cpg'+i);el.style.opacity=.15+.85*Math.min(1,frames[cp+i]/50);el.title='CPG '+i+': '+frames[cp+i].toFixed(2)+' đơn vị rate; thang 0–50'}const dn=base+replay.layout.DN[0];")
 a=js.index('async function load(');b=js.index('\nfunction animate',a)
 js=js[:a]+'''async function load(song,variant='adaptive'){
  const token=++state.loading;state.playing=false;state.ready=false;$('play').disabled=true;$('play').textContent='Đang tải…';

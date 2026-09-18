@@ -48,7 +48,17 @@ learning=f"{summary}. Số thế hệ hoàn tất theo ô nằm trong [{min(c['g
 demo=(f"Có {passed}/9 ô vượt đồng thời cổng kỹ năng và chuỗi. Chính sách primary cố định trước là adaptive seed 0. "+('Hai bản nhạc đầy đủ đã được xuất theo cổng chất lượng.' if manifest and manifest['qualified_song_demonstration'] else 'Primary chưa vượt cả hai cổng nên hai bài nhạc đầy đủ bị khóa ở v4. App cung cấp replay kỹ năng để chẩn đoán, không trình bày nó như một buổi biểu diễn thành công. Dữ liệu hai bản nhạc vẫn được giữ nguyên để đánh giá sau.'))
 conclusion=f"V4 triển khai tăng tốc CPU có kiểm tra tương đương và một pipeline học/đánh giá có ngân sách. {summary}. Mục tiêu một năm mô phỏng trong một giờ chưa đạt; probe GPU không tương thích noslip. Kết quả là đánh giá của một bộ điều khiển lai có hỗ trợ hình học trong phạm vi synthetic hẹp. Cần sửa/kiểm chứng cơ học tiếp xúc và bổ sung baseline, test chuyển giao trước khi đưa ra kết luận rộng hơn."
 editorial=f"Phiên bản này là nghiên cứu thăm dò: {summary}. Tổng learner wall time của hai lượt: {total_wall/60:.2f} phút. Số ô đạt cả skill và sequence gate: {passed}/9. Chưa đủ bằng chứng để gọi manuscript là sẵn sàng nộp Q2; các điểm còn mở bên dưới phải được giữ trong paper."
-values={'DATE':str(date.today()),'ABSTRACT_RESULTS':abstract,'BUDGET_RESULTS':budget,'BUDGET_TABLE':'\n'.join(bt),'LEARNING_RESULTS':learning,'TEST_TABLE':'\n'.join(table),'DEMO_RESULTS':demo,'CONCLUSION':conclusion,'EDITORIAL':editorial}
+checkpoint_rows=['| Mốc thực (phút) | Seed | P trung bình | R trung bình | F1 trung bình | F1 min-max | Trễ tối đa (s) |','|---|---|---|---|---|---|---|']
+for minute in [5,15,30,45]:
+ if status['elapsed_s']<minute*60:continue
+ selected=[]
+ for c in cells:
+  if c['variant']!='adaptive':continue
+  eligible=[h for h in c['history'] if h['wall_s']<=minute*60]
+  if eligible:selected.append(eligible[-1])
+ if selected:
+  mm=[h['metric'] for h in selected];checkpoint_rows.append(f"| {minute} | {len(mm)} | {np.mean([m['precision'] for m in mm]):.3f} | {np.mean([m['recall'] for m in mm]):.3f} | {np.mean([m['f1'] for m in mm]):.3f} | {min(m['f1'] for m in mm):.3f}-{max(m['f1'] for m in mm):.3f} | {max(minute*60-h['wall_s'] for h in selected):.1f} |")
+values={'DATE':str(date.today()),'ABSTRACT_RESULTS':abstract,'BUDGET_RESULTS':budget,'BUDGET_TABLE':'\n'.join(bt),'LEARNING_RESULTS':learning,'TEST_TABLE':'\n'.join(table),'DEMO_RESULTS':demo,'CONCLUSION':conclusion,'EDITORIAL':editorial,'CHECKPOINT_TABLE':'\n'.join(checkpoint_rows)}
 sys.path.insert(0,str(ROOT));import pdf_renderer
 pdf_renderer.PAPER=PAPER
 for stem,title in [('manuscript','Fly Piano v4 - ban thao nghien cuu'),('reviewer','Fly Piano v4 - phan bien va huong xu ly')]:

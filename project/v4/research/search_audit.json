@@ -198,5 +198,10 @@
       "title": "RoboPianist: Dexterous Piano Playing with Deep Reinforcement ...",
       "url": "https://arxiv.org/html/2304.04150v3"
     }
+  ],
+  "additional_primary_fetches": [
+    "https://github.com/smpuglie/Pugliese_cpg_2025",
+    "https://doi.org/10.1101/2025.09.12.675944",
+    "https://www.nature.com/articles/s41586-024-07763-9"
   ]
 }

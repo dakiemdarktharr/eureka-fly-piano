@@ -1,0 +1,20 @@
+{
+  "version": 4,
+  "graph": {
+    "dataset_name": "MANC; Pugliese et al. full-VNC export",
+    "dataset_version": "W_20260522_allSynapses / wTable_20260522_allSynapses",
+    "underlying_neuprint_version": "not stated in downloaded export; do not infer v1.2.3",
+    "upstream_commit": "10e7661bf414ba7b4c2edf795cd36d0f878c17c0",
+    "filter": "DNg100; IN17A001; INXXX466; IN16B036; all motor neurons in fl/ml/hl subclasses",
+    "orientation": "weights[pre,post]; signed synapse counts; no synapse count threshold",
+    "neuron_count": 412,
+    "edge_count": 2592,
+    "synapse_count": 18831,
+    "graph_sha256": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9",
+    "neuron_table_sha256": "975e0b7031bc78dc03e1a95426846e0c946bbefae481a31fde2f3a374772b639"
+  },
+  "active_body": "FlyGym / NeuroMechFly 2.1.0 XML from project/v2/assets/fly_model/piano_fly.xml; fixed thorax; custom 88-key MuJoCo scene",
+  "historical_manifest_note": "body_model and mesh_sha256 in project/connectome_manifest.json describe the old v0 surrogate, not the v4 active body; only its graph/normalization fields are used",
+  "asset_fingerprints": "research/asset_fingerprints.json",
+  "brain_view": "Two FlyWire DNg100 homolog skeletons, not an integrated brain-VNC reconstruction"
+}
