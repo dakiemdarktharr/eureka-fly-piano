@@ -18,7 +18,9 @@ plt.rcParams.update({'font.family':'DejaVu Sans','font.size':9,'axes.spines.top'
 fig,ax=plt.subplots(figsize=(9,3.6),layout='constrained');ax.axis('off')
 boxes=[(.02,.65,.22,.22,'Chuỗi nốt mục tiêu\nCửa sổ cục bộ 150 ms'),(.33,.65,.25,.22,'Lập lịch / IK kỹ thuật\n+ hiệu chỉnh ngang được học'),(.02,.12,.22,.25,'Mạng rate 412 neuron\n24 hệ số synapse\n6 hệ số kích thích MN'),(.66,.65,.3,.22,'42 mục tiêu servo\nCơ thể MuJoCo + 88 phím'),(.66,.12,.3,.25,'Sự kiện tiếp xúc vật lý\nGhép nốt một-một'),(.33,.12,.25,.25,'Thưởng episode -> CEM\n10 ứng viên, 3 elite')]
 for x,y,w,h,t in boxes:ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=.01',facecolor='#e7f1ef',edgecolor='#50938a'));ax.text(x+w/2,y+h/2,t,ha='center',va='center',fontsize=9)
-for start,end in [((.25,.76),(.32,.76)),((.59,.76),(.65,.76)),((.81,.64),(.81,.38)),((.65,.245),(.59,.245)),((.32,.245),(.25,.245)),((.24,.37),(.67,.65))]:ax.add_patch(FancyArrowPatch(start,end,arrowstyle='->',mutation_scale=13,color='#56716d',lw=1.4))
+for start,end in [((.25,.76),(.32,.76)),((.59,.76),(.65,.76)),((.81,.64),(.81,.38)),((.65,.245),(.59,.245)),((.32,.245),(.25,.245)),((.24,.37),(.67,.65)),((.455,.38),(.455,.64))]:ax.add_patch(FancyArrowPatch(start,end,arrowstyle='->',mutation_scale=13,color='#56716d',lw=1.4))
+ax.add_patch(FancyArrowPatch((.8,.12),(.13,.12),connectionstyle='arc3,rad=-.25',arrowstyle='->',mutation_scale=11,color='#56716d',lw=1,linestyle='--'))
+ax.text(.47,.025,'Phản hồi lực mỗi 2 ms',ha='center',fontsize=8,color='#56716d')
 fig.savefig(FIG/'architecture.png',dpi=190);plt.close(fig)
 fig,ax=plt.subplots(figsize=(8,3.2),layout='constrained');names=[f"CPU {r['workers']} worker" for r in bench['parallel']]+['Mục tiêu 1 năm / giờ'];vals=[r['aggregate_rtf'] for r in bench['parallel']]+[8766]
 ax.barh(names,vals,color=['#368f83']*4+['#bc8950']);ax.set_xscale('log');ax.set(xlabel='Giây mô phỏng cộng dồn / giây thực',xlim=(1,30000));ax.grid(axis='x',alpha=.15)

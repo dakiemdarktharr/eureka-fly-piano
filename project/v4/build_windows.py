@@ -6,6 +6,9 @@ args=[sys.executable,'-m','PyInstaller','--noconfirm','--onedir','--windowed','-
 for package in ['flygym','music21','matplotlib','IPython','pyarrow','trimesh','pytest','torch','warp','mujoco_warp']:args+=['--exclude-module',package]
 def add(src,dest):args.extend(['--add-data',f'{src}:{dest}'])
 add(ROOT/'ui','bundle/project/v4/ui')
+for name in ['engine.py','train.py','v4_paths.py']:add(ROOT/name,'bundle/project/v4')
+add(PROJECT/'v2/world.py','bundle/project/v2')
+add(PROJECT/'simulation/model.py','bundle/project/simulation')
 for p in ['output','research']:
  if p=='output' and (ROOT/p).exists():add(ROOT/p,'bundle/project/v4/'+p)
 if (ROOT/'research/cpu_benchmark.json').exists():add(ROOT/'research/cpu_benchmark.json','bundle/project/v4/research')
