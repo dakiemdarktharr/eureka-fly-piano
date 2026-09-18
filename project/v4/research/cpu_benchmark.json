@@ -1,0 +1,77 @@
+{
+  "mujoco": "3.9.0",
+  "dt": 0.0002,
+  "control_dt": 0.002,
+  "rows": [
+    {
+      "batched": false,
+      "wall_s": 0.7698185999997804,
+      "steps": 10350,
+      "rtf": 2.688945161886957
+    },
+    {
+      "batched": true,
+      "wall_s": 0.7063727999993716,
+      "steps": 10350,
+      "rtf": 2.9304639136753874
+    },
+    {
+      "batched": false,
+      "wall_s": 0.7430070999998861,
+      "steps": 10350,
+      "rtf": 2.785976069408109
+    },
+    {
+      "batched": true,
+      "wall_s": 0.6329922000004444,
+      "steps": 10350,
+      "rtf": 3.2701824761798752
+    },
+    {
+      "batched": false,
+      "wall_s": 0.8711973000008584,
+      "steps": 10350,
+      "rtf": 2.376040421610536
+    },
+    {
+      "batched": true,
+      "wall_s": 0.7349013000002742,
+      "steps": 10350,
+      "rtf": 2.8167047738236795
+    }
+  ],
+  "parallel": [
+    {
+      "workers": 1,
+      "wall_s": 7.252370099999098,
+      "steps": 124200,
+      "aggregate_rtf": 3.4250872001144965,
+      "warnings": 0
+    },
+    {
+      "workers": 2,
+      "wall_s": 3.357077799999388,
+      "steps": 124200,
+      "aggregate_rtf": 7.399292325010915,
+      "warnings": 0
+    },
+    {
+      "workers": 3,
+      "wall_s": 2.140815200000361,
+      "steps": 124200,
+      "aggregate_rtf": 11.603056630014496,
+      "warnings": 0
+    },
+    {
+      "workers": 4,
+      "wall_s": 1.7991230999996333,
+      "steps": 124200,
+      "aggregate_rtf": 13.80672617677193,
+      "warnings": 0
+    }
+  ],
+  "max_abs_qpos_difference": 0.0,
+  "events_identical": true,
+  "target_rtf": 8766,
+  "scope": "synthetic active contact; startup excluded only from worker throughput; not training result"
+}

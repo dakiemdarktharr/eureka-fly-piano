@@ -1,0 +1,14 @@
+{
+  "worlds": 16,
+  "training": false,
+  "passed": false,
+  "warp_version": "1.17.0",
+  "mujoco_version": "3.9.0",
+  "device": "cuda:0",
+  "nq": 214,
+  "nv": 214,
+  "ngeom": 157,
+  "error": "noslip solver not implemented.",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\ANHKHOI\\Documents\\ChatGPT\\eureka\\project\\v4\\probe_gpu.py\", line 14, in main\n    m=mjw.put_model(w.model);d=mjw.put_data(w.model,w.data,nworld=a.worlds,nconmax=64,njmax=512)\n      ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\ANHKHOI\\Documents\\ChatGPT\\eureka\\project\\v4\\.venv\\Lib\\site-packages\\mujoco_warp\\_src\\io.py\", line 182, in put_model\n    raise NotImplementedError(f\"noslip solver not implemented.\")\nNotImplementedError: noslip solver not implemented.\n",
+  "total_seconds": 1.9769624000000476
+}

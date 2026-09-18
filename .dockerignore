@@ -20,3 +20,11 @@ project/v3/paper/qa
 **/*.log
 
 project/v3/qa
+
+project/v4/runtime
+project/v4/dist
+project/v4/build
+project/v4/qa
+project/v4/research/pilot_v4a
+project/connectome/*.npy
+project/connectome/neurons.csv

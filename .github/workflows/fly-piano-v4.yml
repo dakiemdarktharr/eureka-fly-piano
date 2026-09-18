@@ -1,0 +1,29 @@
+name: Fly Piano v4 checks
+on: [push, pull_request]
+jobs:
+  protocol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r project/v4/requirements.txt
+      - run: python project/v4/test_protocol.py -v
+      - run: python -m compileall -q project/v4
+      - run: docker compose -f compose.v4.yaml config --quiet
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -f project/v4/Dockerfile -t fly-piano:v4 .
+      - name: Health check without private inputs
+        run: |
+          docker run -d --name fly-piano-v4 -p 127.0.0.1:8878:8878 fly-piano:v4
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8878/api/health > health.json; then break; fi
+            sleep 2
+          done
+          python -c "import json; d=json.load(open('health.json')); assert d['ok'] and not d['ready'] and d['missing']"
+          docker logs fly-piano-v4
+          docker stop fly-piano-v4

@@ -1,0 +1,15 @@
+services:
+  fly-piano-v4:
+    build:
+      context: .
+      dockerfile: project/v4/Dockerfile
+    ports:
+      - "127.0.0.1:8878:8878"
+    volumes:
+      - fly-piano-v4-state:/state
+      - ./project/v2/data:/app/project/v2/data:ro
+      - ./project/connectome:/app/project/connectome:ro
+      - ./project/v2/scores/private:/app/project/v2/scores/private:ro
+    restart: unless-stopped
+volumes:
+  fly-piano-v4-state:

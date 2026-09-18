@@ -1,0 +1,2666 @@
+{
+  "config": {
+    "version": 4,
+    "run_id": "20260918T055453",
+    "budget_s": 3600.0,
+    "workers": 4,
+    "dt": 0.0002,
+    "control_dt": 0.002,
+    "lookahead_s": 0.15,
+    "optimizer": "CEM",
+    "population": 10,
+    "elite": 3,
+    "train_fraction": 0.88,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "variants": [
+      "adaptive",
+      "frozen",
+      "rewired"
+    ],
+    "parameter_names": [
+      "log_synapse_CPG_0",
+      "log_synapse_CPG_1",
+      "log_synapse_CPG_2",
+      "log_synapse_CPG_3",
+      "log_synapse_CPG_4",
+      "log_synapse_CPG_5",
+      "log_synapse_CPG_6",
+      "log_synapse_CPG_7",
+      "log_synapse_CPG_8",
+      "log_synapse_CPG_9",
+      "log_synapse_CPG_10",
+      "log_synapse_CPG_11",
+      "log_synapse_CPG_12",
+      "log_synapse_CPG_13",
+      "log_synapse_CPG_14",
+      "log_synapse_CPG_15",
+      "log_synapse_CPG_16",
+      "log_synapse_CPG_17",
+      "log_synapse_MN_0",
+      "log_synapse_MN_1",
+      "log_synapse_MN_2",
+      "log_synapse_MN_3",
+      "log_synapse_MN_4",
+      "log_synapse_MN_5",
+      "log_gate_0",
+      "log_gate_1",
+      "log_gate_2",
+      "log_gate_3",
+      "log_gate_4",
+      "log_gate_5",
+      "press_extension_0",
+      "press_extension_1",
+      "press_extension_2",
+      "press_extension_3",
+      "press_extension_4",
+      "press_extension_5",
+      "press_advance_s"
+    ],
+    "train_task_seeds": "10000 + generation; never songs",
+    "validation_seeds": [
+      70001,
+      70002
+    ],
+    "test_seeds": [
+      90001,
+      90002,
+      90003,
+      90004
+    ],
+    "success": {
+      "single_precision": 0.95,
+      "single_recall": 0.95,
+      "sequence_precision_strict": 0.85,
+      "sequence_recall": 0.85,
+      "sequence_f1": 0.85
+    },
+    "hashes": {
+      "v4\\engine.py": "a8609c49cf582b6d2032a6206f999df62b54ff3aadbe1f90bc9fe221f2fa76d5",
+      "v4\\train.py": "69d12502b115b15eb9ef858331658abbfb26686a4ad5527bb06d5c62b36b5ca2",
+      "v2\\world.py": "a8c6a0ae8fa2f90795347b82de18d904e11ca873521e2da4354a57088f49ded3",
+      "simulation\\model.py": "0fe26463b5dc6c528a1cbc9a4ab565ae8206f8391d304c739a39eb83ccda337e",
+      "connectome\\weights.npy": "68f496b722f4daa6d6f955a76260db40d7d29ab8fe483b2782a0f1c4bb9328e9",
+      "connectome\\neurons.csv": "975e0b7031bc78dc03e1a95426846e0c946bbefae481a31fde2f3a374772b639",
+      "v2\\data\\ik_cache.npz": "3d1b45a2a833be463447853e94741eb4af1e935f7c88d1eb3195f103e998c473",
+      "v2\\assets\\fly_model\\piano_fly.xml": "6b657b533c2b557ba3dff506102a8a3d8c40db34d159af5460b308e7d047f830"
+    },
+    "mujoco": "3.9.0",
+    "numpy": "2.5.3"
+  },
+  "status": {
+    "state": "completed",
+    "message": "Fixed compute budget ended. Unmet skill gates are not bypassed.",
+    "run_id": "20260918T055453",
+    "pid": 32412,
+    "elapsed_s": 432.2970000000005,
+    "budget_s": 3600.0,
+    "physics_steps": 26895600,
+    "aggregate_simulated_s": 5379.12,
+    "aggregate_rtf": 12.443112027147988,
+    "cells": [
+      {
+        "seed": 0,
+        "variant": "adaptive",
+        "best_validation": 0,
+        "generation": 13,
+        "level": 0,
+        "training_steps": 2418000,
+        "evaluation_steps": 595200,
+        "history": [
+          {
+            "wall_s": 1.9529999999995198,
+            "cell_optimization_wall_s": 0.0,
+            "generation": 0,
+            "physics_steps": 0,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 22
+            }
+          },
+          {
+            "wall_s": 14.515999999999622,
+            "cell_optimization_wall_s": 3.936999999999898,
+            "generation": 1,
+            "physics_steps": 186000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 25
+            },
+            "reward": -4.084276024215471
+          },
+          {
+            "wall_s": 48.96899999999914,
+            "cell_optimization_wall_s": 6.530000000000655,
+            "generation": 2,
+            "physics_steps": 372000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 29
+            },
+            "reward": -4.417547683680295
+          },
+          {
+            "wall_s": 80.25,
+            "cell_optimization_wall_s": 9.139999999999418,
+            "generation": 3,
+            "physics_steps": 558000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 17
+            },
+            "reward": -3.4173101463448
+          },
+          {
+            "wall_s": 112.25,
+            "cell_optimization_wall_s": 11.874999999998181,
+            "generation": 4,
+            "physics_steps": 744000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 17
+            },
+            "reward": -3.4173432769740053
+          },
+          {
+            "wall_s": 143.35900000000038,
+            "cell_optimization_wall_s": 14.499999999998181,
+            "generation": 5,
+            "physics_steps": 930000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 8
+            },
+            "reward": -2.668014871904382
+          },
+          {
+            "wall_s": 174.4369999999999,
+            "cell_optimization_wall_s": 17.0149999999976,
+            "generation": 6,
+            "physics_steps": 1116000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 7
+            },
+            "reward": -2.5846873893497366
+          },
+          {
+            "wall_s": 206.07799999999952,
+            "cell_optimization_wall_s": 19.670999999998457,
+            "generation": 7,
+            "physics_steps": 1302000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 7
+            },
+            "reward": -2.5847141885318248
+          },
+          {
+            "wall_s": 237.76599999999962,
+            "cell_optimization_wall_s": 22.15599999999904,
+            "generation": 8,
+            "physics_steps": 1488000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 6
+            },
+            "reward": -2.5013760722085365
+          },
+          {
+            "wall_s": 268.5619999999999,
+            "cell_optimization_wall_s": 24.62499999999818,
+            "generation": 9,
+            "physics_steps": 1674000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 8
+            },
+            "reward": -2.668019192951159
+          },
+          {
+            "wall_s": 300.1409999999996,
+            "cell_optimization_wall_s": 27.35899999999856,
+            "generation": 10,
+            "physics_steps": 1860000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 7
+            },
+            "reward": -2.58467647653145
+          },
+          {
+            "wall_s": 332.6869999999999,
+            "cell_optimization_wall_s": 29.889999999999418,
+            "generation": 11,
+            "physics_steps": 2046000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 5
+            },
+            "reward": -2.418005658212782
+          },
+          {
+            "wall_s": 363.9840000000004,
+            "cell_optimization_wall_s": 32.42100000000028,
+            "generation": 12,
+            "physics_steps": 2232000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 3
+            },
+            "reward": -2.251292972306684
+          },
+          {
+            "wall_s": 394.8590000000004,
+            "cell_optimization_wall_s": 34.999000000001615,
+            "generation": 13,
+            "physics_steps": 2418000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 3
+            },
+            "reward": -2.25124848203851
+          }
+        ],
+        "optimization_wall_s": 34.999000000001615,
+        "validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 3
+        },
+        "skill_pass": false,
+        "sequence_pass": false,
+        "initial_validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 22
+        },
+        "test": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 24,
+          "actual_notes": 46
+        },
+        "parameters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.02
+        ]
+      },
+      {
+        "seed": 0,
+        "variant": "frozen",
+        "best_validation": 0,
+        "generation": 13,
+        "level": 0,
+        "training_steps": 2418000,
+        "evaluation_steps": 595200,
+        "history": [
+          {
+            "wall_s": 2.8439999999991414,
+            "cell_optimization_wall_s": 0.0,
+            "generation": 0,
+            "physics_steps": 0,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 22
+            }
+          },
+          {
+            "wall_s": 17.89099999999962,
+            "cell_optimization_wall_s": 2.6090000000003783,
+            "generation": 1,
+            "physics_steps": 186000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 25
+            },
+            "reward": -4.084056281636331
+          },
+          {
+            "wall_s": 52.3119999999999,
+            "cell_optimization_wall_s": 5.218000000000757,
+            "generation": 2,
+            "physics_steps": 372000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 26
+            },
+            "reward": -4.167388463653587
+          },
+          {
+            "wall_s": 83.73400000000038,
+            "cell_optimization_wall_s": 7.905000000000655,
+            "generation": 3,
+            "physics_steps": 558000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 24
+            },
+            "reward": -4.000758441425274
+          },
+          {
+            "wall_s": 115.65599999999904,
+            "cell_optimization_wall_s": 10.530000000000655,
+            "generation": 4,
+            "physics_steps": 744000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 21
+            },
+            "reward": -3.750693695580784
+          },
+          {
+            "wall_s": 146.76599999999962,
+            "cell_optimization_wall_s": 13.139999999999418,
+            "generation": 5,
+            "physics_steps": 930000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 22
+            },
+            "reward": -3.833973860029475
+          },
+          {
+            "wall_s": 178.03099999999904,
+            "cell_optimization_wall_s": 15.936999999999898,
+            "generation": 6,
+            "physics_steps": 1116000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 18
+            },
+            "reward": -3.5006480009702887
+          },
+          {
+            "wall_s": 209.46899999999914,
+            "cell_optimization_wall_s": 18.546000000000276,
+            "generation": 7,
+            "physics_steps": 1302000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 19
+            },
+            "reward": -3.583955704857892
+          },
+          {
+            "wall_s": 241.15599999999904,
+            "cell_optimization_wall_s": 21.185999999999694,
+            "generation": 8,
+            "physics_steps": 1488000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 18
+            },
+            "reward": -3.5006214999764804
+          },
+          {
+            "wall_s": 271.9369999999999,
+            "cell_optimization_wall_s": 23.810999999999694,
+            "generation": 9,
+            "physics_steps": 1674000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 19
+            },
+            "reward": -3.583928975784051
+          },
+          {
+            "wall_s": 303.7970000000005,
+            "cell_optimization_wall_s": 26.639000000001033,
+            "generation": 10,
+            "physics_steps": 1860000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 19
+            },
+            "reward": -3.5839140980467428
+          },
+          {
+            "wall_s": 336.0470000000005,
+            "cell_optimization_wall_s": 29.202000000001135,
+            "generation": 11,
+            "physics_steps": 2046000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 18
+            },
+            "reward": -3.500581062292606
+          },
+          {
+            "wall_s": 367.375,
+            "cell_optimization_wall_s": 31.827000000001135,
+            "generation": 12,
+            "physics_steps": 2232000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 18
+            },
+            "reward": -3.5005825168444913
+          },
+          {
+            "wall_s": 398.25,
+            "cell_optimization_wall_s": 34.452000000001135,
+            "generation": 13,
+            "physics_steps": 2418000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 18
+            },
+            "reward": -3.5005767521202626
+          }
+        ],
+        "optimization_wall_s": 34.452000000001135,
+        "validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 18
+        },
+        "skill_pass": false,
+        "sequence_pass": false,
+        "initial_validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 22
+        },
+        "test": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 24,
+          "actual_notes": 46
+        },
+        "parameters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.02
+        ]
+      },
+      {
+        "seed": 0,
+        "variant": "rewired",
+        "best_validation": 0,
+        "generation": 13,
+        "level": 0,
+        "training_steps": 2418000,
+        "evaluation_steps": 595200,
+        "history": [
+          {
+            "wall_s": 4.061999999999898,
+            "cell_optimization_wall_s": 0.0,
+            "generation": 0,
+            "physics_steps": 0,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 19
+            }
+          },
+          {
+            "wall_s": 21.625,
+            "cell_optimization_wall_s": 2.9210000000002765,
+            "generation": 1,
+            "physics_steps": 186000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 17
+            },
+            "reward": -3.4160108437823684
+          },
+          {
+            "wall_s": 55.96899999999914,
+            "cell_optimization_wall_s": 5.734000000000378,
+            "generation": 2,
+            "physics_steps": 372000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 18
+            },
+            "reward": -3.499230990843218
+          },
+          {
+            "wall_s": 87.25,
+            "cell_optimization_wall_s": 8.45299999999952,
+            "generation": 3,
+            "physics_steps": 558000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 14
+            },
+            "reward": -3.1659474752695567
+          },
+          {
+            "wall_s": 119.21899999999914,
+            "cell_optimization_wall_s": 11.21900000000096,
+            "generation": 4,
+            "physics_steps": 744000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 14
+            },
+            "reward": -3.1659312496144736
+          },
+          {
+            "wall_s": 150.375,
+            "cell_optimization_wall_s": 14.015000000001237,
+            "generation": 5,
+            "physics_steps": 930000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.0825968600473193
+          },
+          {
+            "wall_s": 181.60900000000038,
+            "cell_optimization_wall_s": 16.812000000001717,
+            "generation": 6,
+            "physics_steps": 1116000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.082582235861662
+          },
+          {
+            "wall_s": 213.03099999999904,
+            "cell_optimization_wall_s": 19.562000000001717,
+            "generation": 7,
+            "physics_steps": 1302000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.082568980285296
+          },
+          {
+            "wall_s": 244.78099999999904,
+            "cell_optimization_wall_s": 22.343000000000757,
+            "generation": 8,
+            "physics_steps": 1488000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.082563199672551
+          },
+          {
+            "wall_s": 275.3590000000004,
+            "cell_optimization_wall_s": 25.0,
+            "generation": 9,
+            "physics_steps": 1674000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.082565874972481
+          },
+          {
+            "wall_s": 307.6409999999996,
+            "cell_optimization_wall_s": 28.0,
+            "generation": 10,
+            "physics_steps": 1860000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.0825409227566913
+          },
+          {
+            "wall_s": 339.625,
+            "cell_optimization_wall_s": 30.75,
+            "generation": 11,
+            "physics_steps": 2046000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 11
+            },
+            "reward": -2.915887944896955
+          },
+          {
+            "wall_s": 370.84399999999914,
+            "cell_optimization_wall_s": 33.45299999999952,
+            "generation": 12,
+            "physics_steps": 2232000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 11
+            },
+            "reward": -2.9158925843931787
+          },
+          {
+            "wall_s": 401.8119999999999,
+            "cell_optimization_wall_s": 36.15599999999904,
+            "generation": 13,
+            "physics_steps": 2418000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.0825548491979404
+          }
+        ],
+        "optimization_wall_s": 36.15599999999904,
+        "validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 13
+        },
+        "skill_pass": false,
+        "sequence_pass": false,
+        "initial_validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 19
+        },
+        "test": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 24,
+          "actual_notes": 43
+        },
+        "parameters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.02
+        ]
+      },
+      {
+        "seed": 1,
+        "variant": "adaptive",
+        "best_validation": 0,
+        "generation": 13,
+        "level": 0,
+        "training_steps": 2418000,
+        "evaluation_steps": 595200,
+        "history": [
+          {
+            "wall_s": 4.875,
+            "cell_optimization_wall_s": 0.0,
+            "generation": 0,
+            "physics_steps": 0,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 22
+            }
+          },
+          {
+            "wall_s": 25.04700000000048,
+            "cell_optimization_wall_s": 2.625,
+            "generation": 1,
+            "physics_steps": 186000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 20
+            },
+            "reward": -3.6675165162614354
+          },
+          {
+            "wall_s": 59.5,
+            "cell_optimization_wall_s": 5.359000000000378,
+            "generation": 2,
+            "physics_steps": 372000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 29
+            },
+            "reward": -4.417668847786201
+          },
+          {
+            "wall_s": 90.67200000000048,
+            "cell_optimization_wall_s": 8.014999999999418,
+            "generation": 3,
+            "physics_steps": 558000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 22
+            },
+            "reward": -3.83431761551226
+          },
+          {
+            "wall_s": 122.625,
+            "cell_optimization_wall_s": 10.623999999999796,
+            "generation": 4,
+            "physics_steps": 744000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.3342378180067893
+          },
+          {
+            "wall_s": 153.90599999999904,
+            "cell_optimization_wall_s": 13.342999999998938,
+            "generation": 5,
+            "physics_steps": 930000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 19
+            },
+            "reward": -3.5841292632363984
+          },
+          {
+            "wall_s": 185.21899999999914,
+            "cell_optimization_wall_s": 16.123999999997977,
+            "generation": 6,
+            "physics_steps": 1116000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 20
+            },
+            "reward": -3.667521563508095
+          },
+          {
+            "wall_s": 216.67200000000048,
+            "cell_optimization_wall_s": 18.81199999999808,
+            "generation": 7,
+            "physics_steps": 1302000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.3341762532862242
+          },
+          {
+            "wall_s": 248.57799999999952,
+            "cell_optimization_wall_s": 21.71799999999712,
+            "generation": 8,
+            "physics_steps": 1488000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.334111177743086
+          },
+          {
+            "wall_s": 278.71899999999914,
+            "cell_optimization_wall_s": 24.29599999999664,
+            "generation": 9,
+            "physics_steps": 1674000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.3341056420734985
+          },
+          {
+            "wall_s": 311.3119999999999,
+            "cell_optimization_wall_s": 27.091999999996915,
+            "generation": 10,
+            "physics_steps": 1860000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.3341466733960137
+          },
+          {
+            "wall_s": 343.09399999999914,
+            "cell_optimization_wall_s": 29.794999999996435,
+            "generation": 11,
+            "physics_steps": 2046000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.3341358509997434
+          },
+          {
+            "wall_s": 374.2970000000005,
+            "cell_optimization_wall_s": 32.497999999995955,
+            "generation": 12,
+            "physics_steps": 2232000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.3340788922730784
+          },
+          {
+            "wall_s": 405.28099999999904,
+            "cell_optimization_wall_s": 35.20199999999568,
+            "generation": 13,
+            "physics_steps": 2418000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.3340855972891026
+          }
+        ],
+        "optimization_wall_s": 35.20199999999568,
+        "validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 16
+        },
+        "skill_pass": false,
+        "sequence_pass": false,
+        "initial_validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 22
+        },
+        "test": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 24,
+          "actual_notes": 43
+        },
+        "parameters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.02
+        ]
+      },
+      {
+        "seed": 1,
+        "variant": "frozen",
+        "best_validation": 0,
+        "generation": 13,
+        "level": 0,
+        "training_steps": 2418000,
+        "evaluation_steps": 595200,
+        "history": [
+          {
+            "wall_s": 5.640999999999622,
+            "cell_optimization_wall_s": 0.0,
+            "generation": 0,
+            "physics_steps": 0,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 22
+            }
+          },
+          {
+            "wall_s": 28.436999999999898,
+            "cell_optimization_wall_s": 2.57799999999952,
+            "generation": 1,
+            "physics_steps": 186000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 23
+            },
+            "reward": -3.9177109978626783
+          },
+          {
+            "wall_s": 62.89099999999962,
+            "cell_optimization_wall_s": 5.15599999999904,
+            "generation": 2,
+            "physics_steps": 372000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 27
+            },
+            "reward": -4.250993258568848
+          },
+          {
+            "wall_s": 94.10900000000038,
+            "cell_optimization_wall_s": 7.7959999999984575,
+            "generation": 3,
+            "physics_steps": 558000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 20
+            },
+            "reward": -3.66768435495771
+          },
+          {
+            "wall_s": 125.98400000000038,
+            "cell_optimization_wall_s": 10.389999999997599,
+            "generation": 4,
+            "physics_steps": 744000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 25
+            },
+            "reward": -4.084318191005832
+          },
+          {
+            "wall_s": 157.375,
+            "cell_optimization_wall_s": 13.10899999999856,
+            "generation": 5,
+            "physics_steps": 930000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 20
+            },
+            "reward": -3.667665944977295
+          },
+          {
+            "wall_s": 188.65599999999904,
+            "cell_optimization_wall_s": 15.78099999999904,
+            "generation": 6,
+            "physics_steps": 1116000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            },
+            "reward": -3.2510285253714715
+          },
+          {
+            "wall_s": 220.04700000000048,
+            "cell_optimization_wall_s": 18.37499999999818,
+            "generation": 7,
+            "physics_steps": 1302000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 20
+            },
+            "reward": -3.667673337963704
+          },
+          {
+            "wall_s": 251.8119999999999,
+            "cell_optimization_wall_s": 20.87499999999818,
+            "generation": 8,
+            "physics_steps": 1488000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.334322705137909
+          },
+          {
+            "wall_s": 282.03099999999904,
+            "cell_optimization_wall_s": 23.42199999999866,
+            "generation": 9,
+            "physics_steps": 1674000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 14
+            },
+            "reward": -3.1676424273602706
+          },
+          {
+            "wall_s": 315.0779999999995,
+            "cell_optimization_wall_s": 26.390999999997803,
+            "generation": 10,
+            "physics_steps": 1860000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            },
+            "reward": -3.250961771634012
+          },
+          {
+            "wall_s": 346.6409999999996,
+            "cell_optimization_wall_s": 29.12499999999818,
+            "generation": 11,
+            "physics_steps": 2046000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            },
+            "reward": -3.250963031400492
+          },
+          {
+            "wall_s": 377.6869999999999,
+            "cell_optimization_wall_s": 31.74999999999818,
+            "generation": 12,
+            "physics_steps": 2232000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 14
+            },
+            "reward": -3.167618141695031
+          },
+          {
+            "wall_s": 408.78099999999904,
+            "cell_optimization_wall_s": 34.48499999999876,
+            "generation": 13,
+            "physics_steps": 2418000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            },
+            "reward": -3.2509564627921375
+          }
+        ],
+        "optimization_wall_s": 34.48499999999876,
+        "validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 15
+        },
+        "skill_pass": false,
+        "sequence_pass": false,
+        "initial_validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 22
+        },
+        "test": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 24,
+          "actual_notes": 43
+        },
+        "parameters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.02
+        ]
+      },
+      {
+        "seed": 1,
+        "variant": "rewired",
+        "best_validation": 0,
+        "generation": 13,
+        "level": 0,
+        "training_steps": 2418000,
+        "evaluation_steps": 595200,
+        "history": [
+          {
+            "wall_s": 6.890999999999622,
+            "cell_optimization_wall_s": 0.0,
+            "generation": 0,
+            "physics_steps": 0,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 27
+            }
+          },
+          {
+            "wall_s": 32.3119999999999,
+            "cell_optimization_wall_s": 3.04700000000048,
+            "generation": 1,
+            "physics_steps": 186000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 19
+            },
+            "reward": -3.582623974419559
+          },
+          {
+            "wall_s": 66.53099999999904,
+            "cell_optimization_wall_s": 5.843000000000757,
+            "generation": 2,
+            "physics_steps": 372000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 20
+            },
+            "reward": -3.665918639622097
+          },
+          {
+            "wall_s": 97.8119999999999,
+            "cell_optimization_wall_s": 8.686999999999898,
+            "generation": 3,
+            "physics_steps": 558000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 21
+            },
+            "reward": -3.7492938750597498
+          },
+          {
+            "wall_s": 129.70299999999952,
+            "cell_optimization_wall_s": 11.57799999999952,
+            "generation": 4,
+            "physics_steps": 744000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 19
+            },
+            "reward": -3.582842977281313
+          },
+          {
+            "wall_s": 160.95299999999952,
+            "cell_optimization_wall_s": 14.296999999998661,
+            "generation": 5,
+            "physics_steps": 930000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 17
+            },
+            "reward": -3.4162844061688693
+          },
+          {
+            "wall_s": 192.3119999999999,
+            "cell_optimization_wall_s": 17.07799999999952,
+            "generation": 6,
+            "physics_steps": 1116000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.333002091143988
+          },
+          {
+            "wall_s": 224.14099999999962,
+            "cell_optimization_wall_s": 20.12499999999818,
+            "generation": 7,
+            "physics_steps": 1302000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 12
+            },
+            "reward": -2.9998036606947913
+          },
+          {
+            "wall_s": 255.32799999999952,
+            "cell_optimization_wall_s": 22.79699999999866,
+            "generation": 8,
+            "physics_steps": 1488000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.0831113170831195
+          },
+          {
+            "wall_s": 285.5779999999995,
+            "cell_optimization_wall_s": 25.563000000000102,
+            "generation": 9,
+            "physics_steps": 1674000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 12
+            },
+            "reward": -2.999754682556069
+          },
+          {
+            "wall_s": 318.7659999999996,
+            "cell_optimization_wall_s": 28.407000000001062,
+            "generation": 10,
+            "physics_steps": 1860000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.083159747669309
+          },
+          {
+            "wall_s": 350.34399999999914,
+            "cell_optimization_wall_s": 31.29700000000048,
+            "generation": 11,
+            "physics_steps": 2046000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.0831540693458437
+          },
+          {
+            "wall_s": 381.2970000000005,
+            "cell_optimization_wall_s": 34.0630000000001,
+            "generation": 12,
+            "physics_steps": 2232000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 12
+            },
+            "reward": -2.9997533355132893
+          },
+          {
+            "wall_s": 412.3279999999995,
+            "cell_optimization_wall_s": 36.78199999999924,
+            "generation": 13,
+            "physics_steps": 2418000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.083089828249248
+          }
+        ],
+        "optimization_wall_s": 36.78199999999924,
+        "validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 13
+        },
+        "skill_pass": false,
+        "sequence_pass": false,
+        "initial_validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 27
+        },
+        "test": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 24,
+          "actual_notes": 47
+        },
+        "parameters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.02
+        ]
+      },
+      {
+        "seed": 2,
+        "variant": "adaptive",
+        "best_validation": 0,
+        "generation": 13,
+        "level": 0,
+        "training_steps": 2418000,
+        "evaluation_steps": 595200,
+        "history": [
+          {
+            "wall_s": 7.65599999999904,
+            "cell_optimization_wall_s": 0.0,
+            "generation": 0,
+            "physics_steps": 0,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            }
+          },
+          {
+            "wall_s": 37.23400000000038,
+            "cell_optimization_wall_s": 3.813000000000102,
+            "generation": 1,
+            "physics_steps": 186000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            },
+            "reward": -3.2512635684386035
+          },
+          {
+            "wall_s": 69.875,
+            "cell_optimization_wall_s": 6.391000000001441,
+            "generation": 2,
+            "physics_steps": 372000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 12
+            },
+            "reward": -3.0012190365406504
+          },
+          {
+            "wall_s": 101.21899999999914,
+            "cell_optimization_wall_s": 9.001000000002023,
+            "generation": 3,
+            "physics_steps": 558000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 7
+            },
+            "reward": -2.584647427272483
+          },
+          {
+            "wall_s": 132.95299999999952,
+            "cell_optimization_wall_s": 11.517000000001644,
+            "generation": 4,
+            "physics_steps": 744000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 7
+            },
+            "reward": -2.58496963215767
+          },
+          {
+            "wall_s": 164.14099999999962,
+            "cell_optimization_wall_s": 13.985000000002401,
+            "generation": 5,
+            "physics_steps": 930000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 3
+            },
+            "reward": -2.2518795507557523
+          },
+          {
+            "wall_s": 195.60900000000038,
+            "cell_optimization_wall_s": 16.548000000002503,
+            "generation": 6,
+            "physics_steps": 1116000,
+            "metric": {
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 0
+            },
+            "reward": -2.0019271580515117
+          },
+          {
+            "wall_s": 227.53099999999904,
+            "cell_optimization_wall_s": 19.20400000000336,
+            "generation": 7,
+            "physics_steps": 1302000,
+            "metric": {
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 0
+            },
+            "reward": -2.0019126755406274
+          },
+          {
+            "wall_s": 258.40599999999904,
+            "cell_optimization_wall_s": 21.57900000000336,
+            "generation": 8,
+            "physics_steps": 1488000,
+            "metric": {
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 0
+            },
+            "reward": -2.001880924541679
+          },
+          {
+            "wall_s": 288.75,
+            "cell_optimization_wall_s": 24.03200000000288,
+            "generation": 9,
+            "physics_steps": 1674000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 4
+            },
+            "reward": -2.3351690105467746
+          },
+          {
+            "wall_s": 322.3909999999996,
+            "cell_optimization_wall_s": 26.845000000002983,
+            "generation": 10,
+            "physics_steps": 1860000,
+            "metric": {
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 0
+            },
+            "reward": -2.00184545821504
+          },
+          {
+            "wall_s": 353.5,
+            "cell_optimization_wall_s": 29.252000000002226,
+            "generation": 11,
+            "physics_steps": 2046000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 1
+            },
+            "reward": -2.085107356783018
+          },
+          {
+            "wall_s": 384.53099999999904,
+            "cell_optimization_wall_s": 31.783000000001266,
+            "generation": 12,
+            "physics_steps": 2232000,
+            "metric": {
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 0
+            },
+            "reward": -2.0017812141529863
+          },
+          {
+            "wall_s": 415.7029999999995,
+            "cell_optimization_wall_s": 34.392000000001644,
+            "generation": 13,
+            "physics_steps": 2418000,
+            "metric": {
+              "precision": 0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 0
+            },
+            "reward": -2.0017731174028714
+          }
+        ],
+        "optimization_wall_s": 34.392000000001644,
+        "validation": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 0
+        },
+        "skill_pass": false,
+        "sequence_pass": false,
+        "initial_validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 15
+        },
+        "test": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 24,
+          "actual_notes": 34
+        },
+        "parameters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.02
+        ]
+      },
+      {
+        "seed": 2,
+        "variant": "frozen",
+        "best_validation": 0,
+        "generation": 13,
+        "level": 0,
+        "training_steps": 2418000,
+        "evaluation_steps": 595200,
+        "history": [
+          {
+            "wall_s": 8.436999999999898,
+            "cell_optimization_wall_s": 0.0,
+            "generation": 0,
+            "physics_steps": 0,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            }
+          },
+          {
+            "wall_s": 41.84399999999914,
+            "cell_optimization_wall_s": 3.45299999999952,
+            "generation": 1,
+            "physics_steps": 186000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 24
+            },
+            "reward": -4.000973638065216
+          },
+          {
+            "wall_s": 73.1869999999999,
+            "cell_optimization_wall_s": 6.0,
+            "generation": 2,
+            "physics_steps": 372000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 19
+            },
+            "reward": -3.5843081411302227
+          },
+          {
+            "wall_s": 104.65599999999904,
+            "cell_optimization_wall_s": 8.609000000000378,
+            "generation": 3,
+            "physics_steps": 558000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 25
+            },
+            "reward": -4.0844283805350114
+          },
+          {
+            "wall_s": 136.25,
+            "cell_optimization_wall_s": 11.093000000000757,
+            "generation": 4,
+            "physics_steps": 744000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 27
+            },
+            "reward": -4.25105393560212
+          },
+          {
+            "wall_s": 167.48400000000038,
+            "cell_optimization_wall_s": 13.639000000001033,
+            "generation": 5,
+            "physics_steps": 930000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 24
+            },
+            "reward": -4.0009593682404425
+          },
+          {
+            "wall_s": 199.07799999999952,
+            "cell_optimization_wall_s": 16.295000000000073,
+            "generation": 6,
+            "physics_steps": 1116000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 19
+            },
+            "reward": -3.5843006021472625
+          },
+          {
+            "wall_s": 230.875,
+            "cell_optimization_wall_s": 18.858000000000175,
+            "generation": 7,
+            "physics_steps": 1302000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 17
+            },
+            "reward": -3.4175000388271113
+          },
+          {
+            "wall_s": 261.75,
+            "cell_optimization_wall_s": 21.374000000001615,
+            "generation": 8,
+            "physics_steps": 1488000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 16
+            },
+            "reward": -3.3341263565637194
+          },
+          {
+            "wall_s": 292.78099999999904,
+            "cell_optimization_wall_s": 24.483000000001994,
+            "generation": 9,
+            "physics_steps": 1674000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 18
+            },
+            "reward": -3.5007245429518923
+          },
+          {
+            "wall_s": 325.8590000000004,
+            "cell_optimization_wall_s": 27.171000000002095,
+            "generation": 10,
+            "physics_steps": 1860000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 17
+            },
+            "reward": -3.417392632851198
+          },
+          {
+            "wall_s": 357.1409999999996,
+            "cell_optimization_wall_s": 29.937000000001717,
+            "generation": 11,
+            "physics_steps": 2046000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            },
+            "reward": -3.2506876191065137
+          },
+          {
+            "wall_s": 387.90599999999904,
+            "cell_optimization_wall_s": 32.5470000000023,
+            "generation": 12,
+            "physics_steps": 2232000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            },
+            "reward": -3.2507005891997833
+          },
+          {
+            "wall_s": 419.4529999999995,
+            "cell_optimization_wall_s": 35.51600000000326,
+            "generation": 13,
+            "physics_steps": 2418000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 15
+            },
+            "reward": -3.250707469188944
+          }
+        ],
+        "optimization_wall_s": 35.51600000000326,
+        "validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 15
+        },
+        "skill_pass": false,
+        "sequence_pass": false,
+        "initial_validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 15
+        },
+        "test": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 24,
+          "actual_notes": 34
+        },
+        "parameters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.02
+        ]
+      },
+      {
+        "seed": 2,
+        "variant": "rewired",
+        "best_validation": 0,
+        "generation": 12,
+        "level": 0,
+        "training_steps": 2232000,
+        "evaluation_steps": 558000,
+        "history": [
+          {
+            "wall_s": 9.75,
+            "cell_optimization_wall_s": 0.0,
+            "generation": 0,
+            "physics_steps": 0,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 27
+            }
+          },
+          {
+            "wall_s": 45.59399999999914,
+            "cell_optimization_wall_s": 2.9219999999986612,
+            "generation": 1,
+            "physics_steps": 186000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 23
+            },
+            "reward": -3.915998891827587
+          },
+          {
+            "wall_s": 76.85900000000038,
+            "cell_optimization_wall_s": 5.750999999998385,
+            "generation": 2,
+            "physics_steps": 372000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 23
+            },
+            "reward": -3.9160655543603937
+          },
+          {
+            "wall_s": 108.73400000000038,
+            "cell_optimization_wall_s": 8.844999999999345,
+            "generation": 3,
+            "physics_steps": 558000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 21
+            },
+            "reward": -3.7494431814134535
+          },
+          {
+            "wall_s": 139.96899999999914,
+            "cell_optimization_wall_s": 11.719999999999345,
+            "generation": 4,
+            "physics_steps": 744000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 17
+            },
+            "reward": -3.416365804963954
+          },
+          {
+            "wall_s": 171.17200000000048,
+            "cell_optimization_wall_s": 14.594999999999345,
+            "generation": 5,
+            "physics_steps": 930000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 14
+            },
+            "reward": -3.166454145709176
+          },
+          {
+            "wall_s": 202.70299999999952,
+            "cell_optimization_wall_s": 17.422999999998865,
+            "generation": 6,
+            "physics_steps": 1116000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.0831420460854444
+          },
+          {
+            "wall_s": 234.51599999999962,
+            "cell_optimization_wall_s": 20.250999999998385,
+            "generation": 7,
+            "physics_steps": 1302000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 14
+            },
+            "reward": -3.166411105119622
+          },
+          {
+            "wall_s": 265.375,
+            "cell_optimization_wall_s": 23.062999999998283,
+            "generation": 8,
+            "physics_steps": 1488000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.0830850312441904
+          },
+          {
+            "wall_s": 296.59399999999914,
+            "cell_optimization_wall_s": 26.000999999998385,
+            "generation": 9,
+            "physics_steps": 1674000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.0830908650901554
+          },
+          {
+            "wall_s": 329.3909999999996,
+            "cell_optimization_wall_s": 28.688999999998487,
+            "generation": 10,
+            "physics_steps": 1860000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.083168771180172
+          },
+          {
+            "wall_s": 360.71899999999914,
+            "cell_optimization_wall_s": 31.484999999998763,
+            "generation": 11,
+            "physics_steps": 2046000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.083110570947948
+          },
+          {
+            "wall_s": 391.53099999999904,
+            "cell_optimization_wall_s": 34.2659999999978,
+            "generation": 12,
+            "physics_steps": 2232000,
+            "metric": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0,
+              "matched": 0,
+              "target_notes": 12,
+              "actual_notes": 13
+            },
+            "reward": -3.0831274827295614
+          }
+        ],
+        "optimization_wall_s": 34.2659999999978,
+        "validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 13
+        },
+        "skill_pass": false,
+        "sequence_pass": false,
+        "initial_validation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 12,
+          "actual_notes": 27
+        },
+        "test": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 24,
+          "actual_notes": 47
+        },
+        "parameters": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.02
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "date": "2026-09-18",
+  "provider": "Exa",
+  "workstreams": 3,
+  "search_calls": 9,
+  "requested_result_slots": 45,
+  "parsed_results": 44,
+  "unique_result_urls": 38,
+  "note": "Requested result slots are not a count of fully read papers. Primary sources selected and fetched; local benchmarks determine applicability.",
+  "sources": [
+    {
+      "stream": "v4_search_gpu",
+      "title": "N/A",
+      "url": "https://mujoco.readthedocs.io/en/stable/mjwarp/"
+    },
+    {
+      "stream": "v4_search_gpu",
+      "title": "MuJoCo XLA (MJX)#",
+      "url": "https://mujoco.readthedocs.io/en/stable/mjx.html"
+    },
+    {
+      "stream": "v4_search_gpu",
+      "title": "N/A",
+      "url": "https://mujoco.readthedocs.io/en/stable/mjx_api.html"
+    },
+    {
+      "stream": "v4_search_gpu",
+      "title": "N/A",
+      "url": "https://mujoco.readthedocs.io/en/stable/mjwarp/index.html"
+    },
+    {
+      "stream": "v4_search_gpu",
+      "title": "doc/mjx.rst",
+      "url": "https://github.com/google-deepmind/mujoco/blob/main/doc/mjx.rst"
+    },
+    {
+      "stream": "v4_search_cpu",
+      "title": "N/A",
+      "url": "https://mujoco.readthedocs.io/en/3.4.0/python.html"
+    },
+    {
+      "stream": "v4_extra_0",
+      "title": "python/mujoco/rollout.cc at main · google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco/blob/main/python/mujoco/rollout.cc"
+    },
+    {
+      "stream": "v4_extra_0",
+      "title": "python/mujoco/rollout.py at main · google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco/blob/main/python/mujoco/rollout.py"
+    },
+    {
+      "stream": "v4_search_cpu",
+      "title": "C++ threading performance is no better than Python · Issue #897 · google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco/issues/897"
+    },
+    {
+      "stream": "v4_search_cpu",
+      "title": "N/A",
+      "url": "https://mujoco.readthedocs.io/en/stable/%5Fsources/programming/simulation.rst.txt"
+    },
+    {
+      "stream": "v4_extra_2",
+      "title": "RoboPianist: Dexterous Piano Playing with Deep Reinforcement Learning",
+      "url": "https://proceedings.mlr.press/v229/zakka23a.html"
+    },
+    {
+      "stream": "v4_extra_2",
+      "title": "google-research/robopianist",
+      "url": "https://github.com/google-research/robopianist/"
+    },
+    {
+      "stream": "v4_search_learning",
+      "title": "Latent Space Curriculum Reinforcement Learning in High-Dimensional Contextual Spaces and Its Application to Robotic Piano Playing",
+      "url": "https://doi.org/10.1109/humanoids58906.2024.10769872"
+    },
+    {
+      "stream": "v4_extra_2",
+      "title": "RoboPianist: Dexterous Piano Playing with Deep Reinforcement Learning",
+      "url": "https://doi.org/10.48550/arxiv.2304.04150"
+    },
+    {
+      "stream": "v4_search_learning",
+      "title": "kevinzakka/robopianist-rl",
+      "url": "https://github.com/kevinzakka/robopianist-rl"
+    },
+    {
+      "stream": "v4_search_gpu2",
+      "title": "Improve coverage across CUDA, driver versions",
+      "url": "https://github.com/google-deepmind/mujoco_warp/issues/101"
+    },
+    {
+      "stream": "v4_search_gpu2",
+      "title": "Installation — Warp 1.17.0 - GitHub Pages",
+      "url": "https://nvidia.github.io/warp/stable/user_guide/installation.html"
+    },
+    {
+      "stream": "v4_search_gpu2",
+      "title": "FAQ & Troubleshooting — mjlab Documentation",
+      "url": "https://mujocolab.github.io/mjlab/main/source/faq.html"
+    },
+    {
+      "stream": "v4_search_gpu2",
+      "title": "Relax strict checking for CUDA version 12.4 · Issue #1137 · google-deepmind/mujoco_warp",
+      "url": "https://github.com/google-deepmind/mujoco_warp/issues/1137"
+    },
+    {
+      "stream": "v4_extra_1",
+      "title": "GitHub - google-deepmind/mujoco_warp: GPU-optimized version of ...",
+      "url": "https://github.com/google-deepmind/mujoco_warp"
+    },
+    {
+      "stream": "v4_search_cpu2",
+      "title": "Meshes affecting simulation performance",
+      "url": "https://github.com/google-deepmind/mujoco/issues/1279"
+    },
+    {
+      "stream": "v4_search_cpu2",
+      "title": "Collision Detection | google-deepmind/mujoco | DeepWiki",
+      "url": "https://deepwiki.com/google-deepmind/mujoco/4.6-collision-detection"
+    },
+    {
+      "stream": "v4_search_cpu2",
+      "title": "N/A",
+      "url": "https://mujoco.readthedocs.io/en/3.1.2/computation/"
+    },
+    {
+      "stream": "v4_search_cpu2",
+      "title": "MACMJX.md",
+      "url": "https://github.com/robomotic/sim-benchmarks/blob/main/MACMJX.md"
+    },
+    {
+      "stream": "v4_search_learning2",
+      "title": "IndustReal: Transferring Contact-Rich Assembly Tasks from Simulation to Reality",
+      "url": "https://doi.org/10.48550/arxiv.2305.17110"
+    },
+    {
+      "stream": "v4_search_learning2",
+      "title": "[2309.03322] REBOOT: Reuse Data for Bootstrapping Efficient Real-World Dexterous Manipulation",
+      "url": "https://ar5iv.labs.arxiv.org/html/2309.03322"
+    },
+    {
+      "stream": "v4_search_learning2",
+      "title": "Curriculum Learning with Hindsight Experience Replay for Sequential Object Manipulation Tasks",
+      "url": "https://doi.org/10.48550/arxiv.2008.09377"
+    },
+    {
+      "stream": "v4_search_learning2",
+      "title": "Proceedings of the 7th Conference on Robot Learning (CoRL 2023)",
+      "url": "https://proceedings.mlr.press/v229/hu23a/hu23a.pdf"
+    },
+    {
+      "stream": "v4_search_learning2",
+      "title": "[2305.17110] IndustReal: Transferring Contact-Rich Assembly Tasks from Simulation to Reality",
+      "url": "https://ar5iv.labs.arxiv.org/html/2305.17110"
+    },
+    {
+      "stream": "v4_extra_0",
+      "title": "Add a persistent thread pool to rollout",
+      "url": "https://github.com/google-deepmind/mujoco/pull/2282"
+    },
+    {
+      "stream": "v4_extra_0",
+      "title": "Code samples - MuJoCo Documentation",
+      "url": "https://mujoco.readthedocs.io/en/stable/programming/samples.html"
+    },
+    {
+      "stream": "v4_extra_0",
+      "title": "python/mujoco/rollout_test.py",
+      "url": "https://github.com/google-deepmind/mujoco/blob/528e791d/python/mujoco/rollout_test.py"
+    },
+    {
+      "stream": "v4_extra_1",
+      "title": "MuJoCo Warp (MJWarp)",
+      "url": "https://mujoco.readthedocs.io/en/3.6.0/mjwarp/"
+    },
+    {
+      "stream": "v4_extra_1",
+      "title": "Heuristic:Google deepmind Mujoco MJX Feature Compatibility - Leeroopedia",
+      "url": "https://leeroopedia.com/index.php/Heuristic:Google_deepmind_Mujoco_MJX_Feature_Compatibility"
+    },
+    {
+      "stream": "v4_extra_1",
+      "title": "Constraint Solvers | google-deepmind/mujoco | DeepWiki",
+      "url": "https://deepwiki.com/google-deepmind/mujoco/4.5-constraint-solvers"
+    },
+    {
+      "stream": "v4_extra_1",
+      "title": "Confusing unphysical interaction of noslip, frictionloss, and damping · Issue #2423 · google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco/issues/2423"
+    },
+    {
+      "stream": "v4_extra_2",
+      "title": "[PDF] ROBOPIANIST: Dexterous Piano Playing with Deep Reinforcement ...",
+      "url": "https://proceedings.mlr.press/v229/zakka23a/zakka23a.pdf"
+    },
+    {
+      "stream": "v4_extra_2",
+      "title": "RoboPianist: Dexterous Piano Playing with Deep Reinforcement ...",
+      "url": "https://arxiv.org/html/2304.04150v3"
+    }
+  ]
+}
