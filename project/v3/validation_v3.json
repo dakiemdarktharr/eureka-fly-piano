@@ -1,0 +1,113 @@
+{
+  "recorded_utc": "2026-09-18T05:13:07.411194+00:00",
+  "source_commit_tested": "00ef947e8334a327d7c4246d94b1be534cfa3bb3",
+  "protocol_tests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "real_physics_resume": {
+    "run_id": "20260918T050211-s123-80ca",
+    "passed": true,
+    "first_candidates": 1,
+    "resumed_candidates": 2,
+    "same_pending_population": true,
+    "retained_completed_candidate": true,
+    "accumulated_compute": true,
+    "scope": "real physics smoke, excluded from scientific campaign"
+  },
+  "packaged_windows": {
+    "run_id": "20260918T051006-s321-66b3",
+    "real_worker_started": true,
+    "pause_resume": true,
+    "first_candidates": 1,
+    "resumed_candidates": 2,
+    "scope": "packaged Windows smoke, excluded from paper"
+  },
+  "packaged_input_readiness": true,
+  "browser": {
+    "checks": [
+      {
+        "song": "merry",
+        "ready": true,
+        "notes": 2401
+      },
+      {
+        "song": "pool",
+        "ready": true,
+        "notes": 1502
+      }
+    ],
+    "errors": [],
+    "pause": true,
+    "narrow": true,
+    "job_token": true
+  },
+  "trained_browser": {
+    "checks": [
+      {
+        "song": "merry",
+        "variant": "trained",
+        "duration": 317.0394781632153,
+        "last": "Ô 237 · trang 10/10 · 3/4",
+        "run": "20260918T043824-s0-5816"
+      },
+      {
+        "song": "pool",
+        "variant": "trained",
+        "duration": 239.45722,
+        "last": "Ô 69 · trang 8/8 · 12/8",
+        "run": "20260918T043824-s0-5816"
+      }
+    ],
+    "errors": []
+  },
+  "replays_and_pdf": {
+    "paper_pages": 8,
+    "reviewer_pages": 6,
+    "merry": {
+      "frames": 7609,
+      "duration": 317.0394781632153,
+      "finite": true,
+      "sha256": true,
+      "warnings": 0,
+      "metrics": {
+        "precision": 0.07338017174082748,
+        "recall": 0.15660141607663475,
+        "f1": 0.09993355481727574
+      }
+    },
+    "pool": {
+      "frames": 5747,
+      "duration": 239.45722,
+      "finite": true,
+      "sha256": true,
+      "warnings": 0,
+      "metrics": {
+        "precision": 0.06277533039647577,
+        "recall": 0.151797603195739,
+        "f1": 0.0888196338137904
+      }
+    }
+  },
+  "pdf_all_pages_rendered_and_visually_reviewed": true,
+  "github_ci": {
+    "url": "https://github.com/dakiemdarktharr/eureka-fly-piano/actions/runs/35309758730",
+    "protocol": "success",
+    "docker_build_and_server_smoke": "success",
+    "scope": "Ubuntu build/start without private inputs; not cross-platform physics replication"
+  },
+  "not_completed": [
+    "85% target",
+    "independent OMR note verification",
+    "multiple scientific seeds",
+    "fair learned baselines",
+    "numeric convergence",
+    "biological validation",
+    "cross-platform physics replication"
+  ],
+  "sha256": {
+    "manuscript_v3_vi.pdf": "4311a8387dd04e8ffeb2da866084dc61798a2cb62679c95cef483e7c32b97dff",
+    "reviewer_v3_vi.pdf": "215df603e400f626d905ba0b135630eefdd4dcf6112c6538896bdc62a1417554",
+    "FlyPianoLab.exe": "138be2f690eee88e6901521ae0b447fcab38861a13b81efd841d73b10f53ba37"
+  }
+}

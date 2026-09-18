@@ -86,6 +86,10 @@ Lượt `20260918T043824-s0-5816`: 903,42 giây tối ưu, 172 ứng viên, 24 t
 project/v2/.venv/Scripts/python -m unittest discover -s project/v3/tests -v
 ```
 
-`tests/ui_check.cjs` dùng Playwright và biến `PLAYWRIGHT_MODULE`, `CHROMIUM_PATH`, `APP_URL` tùy chọn. `qa/validation_summary.json` ghi các kiểm tra cục bộ thực tế; workflow `.github/workflows/v3-ci.yml` kiểm tra source/container không có private inputs. Thử pause/resume và frozen app có log riêng. Không coi test chưa chạy là pass.
+`tests/ui_check.cjs` dùng Playwright và biến `PLAYWRIGHT_MODULE`, `CHROMIUM_PATH`, `APP_URL` tùy chọn. `validation_v3.json` ghi các kiểm tra cục bộ thực tế; workflow `.github/workflows/v3-ci.yml` kiểm tra source/container không có private inputs. Thử pause/resume và frozen app có log riêng. Không coi test chưa chạy là pass.
 
 Nguồn body: NeuroMechFly Apache-2.0; Three.js MIT; brain surface navis-flybrains GPL-3.0; skeleton release liên quan CC-BY-4.0. Xem `project/v2/assets/attribution.json` và `licenses`. Quyền tái phân phối graph/score còn cần xác minh trước công bố. Repo này không cấp lại quyền cho dữ liệu của bên thứ ba.
+
+## Kiểm chứng bản bàn giao 18-09-2026
+
+7/7 protocol tests đạt. Pause/resume đã chạy với physics thật ở source và EXE; UI và replay toàn bài đều đạt trên bản đóng gói. Paper 8 trang và hồ sơ phản biện 6 trang đã render và rà bố cục. [GitHub Actions của bản code đã kiểm tra](https://github.com/dakiemdarktharr/eureka-fly-piano/actions/runs/35309758730) đạt cả protocol và Docker build/start trên Ubuntu, không có private inputs. Đây không phải kiểm chứng physics đa nền tảng. Xem `validation_v3.json` để biết phạm vi và việc chưa hoàn tất.
