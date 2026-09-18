@@ -4,7 +4,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableStyle,Image,KeepTogether
+from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableStyle,Image,KeepTogether,PageBreak
 from reportlab.lib.pagesizes import A4
 PAPER=Path(__file__).resolve().parent/"paper"
 for name,file in [('Arial','arial.ttf'),('Arial-Bold','arialbd.ttf'),('Arial-Italic','ariali.ttf')]:pdfmetrics.registerFont(TTFont(name,'C:/Windows/Fonts/'+file))
@@ -42,6 +42,7 @@ def build_pdf(md,out,title):
     with PILImage.open(p) as im:width,height=im.size
     scale=min(475/width,370/height);story.append(Image(str(p),width*scale,height*scale));story.append(Spacer(1,8))
    i+=1;continue
+  if line=='## Tài liệu tham khảo':story.append(PageBreak())
   if line.startswith('# '):style=styles['title'];content=line[2:]
   elif line.startswith('## '):style=styles['h2'];content=line[3:]
   elif line.startswith('### '):style=styles['h3'];content=line[4:]

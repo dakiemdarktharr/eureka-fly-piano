@@ -1,12 +1,12 @@
 # Học điều khiển tiếp xúc phím trong một mô hình ruồi có ràng buộc connectome dưới ngân sách tính toán hữu hạn
 
-Bản thảo nghiên cứu v4, tiếng Việt. Thí nghiệm thăm dò có phần mềm kèm theo; chưa phải bản khẳng định khả năng học của ruồi sinh học hoặc bản sẵn sàng nộp journal. Ngày khóa kết quả: {{DATE}}.
+Bản thảo nghiên cứu v4, tiếng Việt. Thí nghiệm thăm dò có phần mềm kèm theo; chưa phải bản khẳng định khả năng học của ruồi sinh học hoặc bản sẵn sàng nộp journal. Ngày khóa kết quả: 2026-09-18.
 
 ## Tóm tắt
 
 Mô phỏng một hệ thần kinh lâu hơn không tự động tạo ra một bộ điều khiển tốt hơn. Trong tác vụ tiếp xúc phím đàn, sai lệch giữa vị trí đích hình học, mặt va chạm của chân và sự kiện phát nốt có thể giới hạn hiệu năng trước cả giới hạn học. Nghiên cứu này xây dựng một quy trình đánh giá bộ điều khiển lai gồm một mạng vận động 412 neuron có cấu trúc từ connectome, bộ giải hình học và cơ thể NeuroMechFly trên bàn phím thu nhỏ. Mục tiêu là đo hiệu năng học dưới trần một giờ tính toán, đồng thời kiểm tra cách tăng thông lượng mà giữ nguyên bước và cơ học mô phỏng.
 
-Chúng tôi dùng gom bước MuJoCo với điều khiển giữ cố định, bốn tiến trình CPU tồn tại lâu, chương trình học từ các nốt tổng hợp và phần thưởng ghép sự kiện một-một. Trong phiên bản cuối, CEM tối ưu 49 tham số, gồm 24 hệ số synapse hiệu dụng, 6 hệ số kích thích quần thể motor neuron và 19 tham số readout. Hai đối chứng là giữ synapse cố định và hoán đổi cạnh có bảo toàn bậc, mỗi cấu hình có ba seed. {{ABSTRACT_RESULTS}}
+Chúng tôi dùng gom bước MuJoCo với điều khiển giữ cố định, bốn tiến trình CPU tồn tại lâu, chương trình học từ các nốt tổng hợp và phần thưởng ghép sự kiện một-một. Trong phiên bản cuối, CEM tối ưu 49 tham số, gồm 24 hệ số synapse hiệu dụng, 6 hệ số kích thích quần thể motor neuron và 19 tham số readout. Hai đối chứng là giữ synapse cố định và hoán đổi cạnh có bảo toàn bậc, mỗi cấu hình có ba seed. Lượt v4b dùng 2786.11 giây thực, tạo 140,197,900 bước vật lý mới, trong đó 116,017,900 bước dùng để tối ưu. adaptive: F1 test trung bình 0.343; frozen: F1 test trung bình 0.330; rewired: F1 test trung bình 0.341.
 
 Benchmark ngắn đạt RTF cộng dồn 13,807 với bốn worker, trong khi mục tiêu một năm/giờ đòi hỏi 8.766. Probe GPU bị chặn bởi tính năng noslip chưa được hỗ trợ; không thay đổi bộ giải để làm đẹp con số. Kết quả chỉ áp dụng cho họ bộ điều khiển và mô hình tiếp xúc đang xét. Không suy ra giới hạn tối đa của ruồi, khả năng đọc sheet, trí nhớ âm nhạc hay lợi ích nhân quả của connectome so với mọi kiến trúc khác.
 
@@ -115,15 +115,24 @@ Hình 2. Thông lượng benchmark CPU gồm tiếp xúc chủ động, sau warm
 
 ### 6.1 Ngân sách và lượng trải nghiệm
 
-{{BUDGET_RESULTS}}
+Lượt v4a 20260918T055453 dừng sau 432.30 s. Lượt v4b 20260918T060329 có trần 3.150 s, bắt đầu với protocol đã sửa và chia 88% ngân sách cho tối ưu. Tổng thực tế hai lượt là 3218.41 s, nằm trong trần 3.600 s. V4b có 116,017,900 bước tối ưu và 24,180,000 bước đánh giá; RTF toàn chiến dịch v4b là 10.064. Tổng giây mô phỏng không phải thời gian học của một bộ não duy nhất. Benchmark, phát triển phần mềm và xuất video/replay không nằm trong ngân sách learner này.
 
-{{BUDGET_TABLE}}
+| Giai đoạn | Giây thực | Giây mô phỏng mới |
+|---|---|---|
+| V4a thăm dò, 37 tham số | 432.30 | 5379.12 |
+| V4b, 49 tham số | 2786.11 | 28039.58 |
+| Tổng hai lượt | 3218.41 | 33418.70 |
 
 ### 6.2 Học và chuyển giao trong phân phối
 
-{{LEARNING_RESULTS}}
+adaptive: F1 test trung bình 0.343; frozen: F1 test trung bình 0.330; rewired: F1 test trung bình 0.341. Số thế hệ hoàn tất theo ô nằm trong [69, 70]. Đường validation có dao động; checkpoint cuối được chọn bằng validation, không phải điểm cuối đường học. Không sử dụng khác biệt trung bình của ba seed làm chứng cứ ưu thế có ý nghĩa thống kê.
 
-{{CHECKPOINT_TABLE}}
+| Mốc thực (phút) | Seed | P trung bình | R trung bình | F1 trung bình | F1 min-max | Trễ tối đa (s) |
+|---|---|---|---|---|---|---|
+| 5 | 3 | 0.137 | 0.194 | 0.160 | 0.133-0.200 | 28.6 |
+| 15 | 3 | 0.226 | 0.306 | 0.260 | 0.148-0.345 | 34.0 |
+| 30 | 3 | 0.257 | 0.333 | 0.289 | 0.167-0.414 | 44.8 |
+| 45 | 3 | 0.283 | 0.333 | 0.305 | 0.174-0.444 | 41.9 |
 
 Các mốc dùng điểm validation gần nhất không vượt mốc, trung bình trên ba seed adaptive; cột trễ cho biết độ cũ lớn nhất của điểm đo. Đây không phải test lặp lại sau mỗi mốc.
 
@@ -131,7 +140,17 @@ Các mốc dùng điểm validation gần nhất không vượt mốc, trung bì
 
 Hình 3. F1 validation theo thời gian thực chiến dịch, từng seed ở một panel. Đây là điểm validation mỗi thế hệ, không phải đường test. Việc lặp lại cùng tập validation nhỏ có thể gây overfit chọn mô hình.
 
-{{TEST_TABLE}}
+| Mạng / seed | Train phút mô phỏng | Precision | Recall | F1 | TP / mục tiêu | Warning |
+|---|---|---|---|---|---|---|
+| adaptive / 0 | 43.40 | 0.353 | 0.250 | 0.293 | 6 / 24 | 0 |
+| frozen / 0 | 43.40 | 0.450 | 0.375 | 0.409 | 9 / 24 | 0 |
+| rewired / 0 | 43.25 | 0.304 | 0.292 | 0.298 | 7 / 24 | 0 |
+| adaptive / 1 | 42.78 | 0.259 | 0.292 | 0.275 | 7 / 24 | 0 |
+| frozen / 1 | 42.78 | 0.257 | 0.375 | 0.305 | 9 / 24 | 0 |
+| rewired / 1 | 42.78 | 0.367 | 0.458 | 0.407 | 11 / 24 | 0 |
+| adaptive / 2 | 42.78 | 0.429 | 0.500 | 0.462 | 12 / 24 | 0 |
+| frozen / 2 | 42.78 | 0.259 | 0.292 | 0.275 | 7 / 24 | 0 |
+| rewired / 2 | 42.78 | 0.350 | 0.292 | 0.318 | 7 / 24 | 0 |
 
 ![Theo mẫu vật lý mới](figures/sample_efficiency.png)
 
@@ -139,7 +158,7 @@ Hình 4. F1 validation theo số bước vật lý dùng để tối ưu từng 
 
 ### 6.3 Demonstration và cổng chất lượng
 
-{{DEMO_RESULTS}}
+Có 0/9 ô vượt đồng thời cổng kỹ năng và chuỗi. Chính sách primary cố định trước là adaptive seed 0. Primary chưa vượt cả hai cổng nên hai bài nhạc đầy đủ bị khóa ở v4. App cung cấp replay kỹ năng để chẩn đoán, không trình bày nó như một buổi biểu diễn thành công. Dữ liệu hai bản nhạc vẫn được giữ nguyên để đánh giá sau. Replay chẩn đoán cố định có 6 nốt, P=0.667, R=0.333, F1=0.444; nó chỉ là một trong các đoạn test, không thay thế kết quả 24 nốt ở bảng trên.
 
 ![Replay chẩn đoán](figures/demo.jpg)
 
@@ -161,7 +180,7 @@ Khả năng hướng đến journal Q2 phụ thuộc đóng góp, mức phù h�
 
 ## 8. Kết luận
 
-{{CONCLUSION}}
+V4 triển khai tăng tốc CPU có kiểm tra tương đương và một pipeline học/đánh giá có ngân sách. adaptive: F1 test trung bình 0.343; frozen: F1 test trung bình 0.330; rewired: F1 test trung bình 0.341. Mục tiêu một năm mô phỏng trong một giờ chưa đạt; probe GPU không tương thích noslip. Kết quả là đánh giá của một bộ điều khiển lai có hỗ trợ hình học trong phạm vi synthetic hẹp. Cần sửa/kiểm chứng cơ học tiếp xúc và bổ sung baseline, test chuyển giao trước khi đưa ra kết luận rộng hơn.
 
 Không có cơ sở kết luận ruồi sinh học không thể học piano, và không dùng nhận xét hài hước về việc thay thế nghệ sĩ như một kết luận khoa học. Nếu muốn một câu nhẹ nhàng trong discussion, cách diễn đạt có phạm vi là: "Với mô hình và ngân sách đã thử ở đây, người chơi piano vẫn chưa cần lo về đối thủ sáu chân." Câu này không thay cho dữ liệu hoặc một kiểm định về khả năng của động vật thật.
 

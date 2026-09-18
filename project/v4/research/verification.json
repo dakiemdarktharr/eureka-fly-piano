@@ -1,0 +1,56 @@
+{
+  "version": 4,
+  "main_run": "20260918T060329",
+  "local_protocol_tests": 6,
+  "local_http_tests": 6,
+  "frozen_worker_smoke": {
+    "completed": true,
+    "optimizer_steps": 0,
+    "evaluation_steps": 76400,
+    "elapsed_s": 5.5
+  },
+  "ui": {
+    "errors": [],
+    "pause": true,
+    "narrow": true,
+    "job_token": true,
+    "songs_locked": true
+  },
+  "artifact_audit": {
+    "run_id": "20260918T060329",
+    "checks": {
+      "source_hashes": true,
+      "step_ledger": true,
+      "metrics_and_gates": true,
+      "shared_hour_budget": {
+        "seconds": 3218.407000000001,
+        "cap": 3600
+      },
+      "replay_integrity": true
+    },
+    "qualified_demo": false,
+    "note": "Replay physics and benchmark are separate from the learner budget; no additional optimization in this audit"
+  },
+  "pdf": {
+    "manuscript": {
+      "pages": 10,
+      "no_placeholders": true,
+      "last_page_characters": 868
+    },
+    "reviewer": {
+      "pages": 4,
+      "no_placeholders": true,
+      "last_page_characters": 3355
+    }
+  },
+  "hashes": {
+    "output\\pdf\\manuscript_v4_vi.pdf": "5c70c12a81a9ce41cf2cbae84f725ffd844152a229cbc662ee3d0bc2c8dbe352",
+    "output\\pdf\\reviewer_v4_vi.pdf": "a00b8ad6f635e9a23e585cbd2f1c558f1eef4de6fd2a5ae75f8f6e2bfb73d03e",
+    "dist\\FlyPianoLabV4\\FlyPianoLabV4.exe": "26ff4b766c77175f2b3c09a40f7b76762fe1abdeae8aaeb6a2db692dfcc2596e"
+  },
+  "limitations": [
+    "GPU noslip unsupported in probed version",
+    "No skill gate passed; songs locked in v4",
+    "Three-seed exploratory study; no biological or Q2 acceptance conclusion"
+  ]
+}

@@ -13,7 +13,9 @@ read=lambda p:json.loads(p.read_text(encoding='utf8'))
 p=argparse.ArgumentParser();p.add_argument('--run',default='20260918T060329');p.add_argument('--preview',action='store_true');a=p.parse_args()
 folder=ROOT/'runtime/runs'/a.run;status=read(folder/'status.json');config=read(folder/'config.json');pilot=read(ROOT/'results/20260918T055453.json');bench=read(ROOT/'research/cpu_benchmark.json')
 if status['state']!='completed' and not a.preview:raise RuntimeError('Campaign not complete; use --preview only for layout QA')
-cells=status['cells'];done=status['state']=='completed';colors={'adaptive':'#218b7d','frozen':'#b77c28','rewired':'#8d72b8'}
+cells=status['cells'];done=status['state']=='completed'
+if done and not (FIG/'demo.jpg').exists():raise RuntimeError('Capture the final diagnostic viewer before final PDF export')
+colors={'adaptive':'#218b7d','frozen':'#b77c28','rewired':'#8d72b8'}
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':9,'axes.spines.top':False,'axes.spines.right':False})
 fig,ax=plt.subplots(figsize=(9,3.6),layout='constrained');ax.axis('off')
 boxes=[(.02,.65,.22,.22,'Chuỗi nốt mục tiêu\nCửa sổ cục bộ 150 ms'),(.33,.65,.25,.22,'Lập lịch / IK kỹ thuật\n+ hiệu chỉnh ngang được học'),(.02,.12,.22,.25,'Mạng rate 412 neuron\n24 hệ số synapse\n6 hệ số kích thích MN'),(.66,.65,.3,.22,'42 mục tiêu servo\nCơ thể MuJoCo + 88 phím'),(.66,.12,.3,.25,'Sự kiện tiếp xúc vật lý\nGhép nốt một-một'),(.33,.12,.25,.25,'Thưởng episode -> CEM\n10 ứng viên, 3 elite')]
@@ -48,6 +50,8 @@ abstract=f"Lượt v4b dùng {status['elapsed_s']:.2f} giây thực, tạo {stat
 budget=f"Lượt v4a {pilot['config']['run_id']} dừng sau {pilot['status']['elapsed_s']:.2f} s. Lượt v4b {a.run} có trần 3.150 s, bắt đầu với protocol đã sửa và chia 88% ngân sách cho tối ưu. Tổng thực tế hai lượt là {total_wall:.2f} s, {'nằm trong' if total_wall<=3600 else 'vượt'} trần 3.600 s. V4b có {train_steps:,} bước tối ưu và {eval_steps:,} bước đánh giá; RTF toàn chiến dịch v4b là {status['aggregate_rtf']:.3f}. Tổng giây mô phỏng không phải thời gian học của một bộ não duy nhất. Benchmark, phát triển phần mềm và xuất video/replay không nằm trong ngân sách learner này."
 learning=f"{summary}. Số thế hệ hoàn tất theo ô nằm trong [{min(c['generation'] for c in cells)}, {max(c['generation'] for c in cells)}]. Đường validation có dao động; checkpoint cuối được chọn bằng validation, không phải điểm cuối đường học. Không sử dụng khác biệt trung bình của ba seed làm chứng cứ ưu thế có ý nghĩa thống kê."
 demo=(f"Có {passed}/9 ô vượt đồng thời cổng kỹ năng và chuỗi. Chính sách primary cố định trước là adaptive seed 0. "+('Hai bản nhạc đầy đủ đã được xuất theo cổng chất lượng.' if manifest and manifest['qualified_song_demonstration'] else 'Primary chưa vượt cả hai cổng nên hai bài nhạc đầy đủ bị khóa ở v4. App cung cấp replay kỹ năng để chẩn đoán, không trình bày nó như một buổi biểu diễn thành công. Dữ liệu hai bản nhạc vẫn được giữ nguyên để đánh giá sau.'))
+if manifest:
+ dm=manifest['items'][0]['metric'];demo+=f" Replay chẩn đoán cố định có {dm['target_notes']} nốt, P={dm['precision']:.3f}, R={dm['recall']:.3f}, F1={dm['f1']:.3f}; nó chỉ là một trong các đoạn test, không thay thế kết quả 24 nốt ở bảng trên."
 conclusion=f"V4 triển khai tăng tốc CPU có kiểm tra tương đương và một pipeline học/đánh giá có ngân sách. {summary}. Mục tiêu một năm mô phỏng trong một giờ chưa đạt; probe GPU không tương thích noslip. Kết quả là đánh giá của một bộ điều khiển lai có hỗ trợ hình học trong phạm vi synthetic hẹp. Cần sửa/kiểm chứng cơ học tiếp xúc và bổ sung baseline, test chuyển giao trước khi đưa ra kết luận rộng hơn."
 editorial=f"Phiên bản này là nghiên cứu thăm dò: {summary}. Tổng learner wall time của hai lượt: {total_wall/60:.2f} phút. Số ô đạt cả skill và sequence gate: {passed}/9. Chưa đủ bằng chứng để gọi manuscript là sẵn sàng nộp Q2; các điểm còn mở bên dưới phải được giữ trong paper."
 checkpoint_rows=['| Mốc thực (phút) | Seed | P trung bình | R trung bình | F1 trung bình | F1 min-max | Trễ tối đa (s) |','|---|---|---|---|---|---|---|']
@@ -68,7 +72,9 @@ for stem,title in [('manuscript','Fly Piano v4 - ban thao nghien cuu'),('reviewe
  for key,value in values.items():text=text.replace('{{'+key+'}}',value)
  if '{{' in text:raise RuntimeError('Unresolved placeholder')
  if not done:text='BẢN XEM BỐ CỤC - THÍ NGHIỆM ĐANG CHẠY\n\n'+text
- (PAPER/f'{stem}_final_vi.md').write_text(text,encoding='utf8');pdf_renderer.build_pdf(text,OUT/f'{stem}_v4_vi.pdf',title)
+ (PAPER/f'{stem}_final_vi.md').write_text(text,encoding='utf8')
+ if stem=='reviewer':pdf_renderer.styles['body'].fontSize=9.7;pdf_renderer.styles['body'].leading=14;pdf_renderer.styles['body'].spaceAfter=6
+ pdf_renderer.build_pdf(text,OUT/f'{stem}_v4_vi.pdf',title)
 rows=[]
 for c in cells:
  for h in c['history']:rows.append(dict(seed=c['seed'],variant=c['variant'],generation=h['generation'],campaign_wall_s=h['wall_s'],training_physics_steps=h['physics_steps'],**h['metric']))
