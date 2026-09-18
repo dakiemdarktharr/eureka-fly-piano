@@ -1,0 +1,2481 @@
+{
+  "all_ids_found": true,
+  "neurons": 412,
+  "same_type": 412,
+  "source": "https://storage.googleapis.com/lee-lab_brain-and-nerve-cord-fly-connectome/compiled_data/manc_121/manc_121_meta.feather",
+  "sha256": "067c88e687ade67bd1e69b88765b4b21596280618cefde0fa43117d4af4a9439",
+  "rows": [
+    {
+      "id": "10072",
+      "graph_type": "IN17A001",
+      "morphology_release_type": "IN17A001",
+      "type_agrees": true
+    },
+    {
+      "id": "10093",
+      "graph_type": "DNg100",
+      "morphology_release_type": "DNg100",
+      "type_agrees": true
+    },
+    {
+      "id": "10339",
+      "graph_type": "DNg100",
+      "morphology_release_type": "DNg100",
+      "type_agrees": true
+    },
+    {
+      "id": "10347",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "10461",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "10462",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "10498",
+      "graph_type": "IN17A001",
+      "morphology_release_type": "IN17A001",
+      "type_agrees": true
+    },
+    {
+      "id": "10558",
+      "graph_type": "IN17A001",
+      "morphology_release_type": "IN17A001",
+      "type_agrees": true
+    },
+    {
+      "id": "10559",
+      "graph_type": "IN17A001",
+      "morphology_release_type": "IN17A001",
+      "type_agrees": true
+    },
+    {
+      "id": "10690",
+      "graph_type": "IN17A001",
+      "morphology_release_type": "IN17A001",
+      "type_agrees": true
+    },
+    {
+      "id": "10707",
+      "graph_type": "IN17A001",
+      "morphology_release_type": "IN17A001",
+      "type_agrees": true
+    },
+    {
+      "id": "10710",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "10737",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "10811",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "10866",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "10968",
+      "graph_type": "MNhl68",
+      "morphology_release_type": "MNhl68",
+      "type_agrees": true
+    },
+    {
+      "id": "11022",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11115",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11226",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11274",
+      "graph_type": "MNhl02",
+      "morphology_release_type": "MNhl02",
+      "type_agrees": true
+    },
+    {
+      "id": "11400",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11480",
+      "graph_type": "MNhl67",
+      "morphology_release_type": "MNhl67",
+      "type_agrees": true
+    },
+    {
+      "id": "11489",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11529",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11562",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11657",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11706",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11751",
+      "graph_type": "INXXX466",
+      "morphology_release_type": "INXXX466",
+      "type_agrees": true
+    },
+    {
+      "id": "11767",
+      "graph_type": "INXXX466",
+      "morphology_release_type": "INXXX466",
+      "type_agrees": true
+    },
+    {
+      "id": "11786",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11809",
+      "graph_type": "MNhl59",
+      "morphology_release_type": "MNhl59",
+      "type_agrees": true
+    },
+    {
+      "id": "11813",
+      "graph_type": "MNhl02",
+      "morphology_release_type": "MNhl02",
+      "type_agrees": true
+    },
+    {
+      "id": "12096",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12107",
+      "graph_type": "INXXX466",
+      "morphology_release_type": "INXXX466",
+      "type_agrees": true
+    },
+    {
+      "id": "12113",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12134",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12196",
+      "graph_type": "MNml29",
+      "morphology_release_type": "MNml29",
+      "type_agrees": true
+    },
+    {
+      "id": "12315",
+      "graph_type": "INXXX466",
+      "morphology_release_type": "INXXX466",
+      "type_agrees": true
+    },
+    {
+      "id": "12396",
+      "graph_type": "Tergopleural/Pleural promotor MN",
+      "morphology_release_type": "Tergopleural/Pleural promotor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12474",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12504",
+      "graph_type": "MNhl67",
+      "morphology_release_type": "MNhl67",
+      "type_agrees": true
+    },
+    {
+      "id": "12585",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12628",
+      "graph_type": "Tergopleural/Pleural promotor MN",
+      "morphology_release_type": "Tergopleural/Pleural promotor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12686",
+      "graph_type": "Tergopleural/Pleural promotor MN",
+      "morphology_release_type": "Tergopleural/Pleural promotor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12693",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12704",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12725",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12758",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12759",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12761",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12800",
+      "graph_type": "MNhl66",
+      "morphology_release_type": "MNhl66",
+      "type_agrees": true
+    },
+    {
+      "id": "12891",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "12953",
+      "graph_type": "IN16B036",
+      "morphology_release_type": "IN16B036",
+      "type_agrees": true
+    },
+    {
+      "id": "13006",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13033",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13036",
+      "graph_type": "MNml81",
+      "morphology_release_type": "MNml81",
+      "type_agrees": true
+    },
+    {
+      "id": "13069",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13075",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13095",
+      "graph_type": "MNhl66",
+      "morphology_release_type": "MNhl66",
+      "type_agrees": true
+    },
+    {
+      "id": "13115",
+      "graph_type": "Ti extensor MN",
+      "morphology_release_type": "Ti extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13144",
+      "graph_type": "MNhl65",
+      "morphology_release_type": "MNhl65",
+      "type_agrees": true
+    },
+    {
+      "id": "13156",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13163",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13170",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13186",
+      "graph_type": "IN16B036",
+      "morphology_release_type": "IN16B036",
+      "type_agrees": true
+    },
+    {
+      "id": "13192",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13241",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13280",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13283",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13300",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13311",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13397",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13399",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13434",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13464",
+      "graph_type": "Tergopleural/Pleural promotor MN",
+      "morphology_release_type": "Tergopleural/Pleural promotor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13490",
+      "graph_type": "Tergopleural/Pleural promotor MN",
+      "morphology_release_type": "Tergopleural/Pleural promotor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13512",
+      "graph_type": "MNhl68",
+      "morphology_release_type": "MNhl68",
+      "type_agrees": true
+    },
+    {
+      "id": "13543",
+      "graph_type": "MNhl59",
+      "morphology_release_type": "MNhl59",
+      "type_agrees": true
+    },
+    {
+      "id": "13563",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13628",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13698",
+      "graph_type": "INXXX466",
+      "morphology_release_type": "INXXX466",
+      "type_agrees": true
+    },
+    {
+      "id": "13740",
+      "graph_type": "MNhl64",
+      "morphology_release_type": "MNhl64",
+      "type_agrees": true
+    },
+    {
+      "id": "13746",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13784",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13817",
+      "graph_type": "Sternal adductor MN",
+      "morphology_release_type": "Sternal adductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13819",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13883",
+      "graph_type": "MNhl88",
+      "morphology_release_type": "MNhl88",
+      "type_agrees": true
+    },
+    {
+      "id": "13904",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13905",
+      "graph_type": "IN16B036",
+      "morphology_release_type": "IN16B036",
+      "type_agrees": true
+    },
+    {
+      "id": "13920",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13942",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "13952",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14020",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14069",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14096",
+      "graph_type": "IN16B036",
+      "morphology_release_type": "IN16B036",
+      "type_agrees": true
+    },
+    {
+      "id": "14168",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14226",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14339",
+      "graph_type": "MNhl68",
+      "morphology_release_type": "MNhl68",
+      "type_agrees": true
+    },
+    {
+      "id": "14343",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14346",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14449",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14468",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14536",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14596",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14622",
+      "graph_type": "MNhl75",
+      "morphology_release_type": "MNhl75",
+      "type_agrees": true
+    },
+    {
+      "id": "14649",
+      "graph_type": "MNhl29",
+      "morphology_release_type": "MNhl29",
+      "type_agrees": true
+    },
+    {
+      "id": "14665",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14773",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14775",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14783",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14798",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14824",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14828",
+      "graph_type": "MNml81",
+      "morphology_release_type": "MNml81",
+      "type_agrees": true
+    },
+    {
+      "id": "14848",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14849",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "14949",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15006",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15023",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15038",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15107",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15149",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15262",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15278",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15317",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15321",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15367",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15380",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15434",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15446",
+      "graph_type": "Ta levator MN",
+      "morphology_release_type": "Ta levator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15550",
+      "graph_type": "MNhl63",
+      "morphology_release_type": "MNhl63",
+      "type_agrees": true
+    },
+    {
+      "id": "15616",
+      "graph_type": "MNml80",
+      "morphology_release_type": "MNml80",
+      "type_agrees": true
+    },
+    {
+      "id": "15623",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15712",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15720",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15735",
+      "graph_type": "MNhl01",
+      "morphology_release_type": "MNhl01",
+      "type_agrees": true
+    },
+    {
+      "id": "15791",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15818",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15857",
+      "graph_type": "MNhl87",
+      "morphology_release_type": "MNhl87",
+      "type_agrees": true
+    },
+    {
+      "id": "15873",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15879",
+      "graph_type": "MNhl74",
+      "morphology_release_type": "MNhl74",
+      "type_agrees": true
+    },
+    {
+      "id": "15883",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "15893",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16017",
+      "graph_type": "MNml85",
+      "morphology_release_type": "MNml85",
+      "type_agrees": true
+    },
+    {
+      "id": "16035",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16228",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16250",
+      "graph_type": "Tergopleural/Pleural promotor MN",
+      "morphology_release_type": "Tergopleural/Pleural promotor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16295",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16346",
+      "graph_type": "Ta levator MN",
+      "morphology_release_type": "Ta levator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16356",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16400",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16419",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16492",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16495",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16497",
+      "graph_type": "MNml84",
+      "morphology_release_type": "MNml84",
+      "type_agrees": true
+    },
+    {
+      "id": "16552",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16632",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16633",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16635",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16658",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16711",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16897",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16903",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "16963",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17018",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17036",
+      "graph_type": "MNml83",
+      "morphology_release_type": "MNml83",
+      "type_agrees": true
+    },
+    {
+      "id": "17050",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17070",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17091",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17133",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17137",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17176",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17226",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17322",
+      "graph_type": "IN16B036",
+      "morphology_release_type": "IN16B036",
+      "type_agrees": true
+    },
+    {
+      "id": "17419",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17550",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17693",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17697",
+      "graph_type": "MNml80",
+      "morphology_release_type": "MNml80",
+      "type_agrees": true
+    },
+    {
+      "id": "17761",
+      "graph_type": "MNhl87",
+      "morphology_release_type": "MNhl87",
+      "type_agrees": true
+    },
+    {
+      "id": "17885",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17905",
+      "graph_type": "MNhl88",
+      "morphology_release_type": "MNhl88",
+      "type_agrees": true
+    },
+    {
+      "id": "17930",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17947",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "17964",
+      "graph_type": "MNml79",
+      "morphology_release_type": "MNml79",
+      "type_agrees": true
+    },
+    {
+      "id": "17970",
+      "graph_type": "MNhl62",
+      "morphology_release_type": "MNhl62",
+      "type_agrees": true
+    },
+    {
+      "id": "18006",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18286",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18412",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18440",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18448",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18471",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18491",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18554",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18579",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18664",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18716",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18963",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "18983",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19048",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19074",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19092",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19094",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19206",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19260",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19319",
+      "graph_type": "Tergopleural/Pleural promotor MN",
+      "morphology_release_type": "Tergopleural/Pleural promotor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19443",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19468",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19480",
+      "graph_type": "MNhl65",
+      "morphology_release_type": "MNhl65",
+      "type_agrees": true
+    },
+    {
+      "id": "19613",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19652",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19667",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19704",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19744",
+      "graph_type": "MNhl61",
+      "morphology_release_type": "MNhl61",
+      "type_agrees": true
+    },
+    {
+      "id": "19751",
+      "graph_type": "Ta levator MN",
+      "morphology_release_type": "Ta levator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19758",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19771",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19773",
+      "graph_type": "MNml29",
+      "morphology_release_type": "MNml29",
+      "type_agrees": true
+    },
+    {
+      "id": "19886",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19929",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "19983",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20119",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20373",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20386",
+      "graph_type": "Tergopleural/Pleural promotor MN",
+      "morphology_release_type": "Tergopleural/Pleural promotor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20551",
+      "graph_type": "MNml78",
+      "morphology_release_type": "MNml78",
+      "type_agrees": true
+    },
+    {
+      "id": "20572",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20593",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20605",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20612",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20615",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20667",
+      "graph_type": "Sternal adductor MN",
+      "morphology_release_type": "Sternal adductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "20673",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21186",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21241",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21255",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21262",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21612",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21665",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21718",
+      "graph_type": "Sternal adductor MN",
+      "morphology_release_type": "Sternal adductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21749",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21753",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21944",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21963",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "21991",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "22126",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "22215",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "22358",
+      "graph_type": "Ta levator MN",
+      "morphology_release_type": "Ta levator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "22465",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "22487",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "22718",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "22729",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23016",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23048",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23117",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23299",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23318",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23364",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23390",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23553",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23698",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "23974",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "24050",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "24139",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "24443",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "24668",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "24669",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "24725",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "24747",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "24828",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "25212",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "25447",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "25475",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "25599",
+      "graph_type": "MNhl63",
+      "morphology_release_type": "MNhl63",
+      "type_agrees": true
+    },
+    {
+      "id": "25674",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "25767",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "25885",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "25892",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "25956",
+      "graph_type": "MNml80",
+      "morphology_release_type": "MNml80",
+      "type_agrees": true
+    },
+    {
+      "id": "26132",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "26370",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "26566",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "26588",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "26613",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "26658",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "26777",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "26809",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "26883",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "27028",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "27078",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "27205",
+      "graph_type": "MNhl60",
+      "morphology_release_type": "MNhl60",
+      "type_agrees": true
+    },
+    {
+      "id": "27258",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "27479",
+      "graph_type": "MNhl62",
+      "morphology_release_type": "MNhl62",
+      "type_agrees": true
+    },
+    {
+      "id": "27733",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "27757",
+      "graph_type": "MNhl61",
+      "morphology_release_type": "MNhl61",
+      "type_agrees": true
+    },
+    {
+      "id": "28219",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "28884",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "28997",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "29187",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "29474",
+      "graph_type": "MNhl64",
+      "morphology_release_type": "MNhl64",
+      "type_agrees": true
+    },
+    {
+      "id": "29483",
+      "graph_type": "Sternal adductor MN",
+      "morphology_release_type": "Sternal adductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "29484",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "29487",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "29554",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "29689",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "29950",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "30306",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "30709",
+      "graph_type": "MNml78",
+      "morphology_release_type": "MNml78",
+      "type_agrees": true
+    },
+    {
+      "id": "30781",
+      "graph_type": "MNml78",
+      "morphology_release_type": "MNml78",
+      "type_agrees": true
+    },
+    {
+      "id": "32253",
+      "graph_type": "MNml79",
+      "morphology_release_type": "MNml79",
+      "type_agrees": true
+    },
+    {
+      "id": "34004",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "34115",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "35407",
+      "graph_type": "MNhl70",
+      "morphology_release_type": "MNhl70",
+      "type_agrees": true
+    },
+    {
+      "id": "35432",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "35735",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "35950",
+      "graph_type": "MNml78",
+      "morphology_release_type": "MNml78",
+      "type_agrees": true
+    },
+    {
+      "id": "37220",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "37741",
+      "graph_type": "MNhl72",
+      "morphology_release_type": "MNhl72",
+      "type_agrees": true
+    },
+    {
+      "id": "39941",
+      "graph_type": "MNml78",
+      "morphology_release_type": "MNml78",
+      "type_agrees": true
+    },
+    {
+      "id": "40443",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "41353",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "41439",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "41482",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "41933",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "42738",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "45494",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "47642",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "48865",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "49886",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "61001",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "96565",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "100515",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "100707",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "100824",
+      "graph_type": "MNhl69",
+      "morphology_release_type": "MNhl69",
+      "type_agrees": true
+    },
+    {
+      "id": "100826",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "101043",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "101736",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "101909",
+      "graph_type": "MNml82",
+      "morphology_release_type": "MNml82",
+      "type_agrees": true
+    },
+    {
+      "id": "102019",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "102123",
+      "graph_type": "MNhl29",
+      "morphology_release_type": "MNhl29",
+      "type_agrees": true
+    },
+    {
+      "id": "102786",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "103416",
+      "graph_type": "MNml77",
+      "morphology_release_type": "MNml77",
+      "type_agrees": true
+    },
+    {
+      "id": "104697",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "152620",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "152621",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "152642",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "152696",
+      "graph_type": "INXXX466",
+      "morphology_release_type": "INXXX466",
+      "type_agrees": true
+    },
+    {
+      "id": "153142",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "153315",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "153335",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "154133",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "154769",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "154803",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "154804",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "155216",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "155218",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "155633",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "155853",
+      "graph_type": "Sternal adductor MN",
+      "morphology_release_type": "Sternal adductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "156180",
+      "graph_type": "Acc. tr flexor MN",
+      "morphology_release_type": "Acc. tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "156233",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "156245",
+      "graph_type": "IN16B036",
+      "morphology_release_type": "IN16B036",
+      "type_agrees": true
+    },
+    {
+      "id": "156505",
+      "graph_type": "MNml76",
+      "morphology_release_type": "MNml76",
+      "type_agrees": true
+    },
+    {
+      "id": "156857",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "157207",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "157320",
+      "graph_type": "Ta levator MN",
+      "morphology_release_type": "Ta levator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "157432",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "157503",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "157709",
+      "graph_type": "MNhl60",
+      "morphology_release_type": "MNhl60",
+      "type_agrees": true
+    },
+    {
+      "id": "158681",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "158694",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "158769",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "158889",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    },
+    {
+      "id": "159762",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "159822",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "162825",
+      "graph_type": "MNml76",
+      "morphology_release_type": "MNml76",
+      "type_agrees": true
+    },
+    {
+      "id": "162827",
+      "graph_type": "MNml86",
+      "morphology_release_type": "MNml86",
+      "type_agrees": true
+    },
+    {
+      "id": "162830",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "162833",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "162868",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "162912",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "162913",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "163009",
+      "graph_type": "MNhl73",
+      "morphology_release_type": "MNhl73",
+      "type_agrees": true
+    },
+    {
+      "id": "163686",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "163719",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "164741",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "165340",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "165511",
+      "graph_type": "Ta depressor MN",
+      "morphology_release_type": "Ta depressor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "166171",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "166309",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "166337",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "166374",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "166385",
+      "graph_type": "ltm1-tibia MN",
+      "morphology_release_type": "ltm1-tibia MN",
+      "type_agrees": true
+    },
+    {
+      "id": "166392",
+      "graph_type": "Sternotrochanter MN",
+      "morphology_release_type": "Sternotrochanter MN",
+      "type_agrees": true
+    },
+    {
+      "id": "166393",
+      "graph_type": "ltm MN",
+      "morphology_release_type": "ltm MN",
+      "type_agrees": true
+    },
+    {
+      "id": "166397",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "167438",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "167442",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "167919",
+      "graph_type": "MNml78",
+      "morphology_release_type": "MNml78",
+      "type_agrees": true
+    },
+    {
+      "id": "171055",
+      "graph_type": "Sternal adductor MN",
+      "morphology_release_type": "Sternal adductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "171948",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "172408",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "173560",
+      "graph_type": "Tr extensor MN",
+      "morphology_release_type": "Tr extensor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "175327",
+      "graph_type": "Tergotr. MN",
+      "morphology_release_type": "Tergotr. MN",
+      "type_agrees": true
+    },
+    {
+      "id": "176866",
+      "graph_type": "Acc. ti flexor MN",
+      "morphology_release_type": "Acc. ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "192299",
+      "graph_type": "Ti flexor MN",
+      "morphology_release_type": "Ti flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "192364",
+      "graph_type": "MNhl71",
+      "morphology_release_type": "MNhl71",
+      "type_agrees": true
+    },
+    {
+      "id": "200065",
+      "graph_type": "MNml77",
+      "morphology_release_type": "MNml77",
+      "type_agrees": true
+    },
+    {
+      "id": "218885",
+      "graph_type": "Tr flexor MN",
+      "morphology_release_type": "Tr flexor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "219796",
+      "graph_type": "Sternal anterior rotator MN",
+      "morphology_release_type": "Sternal anterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "219853",
+      "graph_type": "Pleural remotor/abductor MN",
+      "morphology_release_type": "Pleural remotor/abductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "219894",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "221983",
+      "graph_type": "MNhl01",
+      "morphology_release_type": "MNhl01",
+      "type_agrees": true
+    },
+    {
+      "id": "226276",
+      "graph_type": "Fe reductor MN",
+      "morphology_release_type": "Fe reductor MN",
+      "type_agrees": true
+    },
+    {
+      "id": "11162403133",
+      "graph_type": "Sternal posterior rotator MN",
+      "morphology_release_type": "Sternal posterior rotator MN",
+      "type_agrees": true
+    },
+    {
+      "id": "28532466490",
+      "graph_type": "ltm2-femur MN",
+      "morphology_release_type": "ltm2-femur MN",
+      "type_agrees": true
+    }
+  ]
+}

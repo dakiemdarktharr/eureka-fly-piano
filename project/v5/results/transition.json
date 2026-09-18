@@ -1,0 +1,24 @@
+{
+  "prior_run": "20260918T124222",
+  "prior_state": "stopped",
+  "prior_elapsed_s": 3233.734,
+  "remaining_seconds": {
+    "merry": 3967.079,
+    "pool": 7200
+  },
+  "backup_verified": true,
+  "optimizer_resume": false,
+  "v5_run_id": "20260918T133730",
+  "verified_generation": 2,
+  "verified_candidate_target_counts": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "state_at_verification": "training"
+}

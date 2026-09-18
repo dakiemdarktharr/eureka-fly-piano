@@ -1,0 +1,61 @@
+{
+  "unit_tests_passed": 14,
+  "zero_cue_v4_v5_parity": "Identical final qpos and detected events on a two-target mechanics regression; not a skill score",
+  "ui": {
+    "targets": 100,
+    "neurons": 412,
+    "validGeometry": 410,
+    "active": 72,
+    "ratesFinite": true,
+    "filter": true,
+    "errors": [],
+    "pause": true,
+    "narrow": true,
+    "csrf": true
+  },
+  "workers": {
+    "songs": [
+      "merry",
+      "pool"
+    ],
+    "results": [
+      {
+        "physics_steps": 121480,
+        "metric": {
+          "precision": 0.41935483870967744,
+          "recall": 0.26,
+          "f1": 0.32098765432098764,
+          "matched": 26,
+          "target_notes": 100,
+          "actual_notes": 62,
+          "solver_warnings": 0
+        },
+        "reward": -0.20125700553367373,
+        "solver_warnings": 0
+      },
+      {
+        "physics_steps": 160260,
+        "metric": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "matched": 0,
+          "target_notes": 100,
+          "actual_notes": 58,
+          "solver_warnings": 0
+        },
+        "reward": -2.6149390032220037,
+        "solver_warnings": 0
+      }
+    ]
+  },
+  "packaged_executable": {
+    "ok": true,
+    "physics_steps": 4850,
+    "finite": true,
+    "training": false,
+    "parameters": 55
+  },
+  "packaged_health_and_downloads": true,
+  "source_bundle_hashes_match": true
+}
