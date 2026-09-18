@@ -1,0 +1,30 @@
+name: Fly Piano v3 checks
+on: [push, pull_request]
+jobs:
+  protocol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r project/v3/requirements.txt
+      - run: python -m unittest discover -s project/v3/tests -v
+      - run: python -m compileall -q project/v3
+      - run: docker compose config --quiet
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image without private song data
+        run: docker build -f project/v3/Dockerfile -t fly-piano:v3 .
+      - name: Verify service and missing-input reporting
+        run: |
+          docker run -d --name fly-piano -p 127.0.0.1:8877:8877 fly-piano:v3
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8877/api/health > health.json; then break; fi
+            sleep 2
+          done
+          python -c "import json; d=json.load(open('health.json')); assert d['ok'] and not d['ready'] and d['missing']"
+          docker logs fly-piano
+          docker stop fly-piano

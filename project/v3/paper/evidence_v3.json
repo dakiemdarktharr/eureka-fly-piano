@@ -1,0 +1,729 @@
+{
+  "run_id": "20260918T043824-s0-5816",
+  "config": {
+    "schema": 1,
+    "run_id": "20260918T043824-s0-5816",
+    "minutes": 15.0,
+    "seed": 0,
+    "population": 6,
+    "clip_seconds": 6,
+    "threshold": 0.85,
+    "consecutive_passes": 3,
+    "score_hashes": {
+      "merry": "635925512e7d02a9bf57cd34f7712baf7c228ce57df226f010e8c6decee40307",
+      "pool": "ba86dfd3c207977714f810801c5d242052f85a6dd54f0b550f3555a8d8a16903"
+    },
+    "split": {
+      "merry": {
+        "train": [
+          0.0,
+          194.213668446616
+        ],
+        "validation": [
+          195.47682634135285,
+          257.4644781632153
+        ],
+        "test": [
+          259.86447816321527,
+          316.0394781632153
+        ]
+      },
+      "pool": {
+        "train": [
+          0.0,
+          134.72388663967615
+        ],
+        "validation": [
+          137.92388663967614,
+          184.20080971659905
+        ],
+        "test": [
+          187.89311740890673,
+          238.45722
+        ]
+      }
+    },
+    "algorithm": "diagonal CEM, 16 readout parameters; frozen connectome",
+    "created": "2026-09-18T04:38:24.984518+00:00"
+  },
+  "optimizer_summary": {
+    "generation": 24,
+    "mean": [
+      0.41045431062987114,
+      0.6261624506823693,
+      0.43266037263730606,
+      0.46282370089390423,
+      0.6050551845602979,
+      0.9988160654842642,
+      0.34233585822462376,
+      0.48856584057301206,
+      0.32867669585251774,
+      0.7739495522979497,
+      0.35937534599370624,
+      0.41901173882691556,
+      0.7746646018010345,
+      0.6189054120291129,
+      0.8381127587038413,
+      0.5158342787162175
+    ],
+    "sigma": [
+      0.035,
+      0.035,
+      0.06630306787674528,
+      0.035,
+      0.035,
+      0.035,
+      0.035,
+      0.035,
+      0.035,
+      0.035,
+      0.035,
+      0.035,
+      0.035,
+      0.041661106286699154,
+      0.04794570951187768,
+      0.04130272640618477
+    ],
+    "best_theta": [
+      -0.0013089389550312303,
+      0.013687572569250211,
+      -0.020521676583512574,
+      -0.0036991285969839305,
+      0.016244120838103226,
+      0.09,
+      -0.04187030174502944,
+      0.01134970499041299,
+      -0.031367472336668756,
+      0.044758995039257565,
+      -0.01507566280729375,
+      0.00637850922817404,
+      0.10936002135825003,
+      1.1137467797652765,
+      0.9226143600272381,
+      -0.008635255670360414
+    ],
+    "best_monitor": {
+      "merry": {
+        "precision": 0.14285714285714285,
+        "recall": 0.2765957446808511,
+        "f1": 0.18840579710144928,
+        "matched": 13,
+        "target_notes": 47,
+        "actual_notes": 91,
+        "missed": 34,
+        "extra": 78,
+        "solver_warnings": 0
+      },
+      "pool": {
+        "precision": 0.03361344537815126,
+        "recall": 0.1,
+        "f1": 0.050314465408805034,
+        "matched": 4,
+        "target_notes": 40,
+        "actual_notes": 119,
+        "missed": 36,
+        "extra": 115,
+        "solver_warnings": 0
+      },
+      "macro_f1": 0.11936013125512715,
+      "clips": [
+        [
+          "merry",
+          94.106834223308,
+          6
+        ],
+        [
+          "pool",
+          64.36194331983808,
+          6
+        ]
+      ],
+      "physics_steps": 60000
+    },
+    "learning_seconds": 903.4186266000006,
+    "evaluation_seconds": 63.83853939999972,
+    "physics_steps": 12420000,
+    "candidate_evaluations": 172,
+    "budget_seconds": 900.0,
+    "success_streak": 0,
+    "target_met": false,
+    "wall_seconds": 968.7956223000001
+  },
+  "checkpoints": [
+    {
+      "index": 0,
+      "label": "0 phút",
+      "learning_seconds": 0.0,
+      "evaluation_seconds": 17.428389600000628,
+      "physics_steps": 180000,
+      "candidate_evaluations": 0,
+      "generation": 0,
+      "parameters": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "train": {
+        "merry": {
+          "precision": 0.06818181818181818,
+          "recall": 0.1276595744680851,
+          "f1": 0.08888888888888888,
+          "matched": 6,
+          "target_notes": 47,
+          "actual_notes": 88,
+          "missed": 41,
+          "extra": 82,
+          "solver_warnings": 0
+        },
+        "pool": {
+          "precision": 0.04878048780487805,
+          "recall": 0.15,
+          "f1": 0.07361963190184048,
+          "matched": 6,
+          "target_notes": 40,
+          "actual_notes": 123,
+          "missed": 34,
+          "extra": 117,
+          "solver_warnings": 0
+        },
+        "macro_f1": 0.08125426039536468,
+        "clips": [
+          [
+            "merry",
+            94.106834223308,
+            6
+          ],
+          [
+            "pool",
+            64.36194331983808,
+            6
+          ]
+        ],
+        "physics_steps": 60000
+      },
+      "validation": {
+        "merry": {
+          "precision": 0.06280193236714976,
+          "recall": 0.13131313131313133,
+          "f1": 0.08496732026143791,
+          "matched": 13,
+          "target_notes": 99,
+          "actual_notes": 207,
+          "missed": 86,
+          "extra": 194,
+          "solver_warnings": 0
+        },
+        "pool": {
+          "precision": 0.09316770186335403,
+          "recall": 0.1724137931034483,
+          "f1": 0.12096774193548386,
+          "matched": 15,
+          "target_notes": 87,
+          "actual_notes": 161,
+          "missed": 72,
+          "extra": 146,
+          "solver_warnings": 0
+        },
+        "macro_f1": 0.10296753109846088,
+        "clips": [
+          [
+            "merry",
+            209.47373929681845,
+            6
+          ],
+          [
+            "merry",
+            237.4675652077497,
+            6
+          ],
+          [
+            "pool",
+            147.99311740890687,
+            6
+          ],
+          [
+            "pool",
+            168.13157894736833,
+            6
+          ]
+        ],
+        "physics_steps": 120000
+      },
+      "threshold_passed": false,
+      "target_met": false,
+      "score_hashes": {
+        "merry": "635925512e7d02a9bf57cd34f7712baf7c228ce57df226f010e8c6decee40307",
+        "pool": "ba86dfd3c207977714f810801c5d242052f85a6dd54f0b550f3555a8d8a16903"
+      }
+    },
+    {
+      "index": 1,
+      "label": "1 phút",
+      "learning_seconds": 64.68320610000046,
+      "evaluation_seconds": 29.445058400000562,
+      "physics_steps": 960000,
+      "candidate_evaluations": 10,
+      "generation": 1,
+      "parameters": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "train": {
+        "merry": {
+          "precision": 0.06818181818181818,
+          "recall": 0.1276595744680851,
+          "f1": 0.08888888888888888,
+          "matched": 6,
+          "target_notes": 47,
+          "actual_notes": 88,
+          "missed": 41,
+          "extra": 82,
+          "solver_warnings": 0
+        },
+        "pool": {
+          "precision": 0.04878048780487805,
+          "recall": 0.15,
+          "f1": 0.07361963190184048,
+          "matched": 6,
+          "target_notes": 40,
+          "actual_notes": 123,
+          "missed": 34,
+          "extra": 117,
+          "solver_warnings": 0
+        },
+        "macro_f1": 0.08125426039536468,
+        "clips": [
+          [
+            "merry",
+            94.106834223308,
+            6
+          ],
+          [
+            "pool",
+            64.36194331983808,
+            6
+          ]
+        ],
+        "physics_steps": 60000
+      },
+      "validation": {
+        "merry": {
+          "precision": 0.06280193236714976,
+          "recall": 0.13131313131313133,
+          "f1": 0.08496732026143791,
+          "matched": 13,
+          "target_notes": 99,
+          "actual_notes": 207,
+          "missed": 86,
+          "extra": 194,
+          "solver_warnings": 0
+        },
+        "pool": {
+          "precision": 0.09316770186335403,
+          "recall": 0.1724137931034483,
+          "f1": 0.12096774193548386,
+          "matched": 15,
+          "target_notes": 87,
+          "actual_notes": 161,
+          "missed": 72,
+          "extra": 146,
+          "solver_warnings": 0
+        },
+        "macro_f1": 0.10296753109846088,
+        "clips": [
+          [
+            "merry",
+            209.47373929681845,
+            6
+          ],
+          [
+            "merry",
+            237.4675652077497,
+            6
+          ],
+          [
+            "pool",
+            147.99311740890687,
+            6
+          ],
+          [
+            "pool",
+            168.13157894736833,
+            6
+          ]
+        ],
+        "physics_steps": 120000
+      },
+      "threshold_passed": false,
+      "target_met": false,
+      "score_hashes": {
+        "merry": "635925512e7d02a9bf57cd34f7712baf7c228ce57df226f010e8c6decee40307",
+        "pool": "ba86dfd3c207977714f810801c5d242052f85a6dd54f0b550f3555a8d8a16903"
+      }
+    },
+    {
+      "index": 2,
+      "label": "5 phút",
+      "learning_seconds": 300.03574420000314,
+      "evaluation_seconds": 38.65772020000077,
+      "physics_steps": 3720000,
+      "candidate_evaluations": 49,
+      "generation": 6,
+      "parameters": [
+        -0.0013089389550312303,
+        0.013687572569250211,
+        -0.020521676583512574,
+        -0.0036991285969839305,
+        0.016244120838103226,
+        0.09,
+        -0.04187030174502944,
+        0.01134970499041299,
+        -0.031367472336668756,
+        0.044758995039257565,
+        -0.01507566280729375,
+        0.00637850922817404,
+        0.10936002135825003,
+        1.1137467797652765,
+        0.9226143600272381,
+        -0.008635255670360414
+      ],
+      "train": {
+        "merry": {
+          "precision": 0.14285714285714285,
+          "recall": 0.2765957446808511,
+          "f1": 0.18840579710144928,
+          "matched": 13,
+          "target_notes": 47,
+          "actual_notes": 91,
+          "missed": 34,
+          "extra": 78,
+          "solver_warnings": 0
+        },
+        "pool": {
+          "precision": 0.03361344537815126,
+          "recall": 0.1,
+          "f1": 0.050314465408805034,
+          "matched": 4,
+          "target_notes": 40,
+          "actual_notes": 119,
+          "missed": 36,
+          "extra": 115,
+          "solver_warnings": 0
+        },
+        "macro_f1": 0.11936013125512715,
+        "clips": [
+          [
+            "merry",
+            94.106834223308,
+            6
+          ],
+          [
+            "pool",
+            64.36194331983808,
+            6
+          ]
+        ],
+        "physics_steps": 60000
+      },
+      "validation": {
+        "merry": {
+          "precision": 0.109375,
+          "recall": 0.21212121212121213,
+          "f1": 0.14432989690721648,
+          "matched": 21,
+          "target_notes": 99,
+          "actual_notes": 192,
+          "missed": 78,
+          "extra": 171,
+          "solver_warnings": 0
+        },
+        "pool": {
+          "precision": 0.13580246913580246,
+          "recall": 0.25287356321839083,
+          "f1": 0.17670682730923695,
+          "matched": 22,
+          "target_notes": 87,
+          "actual_notes": 162,
+          "missed": 65,
+          "extra": 140,
+          "solver_warnings": 0
+        },
+        "macro_f1": 0.16051836210822673,
+        "clips": [
+          [
+            "merry",
+            209.47373929681845,
+            6
+          ],
+          [
+            "merry",
+            237.4675652077497,
+            6
+          ],
+          [
+            "pool",
+            147.99311740890687,
+            6
+          ],
+          [
+            "pool",
+            168.13157894736833,
+            6
+          ]
+        ],
+        "physics_steps": 120000
+      },
+      "threshold_passed": false,
+      "target_met": false,
+      "score_hashes": {
+        "merry": "635925512e7d02a9bf57cd34f7712baf7c228ce57df226f010e8c6decee40307",
+        "pool": "ba86dfd3c207977714f810801c5d242052f85a6dd54f0b550f3555a8d8a16903"
+      }
+    },
+    {
+      "index": 3,
+      "label": "15 phút",
+      "learning_seconds": 903.4186266000006,
+      "evaluation_seconds": 51.59268040000097,
+      "physics_steps": 12300000,
+      "candidate_evaluations": 172,
+      "generation": 24,
+      "parameters": [
+        -0.0013089389550312303,
+        0.013687572569250211,
+        -0.020521676583512574,
+        -0.0036991285969839305,
+        0.016244120838103226,
+        0.09,
+        -0.04187030174502944,
+        0.01134970499041299,
+        -0.031367472336668756,
+        0.044758995039257565,
+        -0.01507566280729375,
+        0.00637850922817404,
+        0.10936002135825003,
+        1.1137467797652765,
+        0.9226143600272381,
+        -0.008635255670360414
+      ],
+      "train": {
+        "merry": {
+          "precision": 0.14285714285714285,
+          "recall": 0.2765957446808511,
+          "f1": 0.18840579710144928,
+          "matched": 13,
+          "target_notes": 47,
+          "actual_notes": 91,
+          "missed": 34,
+          "extra": 78,
+          "solver_warnings": 0
+        },
+        "pool": {
+          "precision": 0.03361344537815126,
+          "recall": 0.1,
+          "f1": 0.050314465408805034,
+          "matched": 4,
+          "target_notes": 40,
+          "actual_notes": 119,
+          "missed": 36,
+          "extra": 115,
+          "solver_warnings": 0
+        },
+        "macro_f1": 0.11936013125512715,
+        "clips": [
+          [
+            "merry",
+            94.106834223308,
+            6
+          ],
+          [
+            "pool",
+            64.36194331983808,
+            6
+          ]
+        ],
+        "physics_steps": 60000
+      },
+      "validation": {
+        "merry": {
+          "precision": 0.109375,
+          "recall": 0.21212121212121213,
+          "f1": 0.14432989690721648,
+          "matched": 21,
+          "target_notes": 99,
+          "actual_notes": 192,
+          "missed": 78,
+          "extra": 171,
+          "solver_warnings": 0
+        },
+        "pool": {
+          "precision": 0.13580246913580246,
+          "recall": 0.25287356321839083,
+          "f1": 0.17670682730923695,
+          "matched": 22,
+          "target_notes": 87,
+          "actual_notes": 162,
+          "missed": 65,
+          "extra": 140,
+          "solver_warnings": 0
+        },
+        "macro_f1": 0.16051836210822673,
+        "clips": [
+          [
+            "merry",
+            209.47373929681845,
+            6
+          ],
+          [
+            "merry",
+            237.4675652077497,
+            6
+          ],
+          [
+            "pool",
+            147.99311740890687,
+            6
+          ],
+          [
+            "pool",
+            168.13157894736833,
+            6
+          ]
+        ],
+        "physics_steps": 120000
+      },
+      "threshold_passed": false,
+      "target_met": false,
+      "score_hashes": {
+        "merry": "635925512e7d02a9bf57cd34f7712baf7c228ce57df226f010e8c6decee40307",
+        "pool": "ba86dfd3c207977714f810801c5d242052f85a6dd54f0b550f3555a8d8a16903"
+      }
+    }
+  ],
+  "test": {
+    "evaluation": 1,
+    "parameters": [
+      -0.0013089389550312303,
+      0.013687572569250211,
+      -0.020521676583512574,
+      -0.0036991285969839305,
+      0.016244120838103226,
+      0.09,
+      -0.04187030174502944,
+      0.01134970499041299,
+      -0.031367472336668756,
+      0.044758995039257565,
+      -0.01507566280729375,
+      0.00637850922817404,
+      0.10936002135825003,
+      1.1137467797652765,
+      0.9226143600272381,
+      -0.008635255670360414
+    ],
+    "results": {
+      "merry": {
+        "precision": 0.06435643564356436,
+        "recall": 0.14772727272727273,
+        "f1": 0.0896551724137931,
+        "matched": 13,
+        "target_notes": 88,
+        "actual_notes": 202,
+        "missed": 75,
+        "extra": 189,
+        "solver_warnings": 0
+      },
+      "pool": {
+        "precision": 0.04487179487179487,
+        "recall": 0.08536585365853659,
+        "f1": 0.05882352941176471,
+        "matched": 7,
+        "target_notes": 82,
+        "actual_notes": 156,
+        "missed": 75,
+        "extra": 149,
+        "solver_warnings": 0
+      },
+      "macro_f1": 0.0742393509127789,
+      "clips": [
+        [
+          "merry",
+          272.40822816321526,
+          6
+        ],
+        [
+          "merry",
+          297.4957281632153,
+          6
+        ],
+        [
+          "pool",
+          199.03414305668005,
+          6
+        ],
+        [
+          "pool",
+          221.3161943522267,
+          6
+        ]
+      ],
+      "physics_steps": 120000
+    },
+    "scope": "first held-out evaluation after checkpoint selection"
+  },
+  "full_replay_metrics": {
+    "merry": {
+      "tolerance_s": 0.1,
+      "target_notes": 2401,
+      "actual_notes": 5124,
+      "matched": 376,
+      "precision": 0.07338017174082748,
+      "recall": 0.15660141607663475,
+      "f1": 0.09993355481727574,
+      "missed": 2025,
+      "extra": 4748,
+      "conditional_mae_s": 0.03957628457446657,
+      "signed_delay_s": 0.011092593085104905
+    },
+    "pool": {
+      "tolerance_s": 0.1,
+      "target_notes": 1502,
+      "actual_notes": 3632,
+      "matched": 228,
+      "precision": 0.06277533039647577,
+      "recall": 0.151797603195739,
+      "f1": 0.0888196338137904,
+      "missed": 1274,
+      "extra": 3404,
+      "conditional_mae_s": 0.040935513157894746,
+      "signed_delay_s": 0.026039425438596445
+    }
+  },
+  "note": "One exploratory seed, provisional OMR, private score sequences omitted."
+}

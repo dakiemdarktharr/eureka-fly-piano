@@ -1,0 +1,54 @@
+{
+  "access_date": "2026-09-18",
+  "assets": [
+    {
+      "name": "NeuroMechFly",
+      "url": "https://raw.githubusercontent.com/NeLy-EPFL/flygym/38c8ec61034cd59bc5ba0de20688d4a3c0000d60/LICENSE",
+      "license_file": "licenses/NeuroMechFly.txt",
+      "sha256": "02afa15750a169f0815ff1525dacf28d010f1dfd4cb119fc9e96bfca4f426eb4"
+    },
+    {
+      "name": "navis-flybrains",
+      "url": "https://raw.githubusercontent.com/navis-org/navis-flybrains/273333c8d8bf5adeebebd274e554621462e388bd/LICENSE",
+      "license_file": "licenses/navis-flybrains.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "name": "three",
+      "url": "https://raw.githubusercontent.com/mrdoob/three.js/r186/LICENSE",
+      "license_file": "licenses/three.txt",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "name": "FlyWire DNg100 skeletons",
+      "source": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/",
+      "related_record": "https://zenodo.org/records/10877326",
+      "release": "783",
+      "root_ids": [
+        "720575940640978048",
+        "720575940647228468"
+      ],
+      "license_status": "Related Zenodo record CC-BY-4.0 verified. Confirm direct endpoint redistribution terms before public release.",
+      "related_record_license": "CC-BY-4.0, verified via Zenodo API 2026-09-18"
+    },
+    {
+      "name": "FlyWire annotations",
+      "source": "https://github.com/flyconnectome/flywire_annotations/tree/8587524c1748ce5ef2080822a2fc890fc03bf597",
+      "release": "v3.1.0; FlyWire 783"
+    },
+    {
+      "name": "MANC graph",
+      "source_manifest": "../../connectome_manifest.json",
+      "license_status": "Connectivity export redistribution unresolved; local use only in this package."
+    },
+    {
+      "name": "Piano scores",
+      "source": "User-provided PDFs",
+      "license_status": "Private derived transcription, MIDI and videos. No public redistribution authorized."
+    }
+  ],
+  "transformations": [
+    "FlyWire skeleton coordinates nm to µm and shared centering; no inferred extra neurons.",
+    "NeuroMechFly exported through FlyGym2.1.0, fixed thorax; custom key bodies added."
+  ]
+}

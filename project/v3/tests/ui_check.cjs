@@ -1,0 +1,22 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE);
+const fs=require('fs'),path=require('path');
+(async()=>{const out=path.resolve(__dirname,'../qa');fs.mkdirSync(out,{recursive:true});
+const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH,args:['--no-sandbox','--enable-unsafe-swiftshader']});
+try{const page=await browser.newPage({viewport:{width:1440,height:1080}}),errors=[],checks=[];
+page.on('pageerror',e=>errors.push(e.message));await page.goto(process.env.APP_URL||'http://127.0.0.1:8877/',{waitUntil:'networkidle'});
+await page.waitForFunction(()=>document.querySelector('#readiness').textContent.includes('Đã sẵn sàng'));
+await page.screenshot({path:path.join(out,'dashboard.jpg'),type:'jpeg',quality:85,fullPage:true});
+if(await page.locator('#checkpoints tr').count()<2)throw Error('Missing saved checkpoints');
+await page.locator('#metric').selectOption('f1');
+await page.locator('[data-tab="viewer"]').click();const frame=page.frameLocator('#viewerFrame');
+await frame.locator('#play').waitFor();const viewer=page.frames().find(f=>f.url().includes('/viewer/'));
+await viewer.waitForFunction(()=>window.flyPiano?.state.ready);
+for(const song of ['merry','pool']){await viewer.evaluate(async song=>{await flyPiano.load(song,'full');flyPiano.seek(42)},song);checks.push(await viewer.evaluate(()=>({song:flyPiano.state.song,ready:flyPiano.state.ready,notes:flyPiano.score.notes.length})));}
+await page.screenshot({path:path.join(out,'viewer.jpg'),type:'jpeg',quality:85,fullPage:true});
+await frame.locator('#play').click();await page.waitForTimeout(250);await frame.locator('#play').click();const t=await viewer.evaluate(()=>flyPiano.state.time);await page.waitForTimeout(200);if(t!==await viewer.evaluate(()=>flyPiano.state.time))throw Error('Pause failed');
+await page.locator('[data-tab="training"]').click();await page.setViewportSize({width:800,height:1000});
+if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Horizontal overflow');
+await page.screenshot({path:path.join(out,'narrow.jpg'),type:'jpeg',quality:82,fullPage:true});
+const unauthorized=await page.request.post((process.env.APP_URL||'http://127.0.0.1:8877/')+'api/train',{data:{minutes:1}});if(unauthorized.status()!==403)throw Error('Unprotected job control');
+if(errors.length)throw Error(errors.join('\n'));fs.writeFileSync(path.join(out,'ui_check.json'),JSON.stringify({checks,errors,pause:true,narrow:true,job_token:true},null,2));console.log(JSON.stringify(checks));
+}finally{await browser.close()}})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,0 +1,101 @@
+{
+  "date": "2026-09-18",
+  "environment": "Python 3.12.14; FlyGym 2.1.0; MuJoCo 3.9.0; Windows",
+  "scope": "Private full-score demonstrations; no validated biological or learned-piano claim",
+  "inputs": {
+    "song1_merry_go-round_of_life.pdf": "e217b263842c965aaef9dfcdb52dcf441f0c1c7845a88e1089808fecaa9642d7",
+    "song2_in_the_pool_.pdf": "c1b7ca7a0b5811ca5b2836e819cd26e6d5fa2a3552d1c0c79e9af9eea14b9c98"
+  },
+  "outputs": {
+    "data\\merry_constant.bin": {
+      "bytes": 29035944,
+      "sha256": "b18e1daae7adc5d953078b7c3a5f70585fe70e095809c85ab94e7ebef8ea95f2"
+    },
+    "data\\merry_constant.json": {
+      "bytes": 998243,
+      "sha256": "b195e55b386d7f517da6a8ed1665b516c8b22cad521955b23550c6293a9435e7"
+    },
+    "data\\merry_full.bin": {
+      "bytes": 29035944,
+      "sha256": "2200015cee956bace37493ee02b377c69dd8f2a7576185e433d1c24a932778d2"
+    },
+    "data\\merry_full.json": {
+      "bytes": 1231797,
+      "sha256": "e6fbab2b0481b883e784ff30c32f77595f47730530525da18f66f527b5efd71d"
+    },
+    "data\\merry_reference.mid": {
+      "bytes": 17244,
+      "sha256": "8bf14ec33ee0f963f63f30899eae8ba9e43ece515774263d46bbd0487a2d0e88"
+    },
+    "data\\merry_score.json": {
+      "bytes": 763145,
+      "sha256": "635925512e7d02a9bf57cd34f7712baf7c228ce57df226f010e8c6decee40307"
+    },
+    "data\\pool_constant.bin": {
+      "bytes": 21930552,
+      "sha256": "62418c8ecbd01b0f9acbf13990a48c7bd526685e22f41446c37d96ecc8c5a0b0"
+    },
+    "data\\pool_constant.json": {
+      "bytes": 627894,
+      "sha256": "6b0457da3c3aa1e96d46ab3dfff76908f8056b34aca2c2af94a084cbc484d403"
+    },
+    "data\\pool_full.bin": {
+      "bytes": 21930552,
+      "sha256": "0f55a2821fd1a0119c6365c1b4014a7de059d98e5466aa01cd8625e03a878307"
+    },
+    "data\\pool_full.json": {
+      "bytes": 811768,
+      "sha256": "f7da01403f8e1f931dea35c99fcbfbc57ef7fc943fd401ff0b085769e1b11b86"
+    },
+    "data\\pool_reference.mid": {
+      "bytes": 11422,
+      "sha256": "13f30d54b721ccc9668050ef2b5dd9bd806f31fdc954ffc6f74a569a34dd781b"
+    },
+    "data\\pool_score.json": {
+      "bytes": 460092,
+      "sha256": "ba86dfd3c207977714f810801c5d242052f85a6dd54f0b550f3555a8d8a16903"
+    },
+    "output\\pdf\\manuscript_v2_vi.pdf": {
+      "bytes": 587215,
+      "sha256": "61431c58f9b495e9f84c1ffa7cc931531c730ab5388962c8a826f25251285cf3"
+    },
+    "output\\pdf\\reviewer_response_v2_vi.pdf": {
+      "bytes": 107495,
+      "sha256": "36f585e21bcfec4162f957914a709ef24023c69823f92ac06d662e3b70314656"
+    },
+    "assets\\attribution.json": {
+      "bytes": 2297,
+      "sha256": "a545d28ddee23dfba41ad8e0cd7d8a1c119a2e94ccfe1a5c17cb549e56ed9ccb"
+    },
+    "assets\\brain.json": {
+      "bytes": 3684119,
+      "sha256": "0a5e2d2fae95a86407f153756ba4bbf39a9a843fef679e4f10199c87778ee177"
+    },
+    "assets\\scene.json": {
+      "bytes": 5082194,
+      "sha256": "b0148923f7ebdba2d26d412cb4b0e5995809d2d95eeaeba476954e6e44966e2d"
+    },
+    "videos\\merry_full_demo.mp4": {
+      "bytes": 10082462,
+      "sha256": "68b563e96836de98b58625654fa040c5ee4587867dd129120a82f7e30353aa38"
+    },
+    "videos\\merry_full_demo.mp4.json": {
+      "bytes": 256,
+      "sha256": "3fcc2b61ef43e207c250b82feb991b7312252cd9572c7861015a919a4d9c4000"
+    },
+    "videos\\pool_full_demo.mp4": {
+      "bytes": 6492070,
+      "sha256": "f2c5de0e868f19df82d13bf46fe4da1547cba956ee5d114cf01289d08fe8ddf5"
+    },
+    "videos\\pool_full_demo.mp4.json": {
+      "bytes": 246,
+      "sha256": "e7473b45dfe0f793b9d159fc0a943f10d7a68fd1cde22728fc4a57da2199c939"
+    }
+  },
+  "checks": {
+    "runtime_validation": "validation.json",
+    "browser": "ui_check.json",
+    "pdf_visual_review": "All pages inspected; Poppler verified table, UI figure and final checklist; no overflowing text blocks",
+    "video": "ffprobe verifies H264/AAC; 317.039 s and 239.500 s; representative frames visually inspected"
+  }
+}

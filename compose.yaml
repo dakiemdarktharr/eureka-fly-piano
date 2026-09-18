@@ -1,0 +1,16 @@
+services:
+  fly-piano:
+    build:
+      context: .
+      dockerfile: project/v3/Dockerfile
+    ports:
+      - "127.0.0.1:8877:8877"
+    volumes:
+      - fly-piano-state:/state
+      - ./project/v2/data:/app/project/v2/data:ro
+      - ./project/connectome:/app/project/connectome:ro
+      - ./project/v2/scores/private:/app/project/v2/scores/private:ro
+    restart: unless-stopped
+    stop_grace_period: 20s
+volumes:
+  fly-piano-state:

@@ -1,0 +1,9 @@
+*.pdf binary
+*.stl binary
+*.jpg binary
+*.png binary
+*.npy binary
+*.npz binary
+*.bin binary
+*.mid binary
+project/v2/ui/vendor/* -whitespace

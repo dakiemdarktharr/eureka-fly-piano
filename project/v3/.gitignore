@@ -1,0 +1,10 @@
+runtime/
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+*.log
+paper/qa/
+
+qa/
