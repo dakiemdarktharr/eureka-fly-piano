@@ -158,7 +158,7 @@ Hình 4. F1 trên tập lựa chọn checkpoint theo số bước vật lý dùn
 
 ### 6.3 Minh họa hành vi và lượt luyện bài bổ sung
 
-Trong thí nghiệm tổng hợp v4b, 0/9 ô đạt đồng thời các ngưỡng kỹ năng và chuỗi. Cấu hình dùng để minh họa được xác định trước là adaptive seed 0. Cấu hình này chưa đạt các ngưỡng nên kết quả v4b chỉ có replay chuỗi kỹ năng. Replay chẩn đoán cố định có 6 nốt, P=0.667, R=0.333, F1=0.444; nó chỉ là một trong các đoạn test, không thay thế kết quả 24 nốt ở bảng trên. Sau khi khóa kết quả v4b, một lượt bổ sung luyện trực tiếp hai bài được khởi chạy với ngân sách tối đa 60 phút mỗi bài. Hai checkpoint riêng cùng khởi đầu từ adaptive seed 0; CEM dùng 8 ứng viên và 3 elite, theo các đoạn có onset trong cửa sổ 4 s. Checkpoint được chọn trên các đoạn theo dõi có thể đã được luyện; replay toàn bài được xuất không phụ thuộc ngưỡng precision. Lượt bổ sung chưa được đưa vào các bảng kết quả của bản thảo này và không phải kiểm tra khái quát hóa sang bài mới.
+Trong thí nghiệm tổng hợp v4b, 0/9 ô đạt đồng thời các ngưỡng kỹ năng và chuỗi. Cấu hình dùng để minh họa được xác định trước là adaptive seed 0. Cấu hình này chưa đạt các ngưỡng nên kết quả v4b chỉ có replay chuỗi kỹ năng. Replay chẩn đoán cố định có 6 nốt, P=0.667, R=0.333, F1=0.444; nó chỉ là một trong các đoạn test, không thay thế kết quả 24 nốt ở bảng trên. Sau khi khóa kết quả v4b, các lượt luyện bài bổ sung được phát triển riêng; ngân sách ban đầu 60 phút mỗi bài sau đó tăng lên 120 phút. V5 chuyển episode sang đúng 100 sự kiện và bổ sung giai đoạn kỹ năng trước hai nhánh bài nhạc. Những lượt này không nằm trong bảng kết quả v4b, không thay đổi mẫu số của thí nghiệm đã khóa và không phải kiểm tra khái quát hóa sang bài mới.
 
 ![Replay chẩn đoán](figures/demo.jpg)
 
@@ -178,6 +178,12 @@ Phạm vi kiểm tra hiện tại gồm sáu nốt chậm, tập cao độ nhỏ
 
 Các kết quả còn phụ thuộc một máy, một thuật toán tìm kiếm, tập lựa chọn 12 nốt và tập kiểm tra 24 nốt cho mỗi seed. Chưa có đánh giá có hệ thống về độ nhạy theo phần thưởng, ngưỡng lực, bước thời gian và nhiễu cơ học. Kiểm tra tương đương của cách gom bước xác nhận một thay đổi trong thực thi, nhưng chưa chứng minh hội tụ số hoặc độ chính xác sinh cơ học. Các bước còn thiếu này giới hạn kết luận ở cấu hình mô phỏng đã đo.
 
+### Cập nhật tài liệu và protocol ngày 18/09/2026
+
+FlyGM v3 mô tả khởi tạo bằng imitation learning rồi tinh chỉnh PPO [3], nên không nên giới hạn mô tả công trình này ở imitation đơn thuần. FLYNN dùng DAgger trong điều hướng robot [10]; cả hai không phải bằng chứng trực tiếp cho tác vụ piano của mô hình hiện tại. ENOMAD gợi ý phối hợp tìm kiếm toàn cục và cục bộ [11]. CANTABILE nhấn mạnh cần kiểm soát độ phủ onset để tránh tăng điểm bằng cách bỏ nốt [12]. Các hướng này được dùng để thiết kế protocol v5 riêng, chưa phải kết quả cải thiện của v4.
+
+V5 bổ sung mục tiêu P ≥80% đi kèm R ≥60%, các chuỗi validation/test riêng gồm 100 nốt mỗi chuỗi và chuyển CEM sang tìm kiếm tọa độ khi plateau. Phép thử teacher cơ học chưa đạt yêu cầu: trên 100 mục tiêu seed 82001, ép gate tối đa hoặc chuyển đích IK sang điểm thấp nhất của mesh không tăng số nốt khớp, nhưng tăng bấm thừa. Vì vậy chưa triển khai imitation từ teacher này. Các thất bại chẩn đoán không cho phép kết luận về giới hạn học của ruồi sinh học.
+
 ## 8. Kết luận
 
 Quy trình thực thi trên CPU tăng thông lượng mà giữ nguyên cấu hình vật lý trong phép kiểm tra tương đương đã thực hiện. Trong thí nghiệm tổng hợp, F1 trung bình trên tập kiểm tra là 0.343 ở nhánh adaptive, 0.330 ở nhánh frozen, 0.341 ở nhánh rewired. Chênh lệch giữa các cấu hình còn nhỏ so với phạm vi biến thiên được quan sát qua các seed; dữ liệu chưa xác lập lợi ích riêng của việc tối ưu hệ số synapse. Các kết quả định hướng bước tiếp theo vào hiệu chuẩn tiếp xúc và đối chứng đóng góp của từng nhóm tham số. Kết luận hiện tại áp dụng cho bộ điều khiển lai và tác vụ mô phỏng đã xét.
@@ -194,7 +200,7 @@ Mỗi lượt lưu run_id, các phiên bản thư viện, checksum các file mô
 
 [2] [Whole-body physics simulation of fruit fly behavior, Nature, 2025](https://www.nature.com/articles/s41586-025-09029-4).
 
-[3] [Jin và cộng sự. Whole-Brain Connectomic Graph Model Enables Whole-Body Locomotion Control in Fruit Fly. arXiv:2602.17997, 2026, preprint](https://arxiv.org/abs/2602.17997).
+[3] [Jin và cộng sự. Whole-Brain Connectomic Graph Model Enables Whole-Body Locomotion Control in Fruit Fly. arXiv:2602.17997v3, 14/06/2026, preprint](https://arxiv.org/html/2602.17997v3).
 
 [4] [Zakka và cộng sự. RoboPianist: Dexterous Piano Playing with Deep Reinforcement Learning. PMLR 229, 2024](https://proceedings.mlr.press/v229/zakka23a.html).
 
@@ -207,3 +213,10 @@ Mỗi lượt lưu run_id, các phiên bản thư viện, checksum các file mô
 [8] [Pugliese và cộng sự. Connectome simulations identify a central pattern generator circuit for fly walking. bioRxiv, 2025, preprint](https://doi.org/10.1101/2025.09.12.675944). [Code/data repository](https://github.com/smpuglie/Pugliese_cpg_2025).
 
 [9] [Shiu và cộng sự. A Drosophila computational brain model reveals sensorimotor processing. Nature 634, 210-219, 2024](https://www.nature.com/articles/s41586-024-07763-9).
+
+
+[10] [Wang và Chen. FLYNN. arXiv:2607.00025, 2026, preprint](https://arxiv.org/html/2607.00025).
+
+[11] [Reinforcement learning in densely recurrent biological networks. iScience, trực tuyến 15/12/2025](https://www.cell.com/iscience/fulltext/S2589-0042(25)02697-5).
+
+[12] [Kim và cộng sự. CANTABILE. arXiv:2609.18213, 16/09/2026, preprint](https://arxiv.org/abs/2609.18213).

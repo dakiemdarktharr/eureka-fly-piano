@@ -1,0 +1,40 @@
+{
+  "unit_tests_passed": 19,
+  "ui": {
+    "targets": 100,
+    "neurons": 412,
+    "validGeometry": 410,
+    "active": 72,
+    "ratesFinite": true,
+    "filter": true,
+    "errors": [],
+    "pause": true,
+    "narrow": true,
+    "csrf": true
+  },
+  "pdf_pages": {
+    "v4": 10,
+    "v5": 7
+  },
+  "all_pdf_pages_visually_reviewed": true,
+  "live_run_id": "20260918T155218",
+  "stage_budgets_seconds": [
+    3600,
+    7200,
+    7200
+  ],
+  "long_training_pending": true,
+  "smoke_test": {
+    "minutes_per_stage": 1,
+    "stages_exercised": [
+      "skill",
+      "merry",
+      "pool"
+    ],
+    "note": "Short deadline test; exports intentionally incomplete, not scientific results."
+  },
+  "papers": {
+    "project\\v4\\output\\pdf\\manuscript_v4_vi.pdf": "cdd31bc601edea7eec9c1fa3b6bf6144c17e952cb54b5ebf7eee8727b4daf250",
+    "project\\v5\\output\\pdf\\manuscript_v5_vi.pdf": "cda517298d49356b339da9aeaaa46027f38f131c18a4145797fc88912ecbad31"
+  }
+}

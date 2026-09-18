@@ -64,6 +64,9 @@ class Engine:
         self.pitches=[np.argsort(self.errors[l])[:12]+21 for l in range(6)]
         self.geoms=[i for i in range(self.w.model.ngeom) if self.w.model.geom_type[i]==mj.mjtGeom.mjGEOM_MESH]
 
+    def motor_gate(self,net,amp,theta):
+        return np.clip(8*amp*np.exp(theta[24:30]),0,1)
+
     def synthetic(self,seed,level=0,count=100):
         if count<=0:raise ValueError("Positive target count required")
         rng=np.random.default_rng(seed);notes=[]
@@ -96,7 +99,7 @@ class Engine:
         for j in range(n):
             t=j*.002
             if j%50==0 and cancel and cancel():raise InterruptedError('Cancelled')
-            amp=net.step(500,-1,feedback,goal_drive=goal_drive);goal_drive[:]=0;gate=np.clip(8*amp*np.exp(theta[24:30]),0,1)
+            amp=net.step(500,-1,feedback,goal_drive=goal_drive);goal_drive[:]=0;gate=self.motor_gate(net,amp,theta)
             ctrl=self.idle.copy();wanted=[]
             for l,seq in enumerate(seqs):
                 while ptr[l]<len(seq) and seq[ptr[l]]['end']+.05<t:ptr[l]+=1

@@ -5,3 +5,7 @@
 .cpgPanel{padding:10px 20px 14px;font-size:9px;color:var(--muted);border-top:1px solid var(--line)}.cpgGrid{display:grid;grid-template-columns:repeat(18,1fr);gap:3px;margin-top:8px}.cpgGrid i{font-style:normal;text-align:center;padding:5px 0;background:#69e6c2;color:#092019;font-size:8px}
 
 .neuralPanel{margin:20px 0;padding:24px}.neuralColumns{display:grid;grid-template-columns:2fr 1fr;gap:24px}.neuralControls{display:flex;flex-wrap:wrap;gap:16px;font-size:12px}.neuralControls select{max-width:190px}#neuralView{height:470px;background:#070e18}#neuralHover{font-size:12px;min-height:36px;color:#a9cde5}.neuralReadout{padding:20px;background:#0c1725;border-radius:12px}.neuralReadout h3{font-size:18px;margin:18px 0 8px}#neuralTrace,#neuralHeatmap{width:100%;display:block}#neuralHeatmap{height:206px;image-rendering:pixelated}.heatmapLabel{font-size:12px;margin:18px 0 8px}.regionRow{display:grid;grid-template-columns:65px 1fr 80px;gap:10px;margin:16px 0;font-size:12px}.regionTrack{height:6px;background:#243449;margin-top:5px}.regionTrack i{display:block;height:100%;background:#77e8ce}.smallText{line-height:1.7}#activeCount{color:#78e6cd}@media(max-width:850px){.neuralColumns{grid-template-columns:1fr}#neuralView{height:380px}}
+
+.views{grid-template-columns:1fr}.bodyPanel .webgl{height:440px}#neuronSelect{max-width:100%;width:100%;margin:8px 0}.neuralControls{align-items:center}#atlasScope{min-height:45px}.neuralReadout label{font-size:12px}
+
+.neuralReadout>label{display:block;margin:12px 0}.neuralReadout select{display:block;width:100%;margin-top:5px}

@@ -1,0 +1,9 @@
+{
+  "method": "Jacobian IK at lowest mesh vertex; original contact mesh, servo limits and physics unchanged",
+  "iterations": 90,
+  "tolerance_mm": 0.003,
+  "wall_s": 1.844000000000051,
+  "sha256": "8b32b87e4a8d70058a2ad9738eec9355f6ea905b2d8af832142a2880436caade",
+  "median_error_mm": 0.0006738751769381937,
+  "max_error_mm": 2.096007509071196
+}

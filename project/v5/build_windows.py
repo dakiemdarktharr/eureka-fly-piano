@@ -7,11 +7,12 @@ for package in ['flygym','music21','matplotlib','IPython','pyarrow','trimesh','p
 def add(src,dest):args.extend(['--add-data',f'{src}:{dest}'])
 add(ROOT/'ui','bundle/project/v5/ui')
 add(ROOT/'research/nghien_cuu_va_quyet_dinh_vi.md','bundle/project/v5/research')
+add(ROOT/'research/learning_review_vi.md','bundle/project/v5/research')
 add(ROOT/'results','bundle/project/v5/results')
 add(ROOT/'assets/manc.json','bundle/project/v5/assets')
 add(PROJECT/'v4/output/pdf','bundle/project/v4/output/pdf')
 add(ROOT/'checkpoints','bundle/project/v5/checkpoints')
-for name in ['engine.py','train.py','train_hundred.py','neural_model.py','v4_paths.py']:add(ROOT/name,'bundle/project/v5')
+for name in ['engine.py','train.py','train_hundred.py','train_sequence.py','neural_model.py','v4_paths.py']:add(ROOT/name,'bundle/project/v5')
 add(PROJECT/'v2/world.py','bundle/project/v2')
 add(PROJECT/'simulation/model.py','bundle/project/simulation')
 for p in ['output','research']:

@@ -1,0 +1,228 @@
+{
+  "date": "2026-09-18",
+  "searches": 8,
+  "requested_result_slots": 43,
+  "note": "Slots are not unique reviewed sources.",
+  "batches": {
+    "researchNew1": [
+      {
+        "metadata": [
+          "URL: https://arxiv.org/pdf/2602.17997v2",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://arxiv.org/html/2607.00025",
+          "Published: 2026-07-13T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://experiments.springernature.com/articles/10.1038/s41592-024-02497-y?error=cookies_not_supported&code=34c0d5b8-d91d-4f88-9ba9-88234f23ca69",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://www.roboticscenter.ai/research/papers/whole-brain-connectomic-graph-model-enables-whole-body-locomotion-control-in-fruit-fly-2602",
+          "Published: 2026-02-20T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://erojasoficial-byte.github.io/fly-brain/",
+          "Published: N/A",
+          "Author: E. Rojas — Enrique Manuel Rojas Aliaga",
+          "URL: https://neuromechfly.org/tutorials/6_muscle_imitation/",
+          "Published: N/A",
+          "Author: N/A"
+        ]
+      },
+      {
+        "metadata": [
+          "URL: https://doi.org/10.64898/2026.06.17.732983",
+          "Published: 2026-06-22T00:00:00.000Z",
+          "Author: Ishrat Jahan, Helen Holvoet, Jean‐François De Backer, Ilona C Grunwald Kadow",
+          "URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11109550/",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://www.cell.com/current-biology/fulltext/S0960-9822(26)00397-0",
+          "Published: 2026-05-04T01:49:48.000Z",
+          "Author: N/A",
+          "URL: https://www.biorxiv.org/content/10.64898/2026.06.08.729969v1",
+          "Published: 2026-06-10T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://doi.org/10.1038/s41467-021-22592-4",
+          "Published: 2021-05-07T00:00:00.000Z",
+          "Author: James Bennett, Andrew Philippides, Thomas Nowotny",
+          "URL: https://doi.org/10.1073/pnas.2221415120",
+          "Published: 2023-09-21T00:00:00.000Z",
+          "Author: Adithya E. Rajagopalan, Ran Darshan, Karen L Hibbard, James E. Fitzgerald, Glenn Turner"
+        ]
+      },
+      {
+        "metadata": [
+          "URL: https://eon.systems/updates/embodied-brain-emulation",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://www.arxiv.org/pdf/2602.17997",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://github.com/TheFlyExperiment/Virtual-Embodied-Fly/",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://www.youtube.com/watch?v=r3cMpsV7jTs",
+          "Published: N/A",
+          "Author: Evolving AI",
+          "URL: https://www.theregister.com/offbeat/2026/03/16/digital-fruit-fly-brain-model-walks-and-cleans-its-feelers/5224139",
+          "Published: 2026-03-16T14:35:23.000Z",
+          "Author: Liam Proven ",
+          "URL: https://arxiv.org/html/2602.17997v1",
+          "Published: N/A",
+          "Author: N/A"
+        ]
+      }
+    ],
+    "researchNew2": [
+      {
+        "metadata": [
+          "URL: https://arxiv.org/abs/2609.18213",
+          "Published: 2026-09-16T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://www.arxiv.org/pdf/2603.12243",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://arxiv.org/abs/2609.10844",
+          "Published: 2026-09-09T04:38:38.000Z",
+          "Author: N/A",
+          "URL: https://proceedings.mlr.press/v270/qian25a.html",
+          "Published: 2025-01-12T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://arxiv.org/html/2503.14545",
+          "Published: N/A",
+          "Author: N/A"
+        ]
+      },
+      {
+        "metadata": [
+          "URL: https://www.nature.com/articles/s41593-025-02080-4",
+          "Published: 2025-10-27T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://www.arxiv.org/pdf/2604.04033",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://www.cell.com/iscience/fulltext/S2589-0042(25)02697-5",
+          "Published: 2026-01-16T22:39:53.000Z",
+          "Author: N/A",
+          "URL: https://raw.githubusercontent.com/mlresearch/v300/main/assets/he26b/he26b.pdf",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://arxiv.gg/abs/2606.14975",
+          "Published: 2026-06-12T00:00:00.000Z",
+          "Author: N/A"
+        ]
+      },
+      {
+        "metadata": [
+          "URL: https://f1000research.com/articles/13-116",
+          "Published: 2024-06-11T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11109550/",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://doi.org/10.5283/epub.74816",
+          "Published: 2024-01-01T00:00:00.000Z",
+          "Author: Ehweiner, Andreas, Duch, Carsten, Brembs, Björn",
+          "URL: https://doi.org/10.12688/f1000research.146347.1",
+          "Published: 2024-02-19T00:00:00.000Z",
+          "Author: Andreas Ehweiner, Carsten Duch, Björn Brembs",
+          "URL: https://doi.org/10.12688/f1000research.146347.2",
+          "Published: 2024-06-11T00:00:00.000Z",
+          "Author: Andreas Ehweiner, Carsten Duch, Björn Brembs"
+        ]
+      },
+      {
+        "metadata": [
+          "URL: https://www.youtube.com/watch?v=XVP8RdXqyGw",
+          "Published: N/A",
+          "Author: LNS Group",
+          "URL: https://www.arxiv.org/pdf/2602.17997",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://arxiv.org/html/2602.17997v3",
+          "Published: 2026-06-14T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://arxiv.org/html/2602.17997v1",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://koala.science/storage/pdfs/a14d3e5d-d2c7-4877-bd15-45ee26effb81.pdf",
+          "Published: N/A",
+          "Author: Anonymous Authors"
+        ]
+      },
+      {
+        "metadata": [
+          "URL: https://arxiv.org/html/2607.00025",
+          "Published: 2026-07-13T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://arxiv.org/",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://bittide.aicompass.dev/article/1c190956-eee0-41cf-85ba-2a792268ecf6",
+          "Published: N/A",
+          "Author: N/A",
+          "URL: https://arxiv.gg/abs/2607.00025",
+          "Published: 2026-06-21T00:00:00.000Z",
+          "Author: N/A",
+          "URL: https://pubdb.com/paper/2607.00025",
+          "Published: N/A",
+          "Author: N/A"
+        ]
+      }
+    ],
+    "researchNewFetch1": [
+      {
+        "url": "https://eon.systems/updates/embodied-brain-emulation",
+        "metadata": [
+          "URL: https://eon.systems/updates/embodied-brain-emulation"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/html/2602.17997v3",
+        "metadata": [
+          "URL: https://arxiv.org/html/2602.17997v3",
+          "Published: 2026-06-14"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/html/2607.00025",
+        "metadata": [
+          "URL: https://arxiv.org/html/2607.00025",
+          "Published: 2026-07-13"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2609.18213",
+        "metadata": [
+          "URL: https://arxiv.org/abs/2609.18213",
+          "Published: 2026-09-16"
+        ]
+      },
+      {
+        "url": "https://www.cell.com/iscience/fulltext/S2589-0042(25)02697-5",
+        "metadata": [
+          "URL: https://www.cell.com/iscience/fulltext/S2589-0042(25)02697-5",
+          "Published: 2026-01-16",
+          "Published: December 15, 2025"
+        ]
+      },
+      {
+        "url": "https://lnsgroup.cc/research/FlyGM",
+        "metadata": [
+          "URL: https://lnsgroup.cc/research/FlyGM"
+        ]
+      }
+    ],
+    "researchNewFetch2": [
+      {
+        "metadata": [
+          "URL: https://arxiv.org/abs/2604.04033",
+          "URL: https://www.cell.com/current-biology/fulltext/S0960-9822(26)00397-0",
+          "Published: 2026-05-04",
+          "Published: April 23, 2026",
+          "URL: https://www.youtube.com/watch?v=XVP8RdXqyGw",
+          "Author: LNS Group"
+        ]
+      }
+    ]
+  }
+}

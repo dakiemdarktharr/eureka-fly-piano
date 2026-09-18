@@ -21,7 +21,7 @@ def inline(s):
  s=re.sub(r'\*\*(.+?)\*\*',r'<b>\1</b>',s);s=re.sub(r'`([^`]+)`',r'\1',s)
  s=re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)',r'<link href="\2" color="#176760">\1</link>',s)
  return s
-def build_pdf(md,out,title):
+def build_pdf(md,out,title,reference_page_break=True):
  lines=md.splitlines();story=[];i=0
  while i<len(lines):
   line=lines[i].strip()
@@ -42,7 +42,7 @@ def build_pdf(md,out,title):
     with PILImage.open(p) as im:width,height=im.size
     scale=min(475/width,370/height);story.append(Image(str(p),width*scale,height*scale));story.append(Spacer(1,8))
    i+=1;continue
-  if line=='## Tài liệu tham khảo':story.append(PageBreak())
+  if line=='## Tài liệu tham khảo' and reference_page_break:story.append(PageBreak())
   if line.startswith('# '):style=styles['title'];content=line[2:]
   elif line.startswith('## '):style=styles['h2'];content=line[3:]
   elif line.startswith('### '):style=styles['h3'];content=line[4:]

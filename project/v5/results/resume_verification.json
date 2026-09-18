@@ -1,0 +1,13 @@
+{
+  "run_id": "20260918T155218",
+  "resume_same_run": true,
+  "budget_unchanged": 18000.0,
+  "before_generation": 3,
+  "after_generation": 3,
+  "before_elapsed_s": 175.82800000000043,
+  "after_elapsed_s": 175.82800000000043,
+  "parameters_preserved": true,
+  "later_generation": 5,
+  "later_elapsed_s": 278.8119999999999,
+  "resumed_progress_confirmed": true
+}

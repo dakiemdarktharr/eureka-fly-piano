@@ -6,7 +6,7 @@ Phiên bản này bổ sung quan sát tín hiệu từng neuron và đổi đơn
 
 Chạy `Start-FlyPianoV5.ps1`, hoặc `dist/FlyPianoLabV5/FlyPianoLabV5.exe`. Giao diện ở http://127.0.0.1:8879/. Cổng 8878 dành cho v4. Chọn “Kiểm tra 100 nốt”, phát mô phỏng hoặc kéo thanh thời gian. Khung MANC cho xoay, phóng to, lọc T1/T2/T3, chỉ hiện neuron active và chọn nhánh để xem bodyId, cell type cùng trace. Heatmap có đủ 412 kênh.
 
-Não FlyWire và VNC MANC được trình bày riêng vì chúng thuộc hai mẫu khác nhau. Hai DNg100 trong khung não là phép chiếu tín hiệu lên neuron đồng dạng, không phải synapse đã đo nối hai mẫu. Giao diện không tạo tín hiệu cho optic lobes, mushroom bodies hay các vùng ngoài mạch hiện tại.
+Não FlyWire và VNC MANC dùng chung một khung giải phẫu, cùng bộ chọn neuron, trace và heatmap. Chuyển dữ liệu bằng menu; giữ hệ tọa độ riêng vì chúng thuộc hai mẫu khác nhau. Hai DNg100 trong khung não là phép chiếu tín hiệu lên neuron đồng dạng, không phải synapse đã đo nối hai mẫu. Giao diện không tạo tín hiệu cho optic lobes, mushroom bodies hay các vùng ngoài mạch hiện tại.
 
 ## Đọc điểm đúng cách
 
@@ -17,7 +17,7 @@ Não FlyWire và VNC MANC được trình bày riêng vì chúng thuộc hai m�
 
 Mỗi candidate trong luyện hai bài được đánh giá trên một block đúng 100 sự kiện gốc. Block cuối chồng lấn để đủ 100; hợp âm có thể bị cắt ở ranh giới block. Mọi sự kiện vẫn nằm trong lịch lấy mẫu, kể cả nốt trùng và nốt chưa gán chân. Đánh giá/replay toàn bài giữ đủ 2.401 và 1.502 nốt. Điểm block và điểm toàn bài là hai phép đo khác nhau.
 
-Không dừng sớm theo precision. Ngân sách tối đa 120 phút/bài, 90% dành cho tối ưu và 10% dự phòng đánh giá/xuất replay. Các đoạn theo dõi thuộc chính bài luyện; chúng không phải test khái quát hóa. Nếu không đủ thời gian xuất toàn bài, trạng thái ghi rõ incomplete.
+Mục tiêu mới: P ≥80% đồng thời R ≥60%, không coi đó là kết quả đã đạt. Lịch học gồm 60 phút kỹ năng rồi tối đa 120 phút mỗi bài, 85% dành cho tối ưu/validation và 15% cho test/replay. Hai bài khởi tạo độc lập từ cùng checkpoint kỹ năng. Các đoạn theo dõi thuộc chính bài luyện; chúng không phải test khái quát hóa. Nếu không đủ thời gian xuất toàn bài, trạng thái ghi rõ incomplete.
 
 ## Tín hiệu và giải phẫu
 
@@ -29,11 +29,15 @@ Tải được 412 SWC; bảng metadata độc lập xác nhận 412/412 bodyId 
 
 ## Thay đổi cơ chế học
 
-Giữ CEM và reward theo tiếp xúc vật lý. Bổ sung sáu gain 0–50 cho tín hiệu mục tiêu có lookahead 150 ms tới E1 của từng chân, đưa tổng tham số lên 55. Đây là đường vào **thiết kế**, không phải đường thị giác–vận động đã được xác nhận. Tín hiệu dùng ở bước điều khiển tiếp theo, trễ 2 ms. Checkpoint cũ được thêm sáu số 0 để giữ hành vi ban đầu.
+Dùng CEM và tìm kiếm tọa độ khi plateau. Điểm validation: P + 0,5F1 − 2 max(0; 0,6−R); candidate có shaping nhỏ 0,01 tanh(reward cũ). Sau 4 lần validation không tăng quá 0,005, CEM chuyển sang tìm kiếm tọa độ; tiếp tục plateau thì quay lại CEM với sigma rộng hơn. Test giữ riêng, không chọn checkpoint. Các điều kiện tiếp xúc và dung sai không đổi. Bổ sung sáu gain 0–50 cho tín hiệu mục tiêu có lookahead 150 ms tới E1 của từng chân, đưa tổng tham số lên 55. Đây là đường vào **thiết kế**, không phải đường thị giác–vận động đã được xác nhận. Tín hiệu dùng ở bước điều khiển tiếp theo, trễ 2 ms. Checkpoint cũ được thêm sáu số 0 để giữ hành vi ban đầu.
 
 Thử nghiệm chẩn đoán 100 nốt với cue 0, 10 và 30 đều được 17 nốt đúng/54 lần bấm: P=31,48%, R=17%, F1=22,08%; không có cảnh báo solver. Chưa có bằng chứng cue giúp cải thiện. Ở checkpoint này, gate của bốn chân bão hòa ở 1 và hai chân ở 0 trong replay, nên độ nhạy của bộ giải mã vận động là một hạn chế đáng kiểm tra tiếp. Không dùng ba kết quả này để chọn warm start.
 
-V5 lưu snapshot optimizer gồm mean, sigma, RNG và best để kiểm toán. Nút luyện hiện tạo lượt mới; chưa có chức năng khôi phục chính xác một lượt bị dừng. Khi chuyển từ v4, checkpoint được dùng làm warm start và thời gian đã dùng được trừ khỏi ngân sách, nhưng optimizer khởi tạo lại do protocol thay đổi. Không gọi việc này là resume chính xác.
+Nút “Học tiếp → luyện hai bài” chạy protocol `v5-precision-curriculum-1`. Lượt đang dừng/gián đoạn/failed của protocol này được khôi phục từ `sequence_checkpoint.json`, với mean, sigma, RNG, best, giai đoạn và ngân sách còn lại. Checkpoint được lưu nguyên tử sau thế hệ; công việc chưa lưu khi crash có thể lặp lại và thời gian chưa ghi không khôi phục chính xác. Các lượt cũ thuộc protocol khác được giữ riêng, không bị gọi nhầm là resume chính xác.
+
+Curriculum kỹ năng dùng 3 cao độ thuận lợi mỗi chân trong 25% đầu thời gian tối ưu rồi mở lên 12. Validation luôn ở mức 12, gồm 2 chuỗi ×100 nốt. Test gồm 3 chuỗi khác ×100 nốt; replay chỉ là chuỗi đầu tiên, không thay điểm gộp 300 mục tiêu. Mỗi chuỗi vẫn có đúng 100 yêu cầu.
+
+Paper mới: `output/pdf/manuscript_v5_vi.pdf`; v4 được cập nhật thảo luận nhưng số liệu đã khóa không đổi. Nghiên cứu mới, video gốc và phương án fallback ở `research/learning_review_vi.md`. Chẩn đoán IK/gate không cải thiện nên không đưa vào engine chính.
 
 ## Tái lập và kiểm tra
 

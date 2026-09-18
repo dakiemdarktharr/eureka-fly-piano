@@ -33,7 +33,7 @@ def state():
     return dict(csrf=TOKEN,readiness=readiness(),campaign=s,replay=manifest,benchmark=read_json(bench) if bench.exists() else None)
 def launch(minutes,workers):
     global CHILD
-    command=[sys.executable,'--worker','songs','--minutes',str(minutes),'--workers',str(workers)]
+    command=[sys.executable,'--worker','sequence','--minutes',str(minutes),'--workers',str(workers)]
     if not getattr(sys,'frozen',False):command.insert(1,str(ROOT/'app.py'))
     STATE.mkdir(parents=True,exist_ok=True)
     with (STATE/'worker.log').open('ab') as log:
@@ -51,13 +51,15 @@ class Handler(SimpleHTTPRequestHandler):
         if path in ['/ui/app.js','/ui/style.css','/ui/dashboard.js','/ui/neural_view.js']:return ROOT/path[1:]
         if path in ['/ui/vendor/three.module.js','/ui/vendor/three.core.js','/ui/vendor/OrbitControls.js']:return V2/path[1:]
         if path=='/assets/manc.json':return ROOT/'assets/manc.json'
-        if path=='/research/v5.md':return ROOT/'research/nghien_cuu_va_quyet_dinh_vi.md'
+        if path=='/research/v5.md':return ROOT/'research/learning_review_vi.md'
+        if path=='/research/anatomy.md':return ROOT/'research/nghien_cuu_va_quyet_dinh_vi.md'
         if path in ['/data/neuron_activity.csv','/data/region_activity.json']:return ROOT/'results'/Path(path).name
         if path in ['/assets/scene.json','/assets/brain.json','/assets/attribution.json']:return V2/path[1:]
         if re.fullmatch(r'/replay/(skill|merry|pool)\.(json|bin)',path):return replay_folder()[0]/Path(path).name
         if re.fullmatch(r'/data/(merry|pool)_(score\.json|reference\.mid)',path):return V2/path[1:]
         if re.fullmatch(r'/scores/private/song[12]_[a-z0-9_\-]+\.pdf',path):return V2/path[1:]
-        if path=='/paper/manuscript.pdf':return PROJECT/'v4/output/pdf/manuscript_v4_vi.pdf'
+        if path=='/paper/manuscript.pdf':return ROOT/'output/pdf/manuscript_v5_vi.pdf'
+        if path=='/paper/v4.pdf':return PROJECT/'v4/output/pdf/manuscript_v4_vi.pdf'
         if path=='/paper/reviewer.pdf':return PROJECT/'v4/output/pdf/reviewer_v4_vi.pdf'
         return None
     def local_host(self):
@@ -100,13 +102,16 @@ class Handler(SimpleHTTPRequestHandler):
         except (ValueError,TypeError,OSError) as e:return self.json({'error':str(e)},400)
 
 def main():
-    multiprocessing.freeze_support();p=argparse.ArgumentParser();p.add_argument('--host',choices=['127.0.0.1','0.0.0.0'],default='127.0.0.1');p.add_argument('--port',type=int,default=8879);p.add_argument('--no-browser',action='store_true');p.add_argument('--worker',choices=['songs','verify']);p.add_argument('--minutes',type=float,default=120);p.add_argument('--workers',type=int,default=4);a=p.parse_args()
+    multiprocessing.freeze_support();p=argparse.ArgumentParser();p.add_argument('--host',choices=['127.0.0.1','0.0.0.0'],default='127.0.0.1');p.add_argument('--port',type=int,default=8879);p.add_argument('--no-browser',action='store_true');p.add_argument('--worker',choices=['songs','sequence','verify']);p.add_argument('--minutes',type=float,default=120);p.add_argument('--workers',type=int,default=4);a=p.parse_args()
     if a.worker=='verify':
         from engine import Engine,INITIAL
         from v4_paths import atomic_json
         e=Engine();notes,d=e.synthetic(80002,count=1);r=e.rollout(INITIAL,notes,d)
         atomic_json(STATE/'bundle_verify.json',{'ok':r['solver_warnings']==0,'physics_steps':r['physics_steps'],'finite':True,'training':False,'parameters':len(INITIAL)})
         return
+    if a.worker=='sequence':
+        from train_sequence import run
+        run(a.minutes,a.workers);return
     if a.worker=='songs':
         from train_hundred import run
         run(a.minutes,a.workers);return

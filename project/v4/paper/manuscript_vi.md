@@ -159,6 +159,12 @@ Phạm vi kiểm tra hiện tại gồm sáu nốt chậm, tập cao độ nhỏ
 
 Các kết quả còn phụ thuộc một máy, một thuật toán tìm kiếm, tập lựa chọn 12 nốt và tập kiểm tra 24 nốt cho mỗi seed. Chưa có đánh giá có hệ thống về độ nhạy theo phần thưởng, ngưỡng lực, bước thời gian và nhiễu cơ học. Kiểm tra tương đương của cách gom bước xác nhận một thay đổi trong thực thi, nhưng chưa chứng minh hội tụ số hoặc độ chính xác sinh cơ học. Các bước còn thiếu này giới hạn kết luận ở cấu hình mô phỏng đã đo.
 
+### Cập nhật tài liệu và protocol ngày 18/09/2026
+
+FlyGM v3 mô tả khởi tạo bằng imitation learning rồi tinh chỉnh PPO [3], nên không nên giới hạn mô tả công trình này ở imitation đơn thuần. FLYNN dùng DAgger trong điều hướng robot [10]; cả hai không phải bằng chứng trực tiếp cho tác vụ piano của mô hình hiện tại. ENOMAD gợi ý phối hợp tìm kiếm toàn cục và cục bộ [11]. CANTABILE nhấn mạnh cần kiểm soát độ phủ onset để tránh tăng điểm bằng cách bỏ nốt [12]. Các hướng này được dùng để thiết kế protocol v5 riêng, chưa phải kết quả cải thiện của v4.
+
+V5 bổ sung mục tiêu P ≥80% đi kèm R ≥60%, các chuỗi validation/test riêng gồm 100 nốt mỗi chuỗi và chuyển CEM sang tìm kiếm tọa độ khi plateau. Phép thử teacher cơ học chưa đạt yêu cầu: trên 100 mục tiêu seed 82001, ép gate tối đa hoặc chuyển đích IK sang điểm thấp nhất của mesh không tăng số nốt khớp, nhưng tăng bấm thừa. Vì vậy chưa triển khai imitation từ teacher này. Các thất bại chẩn đoán không cho phép kết luận về giới hạn học của ruồi sinh học.
+
 ## 8. Kết luận
 
 {{CONCLUSION}}
@@ -175,7 +181,7 @@ Mỗi lượt lưu run_id, các phiên bản thư viện, checksum các file mô
 
 [2] [Whole-body physics simulation of fruit fly behavior, Nature, 2025](https://www.nature.com/articles/s41586-025-09029-4).
 
-[3] [Jin và cộng sự. Whole-Brain Connectomic Graph Model Enables Whole-Body Locomotion Control in Fruit Fly. arXiv:2602.17997, 2026, preprint](https://arxiv.org/abs/2602.17997).
+[3] [Jin và cộng sự. Whole-Brain Connectomic Graph Model Enables Whole-Body Locomotion Control in Fruit Fly. arXiv:2602.17997v3, 14/06/2026, preprint](https://arxiv.org/html/2602.17997v3).
 
 [4] [Zakka và cộng sự. RoboPianist: Dexterous Piano Playing with Deep Reinforcement Learning. PMLR 229, 2024](https://proceedings.mlr.press/v229/zakka23a.html).
 
@@ -188,3 +194,10 @@ Mỗi lượt lưu run_id, các phiên bản thư viện, checksum các file mô
 [8] [Pugliese và cộng sự. Connectome simulations identify a central pattern generator circuit for fly walking. bioRxiv, 2025, preprint](https://doi.org/10.1101/2025.09.12.675944). [Code/data repository](https://github.com/smpuglie/Pugliese_cpg_2025).
 
 [9] [Shiu và cộng sự. A Drosophila computational brain model reveals sensorimotor processing. Nature 634, 210-219, 2024](https://www.nature.com/articles/s41586-024-07763-9).
+
+
+[10] [Wang và Chen. FLYNN. arXiv:2607.00025, 2026, preprint](https://arxiv.org/html/2607.00025).
+
+[11] [Reinforcement learning in densely recurrent biological networks. iScience, trực tuyến 15/12/2025](https://www.cell.com/iscience/fulltext/S2589-0042(25)02697-5).
+
+[12] [Kim và cộng sự. CANTABILE. arXiv:2609.18213, 16/09/2026, preprint](https://arxiv.org/abs/2609.18213).
